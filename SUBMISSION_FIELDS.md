@@ -33,11 +33,11 @@ https://orbitcare-eight.vercel.app/
 
 ## Detailed Project Description
 
-Paste the reviewed body of PROJECT_DESCRIPTION.md, which has been updated for this release. It covers the mission introduction, actual guided workflow, personal reference, data quality, replay, body explorer, NASA integration, Crew Assist, offline preparation, implementation, team attribution and limitations. Omit the file's top-level title if the form already supplies one; fit the answer to the actual field limit.
+Paste the reviewed body of PROJECT_DESCRIPTION.md. It explicitly covers all six description prompts: what the project does and how it works, benefits, intended impact, tools/languages/software/hardware, creativity, and factors the team considered. It also records NASA integration, collective team attribution, AI assistance and scientific limitations. Omit the file's top-level title if the form already supplies one; fit the answer to the actual field limit.
 
 ## Use of Super Intelligence (SI)
 
-Yes. OpenAI Codex assisted with an AI-assisted requirements interview, source inspection, architecture, implementation, synthetic fixtures, testing, interface refinement, documentation, deployment and demonstration tooling. Bihandu Liyanage selected and refined the product direction through that process and retains responsibility for reviewing the solution and claims.
+Yes. OpenAI Codex assisted with an AI-assisted requirements process, source inspection, architecture, implementation, synthetic fixtures, testing, interface refinement, documentation, deployment and demonstration tooling. Bihandu Liyanage and Nesandu Liyanage developed OrbitCare collectively, jointly selecting and refining the product direction, including Help a crewmate / Crew Assist. Both share responsibility for reviewing the solution and claims.
 
 The interface includes original AI-assisted application code for the schematic body explorer, procedural planetary artwork, SVG and CSS motion. The mission artwork is visibly labeled "AI-generated procedural artwork" in the application and identified in the video and presentation. It is conceptual, not NASA imagery, a geographic map or live mission telemetry. No raster image/video generation model, downloaded model/texture or NASA insignia was used.
 

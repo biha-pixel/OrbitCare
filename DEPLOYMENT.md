@@ -1,5 +1,7 @@
 # OrbitCare deployment
 
+Working-tree attribution correction: submission documents now credit Bihandu Liyanage and Nesandu Liyanage collectively, including Crew Assist. The matching `public/demo/index.html` footer correction is local and has not been deployed. The release byte comparisons below describe the published release at verification time.
+
 ## Cinematic production release - 15 November 2026 at 20:01 Asia/Colombo
 
 Production **dpl_TMyUrpL1vHy9Lbxjp4cChWmUe5WF** is **Ready** at https://orbitcare-eight.vercel.app/ (deployment URL https://orbitcare-glymu5tpc-nutri-38e1.vercel.app). The participant explicitly approved promotion of verified candidate **dpl_AWZz2FrihrbgtFMTRVqbMiEigqhB**. Protected preview: https://orbitcare-h884wvtaa-nutri-38e1.vercel.app; protection was retained. The previous production **dpl_ivAkd6evSFgFx1ghkmtsHqPpeNfr** remains in deployment history for rollback. No source commit/push or NASA judging submission was made. All release entries below are historical.
@@ -38,7 +40,7 @@ Earlier release records below are historical.
 
 ## Previous team-membership release — 15 November 2026, 15:26 Asia/Colombo
 
-Production **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu** is published at https://orbitcare-eight.vercel.app/. It lists **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**, in the public demo credits and seven-slide presentation. Bihandu confirmed both registrations and approved Nesandu’s membership. Original project ownership, development history, AI attribution and MIT copyright remain unchanged.
+Production **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu** is published at https://orbitcare-eight.vercel.app/. It lists **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**, in the public demo credits and seven-slide presentation. Bihandu confirmed both registrations and approved Nesandu’s membership. See AI_USE.md for the team's collective development attribution and assistance disclosure.
 
 Only the PDF title slide and public demo credits changed in the deployed materials. Slides 2–7 match the previous release pixel for pixel. The existing MP4 contains no outdated membership claim and was **not regenerated**: 28.000 seconds, 1,388,512 bytes, SHA-256 `926a5401e072b077603e8980f96b9254a94c30855e088f18d336d0935172e3eb`. The updated PDF has exactly seven 16:9 pages, 736,453 bytes, SHA-256 `bd0de876c36fe5decdb8becc1ad0bf0cb80f6a4ba35a0e78555a5d6c9140c56c`.
 

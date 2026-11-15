@@ -1,6 +1,6 @@
 # OrbitCare Crew Assist
 
-Crew Assist is a participant-proposed extension for a crewmate helping someone who cannot operate OrbitCare. It is a software workflow prototype, not an emergency assessment, treatment system or communication service.
+Crew Assist was developed collectively by Bihandu Liyanage and Nesandu Liyanage, with the AI assistance disclosed in AI_USE.md, for a crewmate helping someone who cannot operate OrbitCare. It is a software workflow prototype, not an emergency assessment, treatment system or communication service.
 
 ## Use the workflow
 

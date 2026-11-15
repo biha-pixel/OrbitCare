@@ -4,7 +4,7 @@
 
 OrbitCare helps astronauts observe personal changes, compare measurements with a fixed reference, understand sustained deviations, and record reviews offline. An optional mission introduction and five-stage interactive demo make the real workflow easy to explore. Mission Decision Replay reveals only information available on the selected day. A separate NASA OSD-575 explorer preserves original laboratory observations and provenance. Crew Assist provides approved-procedure signposting and optional local incident handoffs through a labeled fictional drill. Monitoring scenarios are synthetic; actual NASA data remain separate. This research prototype does not diagnose, treat, contact medical support, or validate clinical thresholds.
 
-## Problem and solution
+## What it does and how it works
 
 An isolated reading gives little insight into sustained individual change or whether missing information makes comparison unreliable. Long-duration missions also make continuous access to Earth-based support an unsuitable assumption. OrbitCare demonstrates an understandable, locally preserved monitoring-to-review workflow for an astronaut independently reviewing personal information.
 
@@ -22,11 +22,19 @@ An expandable guide to the four recorded measurements explains what is recorded,
 
 The layered human health explorer links schematic cardiovascular, head and muscle regions to the existing selected-day heart-rate, sleep/fatigue or exercise record. Coordinated highlighting, connectors and contextual panels support exploration; spatial controls have keyboard and text alternatives. Region highlighting is educational navigation, never an organ-health conclusion. Direct NASA research cards distinguish context from unvalidated thresholds.
 
-Crew Assist, reached through **Help a crewmate**, extends this participant-proposed concept to same-device assistance when a fictional crewmate cannot operate the software. It reuses the urgent guidance before offering optional incident documentation. Circumstances, measured-observation notes, missing information, actions and contact statements carry user-source and timestamp labels. Blank values stay unknown; historical observations are included only after an explicit fictional-identity confirmation and selected-day snapshot. A deterministic Mars day-24 drill demonstrates software steps without treatment, a medical score or a recovery claim. Incident records have their own bounded local store and JSON import/export; readable text and browser Print / Save as PDF prepare a handoff without notifying anyone. No mission-specific emergency protocol has been supplied or installed. This is not synchronized multi-device crew access or a secure production medical record.
+Crew Assist, reached through **Help a crewmate**, was developed collectively by Bihandu Liyanage and Nesandu Liyanage as part of OrbitCare. It supports same-device assistance when a fictional crewmate cannot operate the software. It reuses the urgent guidance before offering optional incident documentation. Circumstances, measured-observation notes, missing information, actions and contact statements carry user-source and timestamp labels. Blank values stay unknown; historical observations are included only after an explicit fictional-identity confirmation and selected-day snapshot. A deterministic Mars day-24 drill demonstrates software steps without treatment, a medical score or a recovery claim. Incident records have their own bounded local store and JSON import/export; readable text and browser Print / Save as PDF prepare a handoff without notifying anyone. No mission-specific emergency protocol has been supplied or installed. This is not synchronized multi-device crew access or a secure production medical record.
 
 An always available Urgent concern panel separates serious acute concerns from gradual monitoring. It immediately directs users to approved mission emergency procedures and the designated medical personnel, independently of trends or missing data. It contains no treatment protocol, emergency diagnosis or communication function. It never asks the user to wait for three changed days.
 
 After **Offline ready** confirms preparation, the production application can reopen without network access and continue local analysis, entry, review, evidence inspection, and export. Persistence alone is never presented as proof of offline reopening.
+
+## Benefits
+
+OrbitCare brings measurements, comparison rules, explanations and review notes into one inspectable workflow. A personal reference gives each change context; explicit persistence and missing-data explanations help users distinguish a sustained pattern from an isolated reading or an incomplete record. Selected-day replay makes the information available at each decision point visible. Prepared offline access preserves the ability to review and document observations when connectivity is unavailable, while Crew Assist offers a structured local handoff when someone else needs to record the situation. These are demonstrated software capabilities; reduced workload, better decisions and improved health outcomes have not been established through user or clinical studies.
+
+## Intended impact
+
+Our intended impact is to support informed astronaut self-review and clearer crew-to-medical-team handoffs under communication constraints. We hope to make changes and uncertainty easier to discuss, preserve useful context for later review, and show how NASA research can inform an understandable monitoring interface. For learners and judges, the reproducible scenarios also explain how references, persistence and missing information affect a review. OrbitCare is a foundation for further research and evaluation, not evidence of improved mission safety or readiness for operational medical use.
 
 ## NASA science and data
 
@@ -41,14 +49,28 @@ OrbitCare has two officially registered NASA Space Apps Challenge 2026 team memb
 - Bihandu Liyanage
 - Nesandu Liyanage
 
-Local Event: **Anuradhapura, Sri Lanka**. Nesandu’s team membership has been approved by Bihandu. This current membership update does not change the documented original project ownership, development history or AI-use attribution.
+Local Event: **Anuradhapura, Sri Lanka**. Bihandu Liyanage and Nesandu Liyanage developed OrbitCare collectively, including its direction, refinement and **Help a crewmate / Crew Assist** workflow, with the AI assistance described below.
 
-## Distinctive contribution and ownership
+## Creativity
 
-Bihandu Liyanage selected and refined the core direction through an AI-assisted interview: personalized baselines, selected indicators, explainable persistence, astronaut self-review, offline continuity, separate real research data, and a scenario-led presentation. OrbitCare connects reading → comparison → quality assessment → explanation → recorded review → offline continuity. This is a product integration contribution, not a claim of clinical novelty or superior diagnostic performance.
+Our creative contribution is connecting reading → comparison → quality assessment → explanation → recorded review → offline continuity in a single mission-centered experience. Bihandu Liyanage and Nesandu Liyanage jointly selected and refined this direction through an AI-assisted requirements process. Mission Decision Replay lets a visitor revisit a decision using only the information available that day. The layered body explorer connects a measurement to educational context, while the optional procedural Earth-to-Mars introduction and guided demo tell the story through the working application. Crew Assist extends the same approach to helping another crewmate and preparing a local handoff. This combination is a product and presentation contribution, not a claim of clinical novelty or superior diagnostic performance.
 
-## Implementation and limits
+## Tools, languages, software and hardware
 
 A static Next.js/React application runs deterministic TypeScript analysis locally, persists work in IndexedDB, and prepares production assets through a generated service worker. Native WebGL/GLSL, SVG and CSS provide original procedural graphics and motion without external models or textures. A static fallback, reduced-motion support and keyboard/touch controls preserve access. The planetary illustration is labeled AI-generated procedural artwork; it is not a geographic map or mission telemetry. No backend, paid AI key, sign-in, or runtime NASA request is needed. The interface emphasizes understandable change instead of an opaque health score.
 
-The prototype demonstrates reproducible software behavior. Clinical performance, instrument uncertainty, astronaut human-factors suitability, operational usefulness, and flight certification require future evaluation. The three monitored indicators and contextual exercise record do not address every spaceflight hazard or establish health and safety. See SCIENTIFIC_LIMITATIONS.md for exact rules and failure modes.
+Development uses TypeScript, JavaScript, HTML, CSS and GLSL, with Node.js/npm tooling, Recharts for charts and Zod for data validation. Vitest checks deterministic analysis and data handling; Playwright and axe check browser workflows and accessibility. Vercel hosts the static application, and browser captures and FFmpeg support the demonstration media. OpenAI Codex assisted the team with requirements refinement, source inspection, architecture, implementation, synthetic fixtures, tests, documentation, deployment and media tooling. Both team members share responsibility for reviewing the solution and its claims.
+
+The prototype runs on a computer or mobile device with a modern web browser. No dedicated medical hardware, wearable connection or spacecraft sensor integration was used or validated. Monitoring uses labeled synthetic scenarios or manually entered test measurements; the separate NASA explorer uses downloaded research observations.
+
+## Factors our team considered
+
+- **Communication constraints and continuity:** analysis and prepared offline access run locally, with exportable records for later review.
+- **Scientific credibility and uncertainty:** synthetic monitoring stays separate from original NASA measurements; rules, provenance, missing information and limitations remain visible.
+- **Crew responsibilities and urgent concerns:** self-review and helping a crewmate have distinct workflows. Urgent guidance points immediately to approved procedures and designated personnel, independently of trend rules.
+- **Accessibility and attention:** keyboard and text alternatives, reduced motion, a static graphics fallback and optional detail keep the workflow available across interaction preferences and device capabilities.
+- **Data handling and reproducibility:** local storage avoids sending entries to an application backend, but is not a secure production medical record. Fixed scenarios, inspectable calculations and validated imports make behavior repeatable and reviewable.
+
+## Limits and future evaluation
+
+The prototype demonstrates reproducible software behavior. Clinical performance, instrument uncertainty, astronaut human-factors suitability, operational usefulness, and flight certification require future evaluation. The three monitored indicators and contextual exercise record do not address every spaceflight hazard or establish health and safety.

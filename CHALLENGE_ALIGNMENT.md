@@ -2,7 +2,7 @@
 
 ## Current team
 
-OrbitCare’s registered team now comprises **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**. Bihandu approved Nesandu’s membership. Original ownership, development attribution and AI disclosures remain unchanged.
+OrbitCare was developed collectively by **Bihandu Liyanage and Nesandu Liyanage**, the registered team for Local Event **Anuradhapura, Sri Lanka**. Their joint work includes **Help a crewmate / Crew Assist**. AI_USE.md records the AI assistance disclosure.
 
 ## Latest judge-first refinement
 

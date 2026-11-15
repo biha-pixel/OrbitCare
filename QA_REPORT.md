@@ -56,10 +56,10 @@ Current production: **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu**. This was a documentati
 - Exact source hashes confirm 47 protected application, NASA data, test, original-license, MP4 and poster files were unchanged by this task.
 - Exported PDF contains both names and the correct event; exactly seven 16:9 pages; slides 2–7 match previous rendered pixels and extracted text exactly. The title slide was visually inspected.
 - Existing actual encoded video scenes and MP4 metadata were inspected. No outdated membership statement appears. Video was not regenerated and retains the same SHA-256 and 28.000-second duration.
-- Public credits were checked in fresh desktop/mobile contexts for names, local event, original creator attribution and absence of horizontal overflow. Public HTML, slide HTML, PDF, MP4 and SW bytes match the verified local files.
-- No tests or application credits/code were modified; the application’s existing generic credits needed no team correction. Copyright and documented Bihandu/AI-development attribution remain intact. No Nesandu contribution was invented.
+- Public credits were checked in fresh desktop/mobile contexts for names, local event and absence of horizontal overflow. Public HTML, slide HTML, PDF, MP4 and SW bytes matched the verified local files at that release.
+- No tests or application functionality were modified in that verification pass. Current collective development attribution, confirmed by the team, is recorded in AI_USE.md; the MIT copyright notice is unchanged.
 
-Evidence: `artifacts/team-update/`. Current source/submission references to solo membership were removed; explicitly historical descriptions of Bihandu’s earlier individual participation remain accurate. No qualifying Next.js feedback issue was retained in this pass.
+Evidence: `artifacts/team-update/`. Submission and development attribution now credit both team members collectively, including Crew Assist, as confirmed by the team. No qualifying Next.js feedback issue was retained in this pass.
 
 ## Previous judge-first verification — 15 November 2026, 14:58 Asia/Colombo
 

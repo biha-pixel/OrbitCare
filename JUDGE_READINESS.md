@@ -2,7 +2,7 @@
 
 ## Current Crew Assist readiness — 15 November 2026 at 17:48 Asia/Colombo
 
-Public production **dpl_ivAkd6evSFgFx1ghkmtsHqPpeNfr**, https://orbitcare-eight.vercel.app/, adds the participant-proposed assistance use case while retaining the normal first-visit monitoring journey. **Help a crewmate** → approved-procedure/trained-personnel guidance → optional incident/drill → source-labeled local handoff. There is no emergency detection, installed mission protocol, treatment or automated contact.
+Public production **dpl_ivAkd6evSFgFx1ghkmtsHqPpeNfr**, https://orbitcare-eight.vercel.app/, adds the team's assistance use case while retaining the normal first-visit monitoring journey. **Help a crewmate** → approved-procedure/trained-personnel guidance → optional incident/drill → source-labeled local handoff. There is no emergency detection, installed mission protocol, treatment or automated contact.
 
 All 39 unit/data tests, lint, TypeScript and build passed. The complete local suite passed 34 checks; affected forms passed again after final corrections, and all 34 passed on the final public deployment. Public Edge actual-offline export/import and persistence passed. Video remains 28 seconds; slide deck remains seven pages and both names remain accurate. Source, scientific/AI limitations, current transcript and public files align. See CREW_ASSIST.md, latest QA_REPORT.md / DEPLOYMENT.md and `artifacts/crew-final/`. The participant must still publish source if linked and complete **Submit for Judging** with confirmation. Earlier readiness entries are historical.
 
@@ -14,7 +14,7 @@ Current production: **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV**, https://orbitcare-eigh
 Earlier release summaries below are historical.
 
 
-Team-membership release verified 15 November 2026, 15:26 Asia/Colombo: **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**, are reflected in the public credits and seven-slide PDF at https://orbitcare-eight.vercel.app/ (`dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu`). Original ownership/AI attribution remain accurate; the 28-second video was inspected and preserved unchanged. See `artifacts/team-update/` and the latest DEPLOYMENT.md/QA_REPORT.md entries.
+Team-membership release verified 15 November 2026, 15:26 Asia/Colombo: **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**, are reflected in the public credits and seven-slide PDF at https://orbitcare-eight.vercel.app/ (`dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu`). The 28-second video was inspected and preserved unchanged. See `artifacts/team-update/` and the latest DEPLOYMENT.md/QA_REPORT.md entries. Current collective development attribution is recorded in AI_USE.md.
 
 Previous release verified 15 November 2026, 14:58 Asia/Colombo: https://orbitcare-eight.vercel.app/ (dpl_FF9aFyLmA98toA4uavzPuwDFnqo3). All 31 unit/data tests and 28 local/public browser checks passed. Final public screenshot evidence is in `artifacts/judge-public/`. The participant-requested original continuous logo is restored, with reduced-motion support. See DEPLOYMENT.md and QA_REPORT.md for final release details.
 
@@ -22,7 +22,7 @@ Previous release verified 15 November 2026, 14:58 Asia/Colombo: https://orbitcar
 
 ## Current team
 
-**Bihandu Liyanage and Nesandu Liyanage** are registered OrbitCare team members for **Anuradhapura, Sri Lanka**. Bihandu approved Nesandu’s membership after originally participating individually. Current team materials list both names; original development and AI attribution remain as documented.
+**Bihandu Liyanage and Nesandu Liyanage** are registered OrbitCare team members for **Anuradhapura, Sri Lanka**. They developed OrbitCare collectively, including **Help a crewmate / Crew Assist**, with the assistance disclosed in AI_USE.md.
 
 ## Before → after
 

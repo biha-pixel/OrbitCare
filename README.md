@@ -2,7 +2,7 @@
 
 Understand a sustained change. Inspect the reasoning. Keep monitoring offline.
 
-OrbitCare is an astronaut self-monitoring research prototype for NASA Space Apps 2026, created by Bihandu Liyanage through an AI-assisted discovery and implementation process. It is not a diagnostic, treatment, emergency-triage, or flight-certified system. No NASA endorsement is implied.
+OrbitCare is an astronaut self-monitoring research prototype for NASA Space Apps 2026, developed collectively by Bihandu Liyanage and Nesandu Liyanage through an AI-assisted discovery and implementation process. It is not a diagnostic, treatment, emergency-triage, or flight-certified system. No NASA endorsement is implied.
 
 ## Team
 
@@ -11,7 +11,7 @@ OrbitCare has two officially registered NASA Space Apps Challenge 2026 team memb
 - Bihandu Liyanage
 - Nesandu Liyanage
 
-Local Event: **Anuradhapura, Sri Lanka**. Nesandu’s team membership has been approved by Bihandu. This current membership update does not change the documented original project ownership, development history or AI-use attribution.
+Local Event: **Anuradhapura, Sri Lanka**. Both team members jointly developed and refined OrbitCare, including **Help a crewmate / Crew Assist**. See AI_USE.md for the assistance disclosure.
 
 ## Cinematic mission experience
 
