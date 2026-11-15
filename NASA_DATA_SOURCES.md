@@ -55,3 +55,9 @@ Examined sources are not claimed as implemented data integrations. Challenge/sub
 During the alignment upgrade the original NASA overview/standard pages were re-inspected. OSD-575's browser page returned no readable study text; the previously verified source snapshot, acquisition record and value/checksum tests remain the basis of the unchanged numerical integration. No source data were refreshed or replaced.
 
 The requested Canadian Space Agency radiation-monitoring article and space-science overview were inspected but are not implemented data integrations or sources for OrbitCare thresholds. The app has no radiation measurement capability. See CHALLENGE_ALIGNMENT.md for the full source audit and feature matrix.
+
+## Judge-first resource verification — 15 November 2026
+
+A real browser retrieved HTTP 200 from the [official challenge Resources tab](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/?tab=resources). It lists Five Hazards, Risks of Human Spaceflight and Ongoing HRP Research, plus two CSA educational resources. Evidence is retained in `artifacts/judge-final/challenge-resource-inspection.json`. This supersedes the earlier direct-retrieval limitation for the challenge resource list.
+
+The first two NASA resources are used in OrbitCare’s method/evidence and body-context scope explanations. The new research connections explicitly trace the Risks overview to specialist cardiovascular and sleep context. Standard Measures informs the repeated-observation context; published medical-care requirements inform boundaries. These are contextual/design connections, not evidence validating the fixed reference duration, thresholds or persistence rule. OSD-575 is an additional original-data integration; it is not presented as a directly listed challenge resource. All 56 values, units and provenance remain unchanged.

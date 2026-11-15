@@ -1,5 +1,47 @@
 # OrbitCare - guided-care release verification
 
+## Team-membership update verification — 15 November 2026, 15:26 Asia/Colombo
+
+Current production: **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu**. This was a documentation/media-credit update; the prior full 28-check application regression results below remain the implementation baseline.
+
+- Current team: Bihandu Liyanage and Nesandu Liyanage; Local Event: Anuradhapura, Sri Lanka; registration/approval supplied by Bihandu.
+- Build/TypeScript and renderer lint passed; all 31 unit/data tests passed.
+- Existing local demonstration test and full fresh-judge journey test passed. Existing public demonstration playback/PDF test passed; Edge public offline/review persistence passed.
+- Exact source hashes confirm 47 protected application, NASA data, test, original-license, MP4 and poster files were unchanged by this task.
+- Exported PDF contains both names and the correct event; exactly seven 16:9 pages; slides 2–7 match previous rendered pixels and extracted text exactly. The title slide was visually inspected.
+- Existing actual encoded video scenes and MP4 metadata were inspected. No outdated membership statement appears. Video was not regenerated and retains the same SHA-256 and 28.000-second duration.
+- Public credits were checked in fresh desktop/mobile contexts for names, local event, original creator attribution and absence of horizontal overflow. Public HTML, slide HTML, PDF, MP4 and SW bytes match the verified local files.
+- No tests or application credits/code were modified; the application’s existing generic credits needed no team correction. Copyright and documented Bihandu/AI-development attribution remain intact. No Nesandu contribution was invented.
+
+Evidence: `artifacts/team-update/`. Current source/submission references to solo membership were removed; explicitly historical descriptions of Bihandu’s earlier individual participation remain accurate. No qualifying Next.js feedback issue was retained in this pass.
+
+## Latest judge-first verification — 15 November 2026, 14:58 Asia/Colombo
+
+This section supersedes the earlier 23-test release results below. Final production: dpl_FF9aFyLmA98toA4uavzPuwDFnqo3. Software testing does not establish clinical validity or human usability.
+
+| Check | Final observed result |
+|---|---|
+| Unit, calculation, validation and research integrity | 31 tests passed across four files; all 56 original NASA measurements preserved |
+| TypeScript / ESLint / production build | Passed; final static artifact and 48-asset offline cache prepared |
+| Complete local browser suite | All 28 checks passed before promotion |
+| Complete public browser suite | All 28 checks passed on the final public alias in fresh unauthenticated contexts |
+| Judge journey | Open → change scenario → investigate → manual replay → calculation/quality → NASA evidence → local review passed |
+| Offline journey | Real network disconnection, reload, unvisited views, local action and second-reload persistence passed |
+| Missing/non-comparable journey | Distinct uncertainty narratives; broken persistence; no future gaps, review markers or review notes in earlier states |
+| Replay edge cases | Empty workspace stays on day 1; explorer follows the selected indicator; optional playback pauses during investigation interaction |
+| Accessibility | Axe WCAG 2 A/AA and 2.1 AA passed for tested views, dialogs, expanded evidence and saved-review state; keyboard focus and reduced motion passed |
+| Responsive/visual evidence | Fresh opening, replay, explanation, evidence and explorer captures at 1440×900, 1920×1080, 390×844 and 360×800; no horizontal document overflow; main investigation action within the viewport |
+| Original animated logo | Original SVG and CSS have no diff; continuous 1.8-second pulse and seven-second orbit verified; both stop under reduced motion |
+| Microsoft Edge | Final local and public offline/persisted-review/research smoke passed without page errors |
+| Media | FFprobe: 28.000-second 1920×1080/30-fps video; actual recorded replay and disconnected-browser review; seven-page 16:9 PDF rendered and inspected |
+| Release integrity | Protected preview and public SW/MP4/PDF hashes match tested local files |
+| Preservation | Algorithm, schemas, fixtures, NASA data, persistence, offline hook and service-worker generator unchanged; original logo restored |
+| Diff / framework feedback | `git diff --check` passed; reporting pass retained no qualifying Next.js issue |
+
+Visual defects discovered during this pass were fixed before release: mobile action below the fold, legacy mission-day stacking/overlap, saved-review timestamp contrast, and inline NASA link differentiation. A crop that included the later reload was corrected in the actual offline-action video scene and the encoded result inspected again. Tests were updated to explicitly open the new progressive investigation layer, preserving the original assertions.
+
+Evidence: `artifacts/upgrade-judge-before/` (live baseline), `artifacts/judge-final/` (tested final local build), `artifacts/judge-public/` (final public captures and original-motion proof), and `artifacts/presentation/` (capture metadata, PDF renders and encoded video frames). The numerical source and original logo preservation check is stored in `public-verification.json`. No human usability-test outcome is invented.
+
 Performed 15 November 2026 in Asia/Colombo. Node.js 26.8.1, Next.js 16.4.6, React 19.3.0. Software checks are not clinical validation or an astronaut usability study.
 
 ## Preservation and baseline

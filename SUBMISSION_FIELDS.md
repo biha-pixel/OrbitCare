@@ -6,9 +6,18 @@ Review against the official form's actual field limits and current guide before 
 
 OrbitCare
 
+## Team
+
+OrbitCare has two officially registered NASA Space Apps Challenge 2026 team members:
+
+- Bihandu Liyanage
+- Nesandu Liyanage
+
+Local Event: **Anuradhapura, Sri Lanka**. Nesandu’s team membership has been approved by Bihandu. This current membership update does not change the documented original project ownership, development history or AI-use attribution.
+
 ## High-level summary
 
-OrbitCare guides astronaut self-monitoring, explains personal changes and preserves review records offline. A body-system explorer connects recorded indicators with NASA research and clear limits. Measurement guides and transparent rules support interpretation; urgent concerns lead separately to approved mission procedures. Synthetic scenarios stay separate from original OSD-575 research. Research prototype, not diagnosis, emergency triage or certified medical care.
+OrbitCare helps astronauts notice personal changes, understand why a review is suggested, and preserve their review offline. Mission Decision Replay traces a fixed reference, changed readings, persistence and review using transparent rules. NASA research informs indicator context and care boundaries; a separate OSD-575 explorer preserves original laboratory measurements. Monitoring scenarios are synthetic. This research prototype does not diagnose, treat or validate medical thresholds.
 
 ## Public demonstration
 
@@ -18,7 +27,7 @@ Direct video if the field requires a media file: https://orbitcare-eight.vercel.
 
 Fallback presentation: https://orbitcare-eight.vercel.app/demo/OrbitCare-seven-slides.pdf
 
-Choose one primary demonstration format according to the official guide. The video is 28 seconds; the fallback PDF has seven pages including title/closing slides.
+Choose one primary demonstration format according to the official guide. The final video is 28 seconds and follows one reference-to-review story, including actual manual replay and offline review interactions. The fallback PDF has seven pages including title/closing slides; the title slide lists Bihandu Liyanage and Nesandu Liyanage for Anuradhapura, Sri Lanka. Slide 5 shows actual NASA OSD-575 measurements and their scientific separation. The 28-second video has no outdated membership claim and was preserved unchanged.
 
 ## Final project
 
@@ -30,9 +39,11 @@ Use PROJECT_DESCRIPTION.md after participant review. It describes the implemente
 
 ## Use of Super Intelligence / AI
 
-OpenAI Codex assisted with a structured discovery interview, source inspection, architecture, implementation, synthetic fixtures, testing, interface refinement, documentation, deployment, and demo tooling. I selected and refined the product direction and retain responsibility for the solution and claims. Runtime explanations are deterministic and call no cloud model. Synthetic monitoring data is labeled and kept separate from original NASA research measurements. No AI diagnostic performance is claimed. See AI_USE.md for the full disclosure and update it for any further tools I actually use.
+OpenAI Codex assisted with a structured discovery interview, source inspection, architecture, implementation, synthetic fixtures, testing, interface refinement, documentation, deployment, and demo tooling. Bihandu Liyanage selected and refined the product direction and retains responsibility for the solution and claims. Runtime explanations are deterministic and call no cloud model. Synthetic monitoring data is labeled and kept separate from original NASA research measurements. No AI diagnostic performance is claimed. See AI_USE.md for the full disclosure and update it for any further tools I actually use.
 
 ## NASA data and resources actually used
+
+The official challenge Resources tab was retrieved successfully on 15 November 2026. It directly lists NASA Five Hazards, Risks of Human Spaceflight and Ongoing HRP Research. OrbitCare uses the first two in its evidence and scope explanations; specialist articles deepen those connections. OSD-575 is an additional numerical integration, not claimed as a directly listed challenge dataset.
 
 - NASA Standard Measures: repeated, contextual human-spaceflight monitoring research.
 - NASA sleep and irregular schedules risk: sleep/circadian context and limits.

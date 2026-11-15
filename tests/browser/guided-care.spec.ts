@@ -3,6 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
+  await page.locator(".investigation > summary").click();
   await expect(page.getByRole("button", { name: "Record check-in", exact: true })).toBeEnabled();
 });
 
@@ -66,7 +67,7 @@ test("next steps reflect missing information and local review does not send a re
   await page.getByRole("button", { name: "Record action", exact: true }).click();
   await expect(page.getByRole("status").filter({ hasText: "Nothing was sent to medical support" })).toBeVisible();
   await page.getByRole("button", { name: "Review recent observations", exact: true }).click();
-  await expect(page.getByRole("heading", { name: "Follow the mission", exact: true })).toBeFocused();
+  await expect(page.getByRole("heading", { name: "What was known on this day?", exact: true })).toBeFocused();
   await page.getByRole("button", { name: "Replay", exact: true }).click();
   await page.getByRole("button", { name: "Serious symptoms?", exact: false }).click();
   await expect(page.getByRole("dialog")).toContainText("Do not wait for three days");
@@ -135,7 +136,7 @@ test("new explorer and guidance are responsive, accessible and respect reduced m
 
 test("unvisited explorer, guidance and urgent signpost all work after actual offline reload", async ({ page, context }) => {
   await expect(page.getByText("Offline ready", { exact: true }).first()).toBeVisible({ timeout: 45000 });
-  await context.setOffline(true); await page.reload();
+  await context.setOffline(true); await page.reload(); await page.locator(".investigation > summary").click();
   await page.getByRole("button", { name: "Health explorer", exact: true }).click();
   await expect(page.locator(".system-panel h2")).toHaveText("Cardiovascular");
   await page.getByRole("button", { name: "Sleep & fatigue", exact: false }).first().click();
@@ -148,8 +149,9 @@ test("unvisited explorer, guidance and urgent signpost all work after actual off
   await page.getByText("How to measure and record", { exact: true }).click();
   await expect(page.locator(".guide-reading")).toContainText("count for 30 seconds");
   await page.keyboard.press("Escape");
+  if (!(await page.locator(".investigation").getAttribute("open")) && !(await page.locator(".investigation").evaluate(element => (element as HTMLDetailsElement).open))) await page.locator(".investigation > summary").click();
   await page.getByLabel("Review note", { exact: false }).fill("Guided offline review; no communication sent.");
   await page.getByRole("button", { name: "Record action", exact: true }).click();
-  await page.reload();
+  await page.reload(); await page.locator(".investigation > summary").click();
   await expect(page.getByText("Guided offline review; no communication sent.", { exact: true })).toBeVisible();
 });

@@ -9,12 +9,12 @@ try {
   await expect(page.getByText("3 indicators suggest a closer look.")).toBeVisible();
   await expect(page.getByText("Offline ready", { exact: true }).first()).toBeVisible({ timeout: 45000 });
   await context.setOffline(true);
-  await page.reload();
+  await page.reload(); await page.locator(".investigation > summary").click();
   await expect(page.getByText("Browser offline", { exact: true })).toBeVisible();
   await page.getByLabel("Review note", { exact: false }).fill("Edge offline smoke check.");
   await page.getByRole("button", { name: "Record action", exact: true }).click();
   await expect(page.getByText("Saved on this device", { exact: false }).first()).toBeVisible();
-  await page.reload();
+  await page.reload(); await page.locator(".investigation > summary").click();
   await expect(page.getByText("Edge offline smoke check.", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "NASA research", exact: true }).click();
   await expect(page.getByRole("heading", { name: "A record across sampling visits" })).toBeVisible();

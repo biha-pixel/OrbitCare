@@ -46,3 +46,10 @@ OrbitCare code retains the existing MIT license, copyright Bihandu Liyanage 2026
 - [NHLBI diary guidance](https://www.nhlbi.nih.gov/health/insomnia/diagnosis): sleep/wake/nap and surrounding-context recording. OrbitCare's daily aggregation and fatigue scale remain separately labeled conventions.
 
 The human-body SVG is original AI-assisted application code, not NASA imagery or a medical illustration licensed from a third party. It is a schematic educational selector. Media contains actual application captures and disclosed AI-assisted code-defined graphics. No image-generation model, astronaut likeness or NASA insignia was added. The current guide's media/disclosure requirements still need participant reconciliation.
+
+## Final judge-first refinement
+
+- [Official 2026 health-monitoring challenge resources](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/?tab=resources): retrieved by browser; verifies the listed NASA overview resources.
+- [NASA Space Apps GO Team resource guidance](https://github.com/nasa/spaceapps/discussions/1827): current clarification that Global Awards require an included NASA challenge resource and attribution of actual resources/tools.
+- [2025 judging instructional guidance](https://spaceapps-v2-staging.s3.amazonaws.com/media/documents/Final_Space_Apps_2025_Judging_Guidelines_for_web.pdf): historical presentation and meaningful-resource context only; not substituted for current submission rules.
+- The existing four local design/React skills informed hierarchy, disclosure, responsive layout and motion. Local Next.js 16.4.6 client-component and static-export guides were read before changes.

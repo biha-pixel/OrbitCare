@@ -1,6 +1,14 @@
 # OrbitCare — challenge alignment upgrade
 
-## Checkpoint, scope and source confidence
+## Current team
+
+OrbitCare’s registered team now comprises **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**. Bihandu approved Nesandu’s membership. Original ownership, development attribution and AI disclosures remain unchanged.
+
+## Latest judge-first refinement
+
+The later judge-first pass is documented in JUDGE_READINESS.md. The official challenge Resources tab was successfully read in a real browser on 15 November 2026 (HTTP 200); its NASA links are now independently verified. The earlier retrieval failure below is historical. No claim is made that OSD-575 calibrates the synthetic monitoring rules.
+
+## Earlier checkpoint, scope and source confidence
 
 15 November 2026, Asia/Colombo. Starting clean revision: `25f1464`; full source archive and Git state in `artifacts/alignment-baseline/`. The previous public release `dpl_7xF44a7wDxZz46LLoUnFr2tTqY6D` remains the fallback. No agent commit or push is authorized.
 

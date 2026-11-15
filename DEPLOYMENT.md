@@ -1,5 +1,33 @@
 # OrbitCare deployment
 
+## Current team-membership release — 15 November 2026, 15:26 Asia/Colombo
+
+Production **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu** is published at https://orbitcare-eight.vercel.app/. It lists **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**, in the public demo credits and seven-slide presentation. Bihandu confirmed both registrations and approved Nesandu’s membership. Original project ownership, development history, AI attribution and MIT copyright remain unchanged.
+
+Only the PDF title slide and public demo credits changed in the deployed materials. Slides 2–7 match the previous release pixel for pixel. The existing MP4 contains no outdated membership claim and was **not regenerated**: 28.000 seconds, 1,388,512 bytes, SHA-256 `926a5401e072b077603e8980f96b9254a94c30855e088f18d336d0935172e3eb`. The updated PDF has exactly seven 16:9 pages, 736,453 bytes, SHA-256 `bd0de876c36fe5decdb8becc1ad0bf0cb80f6a4ba35a0e78555a5d6c9140c56c`.
+
+Build/TypeScript, renderer lint, 31 unit/data tests, targeted local demo and judge-journey browser checks passed. Public demo playback/seven-page checks and Edge offline persistence passed. Fresh public browser checks verified both names, the event, preserved original creator attribution and exact local/public HTML, slide HTML, PDF, MP4 and service-worker hashes. Hash checks confirm all 47 protected application/data/test/license/video/poster files are unchanged from the start of this membership update. Core offline cache was rebuilt as `32eb234bb0232bf0`.
+
+Protected preview: dpl_76AMn5ghyfonLYsnR29Cc3GvdX3w, https://orbitcare-jlymrwjo5-nutri-38e1.vercel.app; credits/PDF matched the tested files before promotion. Previous verified production dpl_FF9aFyLmA98toA4uavzPuwDFnqo3 remains the fallback. Evidence: `artifacts/team-update/public-verification.json`, `pdf-verification.json`, `preservation-baseline.json`, `team-slide.png` and public credit screenshots. Earlier release records below remain historical. Source changes remain local and uncommitted; the participant must still complete judging submission.
+
+## Previous judge-first release — 15 November 2026, 14:58 Asia/Colombo
+
+Production deployment **dpl_FF9aFyLmA98toA4uavzPuwDFnqo3** is Ready at **https://orbitcare-eight.vercel.app/**. Deployment URL: https://orbitcare-2kyfxs1ii-nutri-38e1.vercel.app. Protected preview: dpl_7Q6zbnvKXkAGarGJCdXd9pDvKDyp, https://orbitcare-9b7r1uoow-nutri-38e1.vercel.app. The previous verified production dpl_EMS6sxHxe1j6RDLhCCDqaVuqoapc remains in deployment history as fallback. The sections below describe that earlier release and are retained as history.
+
+The original pulse and planet logo files are restored exactly to the starting revision. Normal motion loops continuously; reduced motion disables both. The judge-first brief, progressive investigation, manual decision replay, research-to-feature cards and selected-day explorer integration are live.
+
+The final artifact passed 31 unit/data tests, TypeScript, lint, production build and all 28 local browser checks before promotion. Authenticated preview retrieval verified exact service-worker, MP4 and PDF bytes. All 28 checks then passed against the final public alias in fresh unauthenticated contexts; Microsoft Edge public offline/persistence smoke passed. Public four-size screenshot and logo-motion checks passed. Public SW/video/PDF bytes match the local artifact. No deployment protection was disabled.
+
+Core offline version: **a89a23532d5971c1**, 48 assets, approximately 1.57 MiB. Video: **28.000 seconds**, 1920×1080, 30 fps H.264, **1,388,512 bytes**. PDF: exactly **seven native 16:9 pages**, **736,418 bytes**. Media captures: 2026-11-15T09:11:57.181Z (UTC). Actual encoded scenes and all exported PDF pages were visually inspected. Manual replay and offline review are actual recorded interactions; saved review survives another offline reload.
+
+SHA-256:
+
+- MP4: `926a5401e072b077603e8980f96b9254a94c30855e088f18d336d0935172e3eb`
+- PDF: `6155a48342e12fa596c7b7a330164c3941dcc434fea65130d74bc8f7e549040e`
+- Service worker: `8e17ddcbb7f911907a3e00858523d3d836adf50f70a6fe1ea72910a9590ab1c4`
+
+Evidence: `artifacts/judge-final/preview-verification.json`, `artifacts/judge-final/public-verification.json`, `artifacts/judge-public/`, and `artifacts/presentation/verification.json`. Final public links remain the application, `/demo/`, `/demo/OrbitCare-demo.mp4`, and `/demo/OrbitCare-seven-slides.pdf` on the stable production domain. No agent commit or push was made. NASA judging submission still requires the participant’s registered account and successful confirmation.
+
 ## Public links
 
 - Application / final project: **https://orbitcare-eight.vercel.app/**

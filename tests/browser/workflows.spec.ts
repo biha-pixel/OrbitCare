@@ -4,6 +4,7 @@ import { mkdir } from "node:fs/promises";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
+  await page.locator(".investigation > summary").click();
   await expect(page.getByRole("button", { name: "Record check-in", exact: true })).toBeEnabled();
 });
 
@@ -37,7 +38,7 @@ test("check-ins validate, persist, and require deliberate edits", async ({ page 
   await page.getByRole("button", { name: "Save check-in", exact: true }).click();
   await expect(page.getByRole("status").filter({ hasText: "Check-in recorded for mission day 29" })).toBeVisible();
   await expect(page.getByText("Saved on this device", { exact: false }).first()).toBeVisible();
-  await page.reload();
+  await page.reload(); await page.locator(".investigation > summary").click();
   await expect(page.getByRole("button", { name: "Mission day 29", exact: false })).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: "Record check-in", exact: true }).click();
   await page.getByRole("button", { name: "Save check-in", exact: true }).click();
@@ -53,7 +54,7 @@ test("local review records do not clear flags", async ({ page }) => {
   await page.getByRole("button", { name: "Record action", exact: true }).click();
   await expect(page.getByText("3 indicators suggest a closer look.")).toBeVisible();
   await expect(page.getByText("Repeat under comparable resting conditions.", { exact: true })).toBeVisible();
-  await page.reload();
+  await page.reload(); await page.locator(".investigation > summary").click();
   await expect(page.getByText("Repeat under comparable resting conditions.", { exact: true })).toBeVisible();
 });
 
@@ -106,13 +107,13 @@ test("empty custom workspace has honest missing and reference states", async ({ 
 test("production app reopens offline, saves, exports, and opens uncached views", async ({ page, context }) => {
   await expect(page.getByText("Offline ready", { exact: true }).first()).toBeVisible({ timeout: 30000 });
   await context.setOffline(true);
-  await page.reload();
+  await page.reload(); await page.locator(".investigation > summary").click();
   await expect(page.getByText("Browser offline", { exact: true })).toBeVisible();
   await expect(page.getByText("3 indicators suggest a closer look.")).toBeVisible();
   await page.getByLabel("Review note", { exact: false }).fill("Offline follow-up recorded.");
   await page.getByRole("button", { name: "Record action", exact: true }).click();
   await expect(page.getByText("Saved on this device", { exact: false }).first()).toBeVisible();
-  await page.reload();
+  await page.reload(); await page.locator(".investigation > summary").click();
   await expect(page.getByText("Offline follow-up recorded.", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "NASA research", exact: true }).click();
   await expect(page.getByRole("heading", { name: "A record across sampling visits" })).toBeVisible();

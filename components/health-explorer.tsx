@@ -34,8 +34,8 @@ function BodyMap({ selected, onSelect }: { selected: BodySystemId; onSelect: (id
   </svg>;
 }
 
-export default function HealthExplorer({ workspace, day, results, onDay, onMonitor, onUrgent }: { workspace: Workspace; day: number; results: Result[]; onDay: (day: number) => void; onMonitor: (indicator: Indicator) => void; onUrgent: () => void }) {
-  const [selected, setSelected] = useState<BodySystemId>("cardiovascular");
+export default function HealthExplorer({ workspace, day, results, onDay, onMonitor, onUrgent, initialIndicator }: { initialIndicator: Indicator; workspace: Workspace; day: number; results: Result[]; onDay: (day: number) => void; onMonitor: (indicator: Indicator) => void; onUrgent: () => void }) {
+  const [selected, setSelected] = useState<BodySystemId>(initialIndicator === "heartRate" ? "cardiovascular" : "sleep");
   const system = bodySystems.find(item => item.id === selected)!;
   const source = careSources[system.source];
   const current = workspace.checkIns.find(item => item.day === day);

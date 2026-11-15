@@ -35,6 +35,7 @@ export default function OrbitCare() {
   const [error, setError] = useState("");
   const [entryDay, setEntryDay] = useState<number | null>(null);
   const [urgentOpen, setUrgentOpen] = useState(false);
+  const [investigating, setInvestigating] = useState(false);
   const [playing, setPlaying] = useState(false);
   const queue = useRef<Promise<void>>(Promise.resolve());
   const offline = useOffline();
@@ -51,7 +52,7 @@ export default function OrbitCare() {
   }, []);
   useEffect(() => {
     if (!playing) return;
-    const timer = window.setInterval(() => setDay(previous => { if (previous >= workspace.currentDay) { setPlaying(false); return previous; } return previous + 1; }), 650);
+    const timer = window.setInterval(() => setDay(previous => { if (previous >= workspace.currentDay) { setPlaying(false); return previous; } return previous + 1; }), 1600);
     return () => window.clearInterval(timer);
   }, [playing, workspace.currentDay]);
   function commit(next: AppState) {
@@ -90,7 +91,7 @@ export default function OrbitCare() {
     } catch (cause) { setError(cause instanceof Error && cause.message.startsWith("Import must") ? cause.message : "Import rejected: use an OrbitCare schema-v1 export with valid units, values, unique days, and rule version. Existing data is unchanged."); }
   }
   return <div className="app-shell"><a href="#main-content" className="skip-link">Skip to main content</a>
-    <aside className="sidebar"><a className="brand" href="#main-content" aria-label="OrbitCare home" onClick={() => setView("monitor")}><BrandMark /><span>OrbitCare<span className="brand-caption">Personal monitoring</span></span></a>
+    <aside className="sidebar"><a className="brand" href="#main-content" aria-label="OrbitCare home" onClick={() => setView("monitor")}><BrandMark /><span>OrbitCare<span className="brand-caption">Research prototype</span></span></a>
       <div className="workspace-label">Mission workspace</div><nav aria-label="Main navigation">{navigation.map(item => <button key={item.id} className={view === item.id ? "nav-item active" : "nav-item"} aria-current={view === item.id ? "page" : undefined} onClick={() => { setView(item.id); setPlaying(false); }}><item.icon size={19} />{item.label}{view === item.id && <span className="nav-active-dot" />}</button>)}</nav>
       <div className="sidebar-bottom"><div className="device-status"><span className={`connection-orb ${offline.ready ? "ready" : ""}`} /><div><strong>{offline.status}</strong><span>Local analysis. No cloud account.</span></div></div><div className="crew-identity"><span className="crew-monogram">C1</span><div><strong>Crewmember 01</strong><span>Fictional demonstration profile</span></div></div><p className="sidebar-disclaimer">A research prototype for NASA Space Apps 2026. Not a clinical or flight-certified system.</p></div>
     </aside>
@@ -100,8 +101,8 @@ export default function OrbitCare() {
         {message && <div className="notice success" role="status"><Check size={17} /><span>{message}</span><button className="text-button" onClick={() => setMessage("")}>Dismiss</button></div>}
         {offline.waiting && <div className="notice"><Info size={17} /><span>An updated application is ready. Save or export work before reloading.</span><button className="text-button" onClick={() => { if (window.confirm("Apply the update and reload? Save or export unsaved work first.")) offline.applyUpdate(); }}>Apply update</button></div>}
         <div key={view} className="view-transition">
-        {view === "monitor" && <MonitorView workspace={workspace} day={day} indicator={indicator} results={results} loaded={loaded} playing={playing} selectDay={next => { setPlaying(false); setDay(next); }} selectIndicator={setIndicator} selectWorkspace={selectWorkspace} onCheckIn={() => setEntryDay(day)} onReview={saveReview} onReplay={() => { if (playing) setPlaying(false); else { setDay(14); setPlaying(true); } }} onData={() => setView("data")} onExplorer={() => { setPlaying(false); setView("explorer"); }} onUrgent={openUrgent} />}
-        {view === "explorer" && <HealthExplorer workspace={workspace} day={day} results={results} onDay={next => { setPlaying(false); setDay(next); }} onMonitor={next => { setIndicator(next); setView("monitor"); }} onUrgent={openUrgent} />}
+        {view === "monitor" && <MonitorView workspace={workspace} day={day} indicator={indicator} results={results} loaded={loaded} playing={playing} investigating={investigating} onInvestigating={open => { setInvestigating(open); if (!open) setPlaying(false); }} onResearch={() => { setPlaying(false); setView("research"); }} selectDay={next => { setPlaying(false); setDay(next); }} selectIndicator={next => { setPlaying(false); setIndicator(next); }} selectWorkspace={selectWorkspace} onCheckIn={() => setEntryDay(day)} onReview={saveReview} onReplay={() => { if (playing) setPlaying(false); else { setDay(Math.min(14, workspace.currentDay)); setPlaying(true); } }} onData={() => setView("data")} onExplorer={() => { setPlaying(false); setView("explorer"); }} onUrgent={openUrgent} />}
+        {view === "explorer" && <HealthExplorer initialIndicator={indicator} workspace={workspace} day={day} results={results} onDay={next => { setPlaying(false); setDay(next); }} onMonitor={next => { setIndicator(next); setInvestigating(true); setView("monitor"); }} onUrgent={openUrgent} />}
         {view === "research" && <ResearchView />}{view === "method" && <MethodView />}
         {view === "data" && <DataView state={state} workspace={workspace} loaded={loaded} storage={storage} offlineStatus={offline.status} offlineReady={offline.ready} onSelect={selectWorkspace} onCustom={addCustom} onExport={exportCurrent} onImport={importFile} onReset={reset} onRetry={() => void offline.retry()} />}
         </div><footer className="page-footer"><span><ShieldCheck size={14} />Research prototype · not a medical device</span><span>{storage}<span className="footer-dot">·</span>OrbitCare 1.0</span></footer>

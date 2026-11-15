@@ -12,7 +12,7 @@ The app records resting heart rate (bpm), sleep (hours), fatigue (an explicitly 
 
 Aligned plots and a selectable mission timeline reveal what was available on each day, hiding later readings. Selecting an indicator exposes the reference, current value, difference, persistence, rule, research context, origin, uncertainty, and limitations. Local review actions record verifying a measurement, adding context, or requesting medical review. They neither send a communication nor clear a computed flag.
 
-The opening change brief answers what changed and links directly to the explanation. A paired reference/reading comparison and three-day persistence display make the reasoning inspectable. The mission timeline marks reference days, observed changes, missingness and recorded reviews, without revealing future flags. The NASA explorer provides participant shapes, keyboard-selectable observations and an accessible original-value table.
+The opening view presents compact mission context, clearly labeled synthetic scenarios, reference-to-current readings and one primary action: Investigate the change. Calculations, charts, tables and review history remain available inside an expandable investigation. Mission Decision Replay guides manual exploration from reference establishment through the first changed reading, consecutive persistence and review. A Next turning point control derives transitions from the original deterministic analysis. Optional playback can be paused; all stages also work without animation. Future observations, missingness and review events stay hidden in earlier states. NASA research-to-feature cards explain the cardiovascular, sleep, longitudinal and medical-care connections and their limits. The original-value NASA explorer remains separate.
 
 Four deterministic scenarios demonstrate stability, sustained change, incomplete information, and return toward the reference. Judges can reproduce the same behavior without registration. Entries can be added or deliberately edited; accessible tables, validated JSON portability, workspace reset, and a printable review record make the workflow inspectable.
 
@@ -29,6 +29,15 @@ After **Offline ready** confirms preparation, the production application can reo
 NASA Standard Measures supports the relevance of repeated contextual human-spaceflight measurement. NASA sleep/schedule and human-spaceflight risk resources inform evidence panels while making clear that these indicators are incomplete. These resources do not provide OrbitCare's thresholds.
 
 The separate OSD-575 view contains 56 original sodium/potassium observations: four Inspiration4 participants and seven ground sampling visits. It preserves mmol/L, coded participants, visit labels, methodology, an original checksum-verified CSV, and a reproducible transformation. Positions represent categorical sampling visits, not equal elapsed time. The app invents no in-flight data, applies no monitoring alerts to laboratory values, and makes no disease/causal interpretation. A three-day mission does not validate long-duration monitoring rules.
+
+## Team
+
+OrbitCare has two officially registered NASA Space Apps Challenge 2026 team members:
+
+- Bihandu Liyanage
+- Nesandu Liyanage
+
+Local Event: **Anuradhapura, Sri Lanka**. Nesandu’s team membership has been approved by Bihandu. This current membership update does not change the documented original project ownership, development history or AI-use attribution.
 
 ## Distinctive contribution and ownership
 
