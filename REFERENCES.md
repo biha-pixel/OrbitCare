@@ -35,3 +35,14 @@ Skills are project-scoped copies in `.agents/skills/`, with licenses and source 
 Final media uses actual Playwright screen captures, FFmpeg composition, local IBM Plex fonts, and the original OrbitCare mark. A local, non-runtime PyMuPDF 1.26.7 verification wheel rendered the exported PDF pages for visual inspection; it is not bundled with the app or added to its dependencies.
 
 OrbitCare code retains the existing MIT license, copyright Bihandu Liyanage 2026. Third-party sources retain their terms. No NASA branding, endorsement, or certification is claimed.
+
+## Guided-care upgrade sources actually used
+
+- [NASA cardiovascular adaptations](https://www.nasa.gov/reference/risk-of-cardiovascular-adaptations/): heart-rate relevance and limitations, not a diagnostic rule.
+- [NASA five hazards](https://www.nasa.gov/hrp/hazards/): hazard context and explicit monitoring boundaries.
+- [NASA health and medical care](https://www.nasa.gov/reference/3-0-health-and-medical-care/), §§3.1, 3.4, 3.5: mission-specific medical responsibilities and scope.
+- [NASA medical training](https://www.nasa.gov/reference/5-0-training/), §5.2.1: crew medical training context; no emergency protocol copied.
+- [American Heart Association pulse guidance](https://www.heart.org/en/healthy-living/exercise-and-physical-activity/fitness-basics/target-heart-rates): general manual wrist pulse method, not device certification or clinical thresholds.
+- [NHLBI diary guidance](https://www.nhlbi.nih.gov/health/insomnia/diagnosis): sleep/wake/nap and surrounding-context recording. OrbitCare's daily aggregation and fatigue scale remain separately labeled conventions.
+
+The human-body SVG is original AI-assisted application code, not NASA imagery or a medical illustration licensed from a third party. It is a schematic educational selector. Media contains actual application captures and disclosed AI-assisted code-defined graphics. No image-generation model, astronaut likeness or NASA insignia was added. The current guide's media/disclosure requirements still need participant reconciliation.

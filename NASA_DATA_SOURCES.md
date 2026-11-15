@@ -7,6 +7,10 @@
 | [Standard Measures](https://www.nasa.gov/reference/standard-measures/) | Informational human-spaceflight repeated-measure research overview; activity/sleep collection, not a downloaded monitoring table | Longitudinal/contextual monitoring evidence. No OrbitCare thresholds supplied. |
 | [Sleep and irregular schedules risk](https://www.nasa.gov/reference/risk-from-inadequate-sleep-and-irregular-schedules/) | Human-spaceflight research guidance, not an integrated numerical dataset | Sleep/circadian context. Does not validate the fatigue scale or rules. |
 | [HRP risks](https://www.nasa.gov/hrp/risks/) | Human physiological risk/adaptation overview | Heart-rate/exercise context; no fitness or diagnostic conclusion. |
+| [Cardiovascular adaptations](https://www.nasa.gov/reference/risk-of-cardiovascular-adaptations/) | Human-spaceflight risk research overview; no numerical feed | Direct research-to-indicator mapping in the body explorer and heart-rate explanation. Pulse alone cannot diagnose disease. |
+| [Five hazards](https://www.nasa.gov/hrp/hazards/) | Human-spaceflight hazard overview | Method/evidence scope boundary and distance/altered-gravity context; no radiation or organ sensor is claimed. |
+| [Health and medical care](https://www.nasa.gov/reference/3-0-health-and-medical-care/) | Published NASA-STD-3001 care requirements, especially §§3.1, 3.4, 3.5 | Urgent signpost and medical-responsibility boundaries. Not an implementable emergency treatment protocol or certification. |
+| [Medical training](https://www.nasa.gov/reference/5-0-training/) | Published NASA-STD-3001 training requirements, especially §5.2.1 | Explains why approved procedures and trained crew medical personnel are required. No treatment or CPR instructions are implemented. |
 
 Concise paraphrased evidence and original URLs are bundled offline. Original external pages require connectivity. These resources establish relevance, not medical validity of the software.
 
@@ -40,10 +44,14 @@ The selected CSV was publicly downloadable without authentication. The indexed s
 
 | Resource | Classification and decision |
 |---|---|
-| [HRP](https://www.nasa.gov/hrp/), [hazards](https://www.nasa.gov/hrp/hazards/), [roadmap](https://humanresearchroadmap.nasa.gov/Risks/), [ongoing research](https://www.nasa.gov/hrp/ongoing-hrp-research/) | Research/discovery guidance; overview pages do not establish a daily vital-sign dataset or alert thresholds. |
+| [HRP](https://www.nasa.gov/hrp/), [roadmap](https://humanresearchroadmap.nasa.gov/Risks/), [ongoing research](https://www.nasa.gov/hrp/ongoing-hrp-research/) | Research/discovery guidance; overview pages do not establish a daily vital-sign dataset or alert thresholds. Five hazards is now actually used in the evidence/scope explanation above. |
 | [OSDR](https://science.nasa.gov/biological-physical/data/osdr/), [BPS](https://science.nasa.gov/biological-physical/data/), [biological API](https://visualization.osdr.nasa.gov/biodata/api/) | Repository/API discovery, not runtime integrations. Population/units/methods/access are study-specific. |
 | [Inspiration4 catalog](https://osdr.nasa.gov/bio/repo/data/missions/SpaceX%20Inspiration4), [NASA explanation](https://www.nasa.gov/osdr-latest-news-i4-mission-datasets/) | Mission/study discovery. Short-duration research is not long-duration telemetry. |
 | [OSD-569](https://osdr.nasa.gov/bio/repo/data/studies/OSD-569) | Public CBC CSV inspected; ground visits and assay-specific units. Excluded to avoid duplicating the laboratory explorer. Other assays have different access requirements. |
 | [NLSP](https://nlsp.nasa.gov/), [catalog entry](https://data.nasa.gov/dataset/nasa-life-sciences-portal-nlsp) | Portal content unreadable through the research tool, catalog license unspecified. No suitable numerical download validated; excluded. |
 
 Examined sources are not claimed as implemented data integrations. Challenge/submission rules are distinct from scientific evidence; unverified current-guide details remain marked in SUBMISSION_CHECKLIST.md.
+
+During the alignment upgrade the original NASA overview/standard pages were re-inspected. OSD-575's browser page returned no readable study text; the previously verified source snapshot, acquisition record and value/checksum tests remain the basis of the unchanged numerical integration. No source data were refreshed or replaced.
+
+The requested Canadian Space Agency radiation-monitoring article and space-science overview were inspected but are not implemented data integrations or sources for OrbitCare thresholds. The app has no radiation measurement capability. See CHALLENGE_ALIGNMENT.md for the full source audit and feature matrix.

@@ -25,3 +25,7 @@ On mobile, the change brief precedes scenario controls; metric headers sit above
 Use the project-local Frontend Design, Vercel Web Design Guidelines, React Best Practices and UI UX Pro Max guidance. Impeccable critique/polish references inform review only; no engine or hooks are installed. Baseline/final screenshot evidence and implementation decisions are recorded in VISUAL_UPGRADE.md.
 
 Use visible keyboard focus, original chart units, redundant text status, touch-sized controls, native dialog semantics, reduced motion, and table alternatives. Every loading, empty, error, incomplete, and offline state must provide useful direction.
+
+The guided-care upgrade adds a dedicated three-region educational body explorer. The left navy map and right evidence/record panel share a selected system; native text controls duplicate the SVG regions. A highlighted region means selection only. On mobile the map is compact, followed by the record and limitations. An independent Urgent concern control stays available in the top bar and check-in, with calm, immediate referral language rather than alarm effects.
+
+Motion tokens are 180 ms for feedback, 280 ms for panels and 320 ms for body highlighting/connector reveal, using a settling easing curve. Chart observations and all numbers switch immediately; opacity communicates the record change without inventing intermediate measurements. User-triggered guide, navigation, explanation, timeline and saved-review feedback respect prefers-reduced-motion. No continuous atmospheric animation or extra animation package is used.

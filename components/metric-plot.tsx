@@ -23,7 +23,7 @@ export default function MetricPlot({ workspace, day, result, selected, onSelect 
       <span className={`metric-state ${result.status === "review" || result.status === "change" ? "text-amber" : ""}`}>{STATUS_LABELS[result.status]}</span>
       <span className="metric-reference">Reference {formatValue(center, result.indicator)} {metric.unit}</span>
     </button>
-    <div className="plot" role="img" aria-label={`${metric.name} through mission day ${day}. ${STATUS_LABELS[result.status]}. Reference ${formatValue(center, result.indicator)} ${metric.unit}. Data table below.`}>
+    <div key={`${workspace.id}-${day}`} className="plot observation-transition" role="img" aria-label={`${metric.name} through mission day ${day}. ${STATUS_LABELS[result.status]}. Reference ${formatValue(center, result.indicator)} ${metric.unit}. Data table below.`}>
       <ResponsiveContainer width="100%" height="100%" minWidth={0}>
         <LineChart data={plot} margin={{ top: 13, right: 15, bottom: 2, left: 0 }} accessibilityLayer>
           <CartesianGrid vertical={false} stroke="#E8EEEB" strokeDasharray="3 4" />

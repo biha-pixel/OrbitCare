@@ -5,6 +5,7 @@ import "@fontsource/ibm-plex-sans/latin-600.css";
 import "@fontsource/ibm-plex-mono/latin-400.css";
 import "./globals.css";
 import "./mission.css";
+import "./alignment.css";
 
 export const metadata: Metadata = {
   title: "OrbitCare — Mission health review",

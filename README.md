@@ -13,6 +13,8 @@ Verified public links are recorded in [DEPLOYMENT.md](DEPLOYMENT.md). No registr
 3. Record a review action. It stays local, does not contact support, and does not clear calculated flags.
 4. Wait for **Offline ready**, disconnect, and reload. Use monitoring, check-ins, evidence, research, reviews, and export offline.
 5. Open **NASA research** for a separate, descriptive view of real OSD-575 serum measurements.
+6. Open **Health explorer** to select a schematic body region, inspect its existing recorded trend and read the NASA context and limits. Expand **How to measure and record** in check-in for methods and quality guidance.
+7. **Urgent concern** directs immediately to approved mission procedures and designated medical personnel. It works independently of trend flags and makes no contact or diagnosis.
 
 Monitoring data is synthetic or user-entered test data. NASA laboratory observations never enter the monitoring engine. Do not enter private medical information.
 
@@ -72,6 +74,8 @@ package-lock.json   Locked dependency versions
 Daily heart-rate, sleep, ordinal fatigue, and contextual exercise entries; fixed personal reference statistics; transparent three-day persistence; aligned original-unit plots; mission timeline/replay; evidence and assumptions; review history; native IndexedDB; validated JSON import/export; deliberate reset; printable record; responsive keyboard-accessible UI; production offline PWA; and a separate 56-observation NASA OSD-575 explorer.
 
 The redesigned workspace puts a unified change brief first, followed by scenario previews, readable plots, a reference-to-reading explanation, and marked mission progression. See [VISUAL_UPGRADE.md](VISUAL_UPGRADE.md) for the visual audit, checkpoint, screenshot comparisons and preservation checks. The final demo uses composed actual screen captures and a recorded, genuinely offline interaction; it is not presented as a continuous recording.
+
+The subsequent [challenge alignment audit](CHALLENGE_ALIGNMENT.md) records guided recording, status-specific next steps, the separate urgent signpost and the three-region interactive SVG explorer. CSS feedback uses 180–320 ms transitions with a reduced-motion override; health values update immediately without animated interpolation. No additional runtime dependency or saved-record schema was introduced.
 
 Next.js 16.4.6 static export, React 19.3.0, TypeScript, Tailwind 4.3.3, Recharts, Zod, Lucide, and locally bundled IBM Plex fonts. No server, authentication, analytics SDK, cloud model, sensor connection, or automatic synchronization is used. Hosting receives normal web requests; monitoring entries are processed locally.
 

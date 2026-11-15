@@ -50,3 +50,13 @@ Sampling visits have unequal elapsed-time spacing. The view uses categorical pos
 ## Software limits
 
 Browser records are unencrypted by OrbitCare and subject to clearing/eviction. No multi-tab/multi-device synchronization exists. Offline reopening needs prior online preparation; external pages need internet. Browser connectivity does not prove reachable Earth communications. Automated tests demonstrate software behavior, not clinical validity or complete accessibility certification.
+
+## Guided recording, body exploration and urgent concerns
+
+The expandable measurement guides describe methods and equipment assumptions. Manual pulse guidance draws on the American Heart Association's terrestrial educational instructions, not a NASA-certified acquisition protocol. No device is connected or verified. The sleep guide uses an explicit preceding-24-hour aggregation convention; consistent intervals and avoiding duplicate sleep are engineering choices informed by diary practice, not a validated mission measurement system. The fatigue scale remains illustrative. Context notes do not adjust thresholds automatically; only heart rate has the existing explicit comparability exclusion.
+
+The SVG body is a deliberately simplified educational map, created through AI-assisted code. Heart, head and muscle highlights are topic selection, never measured organ condition. Associated charts use existing selected-day observations and references; exercise remains duration context without a flag. There are no new organ, brain, muscle, radiation, bone-density or fitness measurements. The drawing is not suitable for anatomical instruction or clinical localization.
+
+The Urgent concern panel is accessible independently of readings, reference sufficiency and three-day rules, including from check-in and offline. It directs immediate use of approved mission emergency procedures and the designated Crew Medical Officer or appropriate support according to those procedures. It supplies no treatment algorithm, diagnosis, symptom score, CPR steps, medication, contact service or actual mission protocol. Opening it does not alert anyone and should not delay real procedures. A normal-looking trend does not rule out an emergency. Ordinary review actions remain local notes and retain the existing export schema.
+
+NASA's public care/training requirements justify the responsibility boundary; they do not certify this interface. Plain language, keyboard controls and automated accessibility checks have been exercised, but comprehension by medically untrained astronauts has not been established through a user study.

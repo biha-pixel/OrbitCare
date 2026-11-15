@@ -16,6 +16,12 @@ The opening change brief answers what changed and links directly to the explanat
 
 Four deterministic scenarios demonstrate stability, sustained change, incomplete information, and return toward the reference. Judges can reproduce the same behavior without registration. Entries can be added or deliberately edited; accessible tables, validated JSON portability, workspace reset, and a printable review record make the workflow inspectable.
 
+An expandable four-indicator guide explains what is recorded, why it matters, practical methods, equipment assumptions and interpretation limits. Status-specific next steps suggest checking measurement quality, recording context, inspecting recent observations and using designated medical personnel or approved procedures when appropriate. Saving a review is always a local action.
+
+The interactive human health explorer links a schematic cardiovascular, head and muscle region to the existing selected-day heart-rate, sleep/fatigue or exercise record. Spatial controls have keyboard and text alternatives. Region highlighting is educational navigation, never an organ-health conclusion. Direct NASA research cards distinguish context from unvalidated thresholds.
+
+An always available Urgent concern panel separates serious acute concerns from gradual monitoring. It immediately directs users to approved mission emergency procedures and the designated medical personnel, independently of trends or missing data. It contains no treatment protocol, emergency diagnosis or communication function. It never asks the user to wait for three changed days.
+
 After **Offline ready** confirms preparation, the production application can reopen without network access and continue local analysis, entry, review, evidence inspection, and export. Persistence alone is never presented as proof of offline reopening.
 
 ## NASA science and data

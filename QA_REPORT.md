@@ -1,53 +1,54 @@
-# OrbitCare ? redesigned release verification
+# OrbitCare - guided-care release verification
 
-Performed 15 November 2026 in the participant's Windows workspace. Environment: Node.js 26.8.1, Next.js 16.4.6, React 19.3.0. These are software checks, not clinical validation or an astronaut usability study.
+Performed 15 November 2026 in Asia/Colombo. Node.js 26.8.1, Next.js 16.4.6, React 19.3.0. Software checks are not clinical validation or an astronaut usability study.
 
-## Checks actually run for this upgrade
+## Preservation and baseline
 
-| Check | Observed result |
+The starting clean revision was 25f1464. Git state and a full source archive were saved in artifacts/alignment-baseline/. Before application changes, 28 unit/data tests, lint, TypeScript, production build and 15 browser regressions passed. Five-size screenshots are in artifacts/upgrade-alignment-baseline/. No agent commit or push was made.
+
+The numerical analysis, types, validation, scenario fixtures, NASA raw/derived measurements, IndexedDB persistence, offline hook and service-worker generator have no diff from that checkpoint. Data schema v1 and existing export/import behavior remain intact. New source-backed guidance and UI read existing analysis results. Urgent concern contains no diagnostic algorithm or record/communication system.
+
+## Completed checks
+
+| Check | Actual observed result |
 |---|---|
-| Baseline checkpoint | Clean starting revision bb634c3103e65158cb09e8a570099dd141f2a728; full source archive and Git state retained in artifacts/upgrade-baseline/ |
-| Baseline verification | 28 unit/data tests, lint, TypeScript, production build and 12 browser checks passed before application edits |
-| Final npm test | 28 tests passed across three numerical, validation and research-integrity suites |
-| Final npm run lint | Passed |
-| Final npm run typecheck | Passed |
-| Final npm run build | Passed; 56 original research observations reproduced; static export and offline manifest generated |
-| Final local Chromium suite | All 15 tests passed, including new change-brief, future-timeline, keyboard research and five-viewport assertions |
-| Microsoft Edge smoke | Passed against both local artifact and final public URL: actual offline reload, persisted local review, bundled research, no page errors |
-| Automated accessibility | Tested monitor, research, method, data and check-in dialog: no axe WCAG 2 A/AA and 2.1 AA violations detected |
-| Visual audit | Baseline and final screenshots at 1440?900, 1920?1080, 1024?768, 390?844 and 360?800; no horizontal document overflow in the tested layouts |
-| Preservation check | No diff from the starting checkpoint in analysis, types, validation, persistence, offline hook, scenario fixtures, NASA raw/derived measurements or service-worker generator |
-| NASA integrity | Exact source checksum and byte length, all 56 selected values, original units, four participants and seven visits verified by existing data tests |
-| Video verification | FFprobe: 28.000 seconds, 1920?1080, 30 fps, H.264/yuv420p, 1,172,296 bytes; encoded frames inspected across the actual rendered scenes |
-| PDF verification | Exactly seven pages, each 1440?810 points (16:9); every actual exported page rendered with PyMuPDF and visually inspected |
-| Preview verification | Preview app content matches the tested HTML before Vercel's added feedback script; MP4 and PDF match local SHA-256 checksums |
-| git diff --check | Passed; ordinary Windows LF/CRLF conversion notices only |
+| npm test | 28 numerical, validation and source-integrity tests passed |
+| npm run lint | Passed |
+| npm run typecheck | Passed |
+| npm run build | Passed; 56 verified original NASA observations reproduced; static artifact and service worker generated |
+| New guided-care checks | Guides, acute concern in stable/empty records, check-in-to-urgent navigation, system mapping, as-of replay, responsiveness, reduced motion and offline persistence passed in the final 23-test run |
+| Existing regression coverage | All original 15 checks passed within that complete local run |
+| Accessibility | No axe WCAG 2 A/AA and 2.1 AA violations in the tested original views/dialog, new urgent dialog, body explorer and expanded guide |
+| Microsoft Edge | Final local artifact passed actual offline reload, persisted review, bundled research and no page-error smoke |
+| Visual review | Real captures at 1440x900, 1920x1080, 1024x768, 390x844 and 360x800, including all three systems, guidance and urgent concern; no document overflow |
+| Video | FFprobe: 28.000 seconds, 1920x1080, 30 fps, H.264/yuv420p, 1,236,621 bytes; encoded scenes inspected |
+| Presentation | Exactly seven 16:9 PDF pages (1440x810 points); every actual exported page rendered with PyMuPDF and visually inspected |
+| Source/data preservation | Protected-file diff empty; original checksum and all 56 selected NASA values pass existing tests |
+| git diff --check | Passed, ordinary Windows line-ending notices only |
 
-All **15 public Chromium checks passed** against https://orbitcare-eight.vercel.app after the redesigned deployment, in fresh unauthenticated contexts (46.6 seconds). Local acceptance passed all 15 as well (41.6 seconds). DEPLOYMENT.md records release IDs and checksums. A preview with Vercel authentication is not the public judge link.
+All 23 final local browser tests passed (2.2 minutes). The eighth new test explicitly verifies missing-data action guidance, local no-request language, recent-observation focus and urgent replay pause. Final public acceptance is recorded in DEPLOYMENT.md when observed; it must not be inferred from local results.
 
-## Browser coverage
+## Targeted browser assertions
 
-The 15-test suite exercises deterministic scenarios and replay; reference/explanation values; absence of future observations and future timeline flags; check-in validation, valid zeros, deliberate edits and reload persistence; local review history without clearing computed flags; research/source separation; actual JSON export/import and invalid-import rejection; reset and custom workspaces; genuine network disconnection and production reopening; offline save/reload/export and bundled evidence; honest failure for a first unprepared offline visit; responsive controls, contrast and keyboard dialogs; later mission days and print records; media playback/duration/aspect, seven-page PDF/aspect and original CSV availability; focus transfer from the change brief; review-event markers; keyboard selection of original NASA points; and reduced-motion behavior at all five viewports.
+- Open all four guides; inspect methods, equipment, quality and limits; navigate and close them without changing field values.
+- Urgent concern works for stable and empty records, focuses its heading, warns against waiting for three changed days, states that no contact was made, and supplies no symptom score/form/treatment.
+- Check-in can reach the urgent signpost without saving an entry.
+- Cardiovascular, head/sleep and activity regions map to existing heart-rate, sleep/fatigue or exercise context and appropriate NASA references; keyboard arrows/Enter and mobile taps work.
+- Explorer tables and charts use the selected as-of day and hide later readings; returning to monitoring preserves day selection.
+- Reduced motion removes CSS/connector animation, and all five requested viewports retain working controls without document overflow.
+- After an actual disconnected-browser reload, previously unvisited explorer/guides/signpost open from bundled assets and a local review survives a second reload.
+- Original tests retain scenario switching, transparent reference/persistence, no future data/flags, entry/edit bounds, missingness, portability/reset, print, research integrity, keyboard/accessibility and media playback checks.
 
-Numerical tests cover hand-calculated median/MAD, lower ordinal median, reference sufficiency, exact rule boundaries, missing/non-comparable sequences and future-data exclusion. Validation tests cover malformed, oversized, unsupported-version and invalid-origin imports, duplicate days/IDs, shifted references and valid zeros/nulls. No algorithm was changed to improve screenshots.
+## Findings corrected
 
-## Issues found and corrected during the upgrade
+The SVG activity hit area initially had a gap; it now covers the intended region. A guide heading's mixed text structure made its control difficult to locate; it now has a distinct label. A research link measured 4.43:1 contrast and was darkened before retesting. A missing-data test used the wrong fixture day and was corrected to the actual missing day without changing fixtures. Urgent navigation now pauses replay through one shared handler. Insufficient-reference guidance explicitly avoids inventing missing historical values. Early media punctuation encoding was corrected before the final rendered review.
 
-- A floating mobile check-in control covered scenario content. It now sits inside the page header.
-- Enlarged research labels exposed a clipped axis value; label position was corrected without changing data.
-- Low-contrast explanatory labels were corrected and accessibility checks rerun.
-- Timeline replay previously exposed later-day flags even though plots/tables hid future readings. Later status markers now appear only when their day is reached. Dates remain selectable; numerical analysis and saved records are unchanged.
-- First media renders had overlapping opening text, padded captures, hover tooltips and small rule details. Rendered scenes were inspected and corrected; final media uses enlarged source details and explicit units.
-- Windows Controlled folder access remains enabled. Existing tests use a dedicated OS-temp download directory, so no Defender allow-list exception was necessary.
+No new runtime package or animation framework was added. Effects use immediate correct values and 180/280/320 ms CSS feedback with a reduced-motion override. Controlled folder access remains enabled; no Defender allow-list exception was needed.
 
-## Media provenance
+## Media provenance and limitations
 
-The video combines composed actual application closeups with a recorded form interaction after genuine browser network disconnection. It is not presented as a continuous unedited recording. The application was reloaded offline before recording the review, and the record survived a second offline reload. Assertions and raw-capture timing are retained in artifacts/presentation/capture.json. FFprobe output, preview checksums and actual PDF page renders are in the same directory. No image/video-generation model, NASA logo, under-18 likeness or invented application function is used.
+Captures are actual application UI. A raw review-form interaction was recorded after real browser network disconnection and an actual offline reload, with persistence verified after another reload. Still captures are composed with captions and source graphics; the video is not presented as a continuous recording. Evidence: artifacts/presentation/capture.json, verification.json, encoded-*.png and pdf-rendered/. The body SVG is original AI-assisted schematic application code, not NASA imagery or validated anatomy.
 
-## Scientific and practical limits
+No clinical/astronaut usability study, physical-device testing, Firefox/Safari check, full screen-reader audit, penetration test or Lighthouse benchmark was run. Automated axe checks are not accessibility certification. Quota exhaustion/browser-eviction recovery are untested; multi-device/multi-tab sync is unsupported. The urgent panel has no installed mission protocol, treatment, triage or contact capability. Reminders and environment-specific rules are deferred.
 
-Monitoring rules remain unvalidated engineering assumptions. NASA laboratory observations are a separate descriptive research view and do not validate thresholds. No diagnosis, treatment, clinical accuracy, disease prediction, emergency prevention or flight-certification claim is supported. Offline review records locally and does not contact medical support.
-
-No clinical/astronaut usability evaluation, Firefox/Safari/physical-mobile-device testing, full screen-reader audit, penetration test or Lighthouse/Core Web Vitals benchmark was run. Automated axe success is not accessibility certification. Deliberate quota exhaustion and browser-eviction recovery remain untested; multi-tab/multi-device synchronization is unsupported. The earlier release's dependency/security audits are historical results, not newly rerun security certification.
-
-The current official submission-guide PDF, current award eligibility/definitions and any earlier local judging cutoff remain independently unverified by the agent. The participant must reconcile their guide/dashboard, review final media/text, publish source manually if desired, and click **Submit for Judging**, retaining successful confirmation. The agent made no commits, pushes or NASA judging submission.
+Original challenge summary is independently indexed; direct full challenge retrieval failed, and the accompanying presentation was participant-reported. The full submission guide, current award definitions and earlier local cutoff still require participant reconciliation. The participant must review text/media, publish source manually if desired, use Submit for Judging and retain successful confirmation. Deployment alone is not submission.

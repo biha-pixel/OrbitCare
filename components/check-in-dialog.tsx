@@ -3,8 +3,9 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { X, ClipboardPlus, Save } from "lucide-react";
 import { checkInSchema } from "@/lib/validation";
 import type { CheckIn, Workspace } from "@/lib/types";
+import MeasurementGuide from "./measurement-guide";
 
-export default function CheckInDialog({ workspace, initialDay, onClose, onSave }: { workspace: Workspace; initialDay: number; onClose: () => void; onSave: (row: CheckIn) => void }) {
+export default function CheckInDialog({ workspace, initialDay, onClose, onSave, onUrgent }: { workspace: Workspace; initialDay: number; onClose: () => void; onSave: (row: CheckIn) => void; onUrgent: () => void }) {
   const dialog = useRef<HTMLDialogElement>(null);
   function formFor(day: number) {
     const row = workspace.checkIns.find(item => item.day === day);
@@ -27,6 +28,8 @@ export default function CheckInDialog({ workspace, initialDay, onClose, onSave }
   return <dialog ref={dialog} className="entry-dialog" onCancel={onClose} aria-labelledby="checkin-heading"><form onSubmit={submit}>
     <div className="dialog-heading"><span className="dialog-icon"><ClipboardPlus size={22} /></span><button className="icon-button" type="button" onClick={onClose} aria-label="Close check-in"><X size={21} /></button></div>
     <h2 id="checkin-heading">Record a check-in</h2><p className="muted">Test measurements stay on this device. Blank fields are missing readings; zero sleep or exercise is valid.</p>
+    <button type="button" className="checkin-urgent-link text-button" onClick={onUrgent}>Serious symptoms? Open urgent pathway</button>
+    <MeasurementGuide />
     <label className="field day-field">Mission day<input type="number" min="1" max="9999" required value={day} onChange={event => { const next = Number(event.target.value); setDay(next); setForm(formFor(next)); setReplace(false); }} /></label>
     <div className="form-grid">
       <label className="field">Resting heart rate <span>bpm · input bounds 20–250</span><input name="heartRate" inputMode="decimal" type="number" min="20" max="250" step="0.1" value={form.heartRate} onChange={event => setForm({ ...form, heartRate: event.target.value })} /></label>
