@@ -11,7 +11,7 @@
 ## Challenge and planning
 
 - [2026 selected challenge](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/).
-- [Submission guide page](https://www.spaceappschallenge.org/resources/project-submission-guide/): the current PDF was not independently retrieved by the implementation agent. Participant-supplied rules require final reconciliation.
+- [Official Project Submission Guide](https://www.spaceappschallenge.org/resources/project-submission-guide/), dated 13 November 2026: its full current web text was retrieved successfully by browser on 15 November 2026. Field names, external-link/media limits, English and SI disclosures, deadline and submission confirmation were checked. Logged-in field caps and participant declarations still require the participant's review; evidence: `artifacts/submission-readiness/official-guide-page.json`.
 - [Historical 2025 award definitions](https://www.spaceappschallenge.org/2025/awards/): positioning only; not confirmed 2026 eligibility/definitions.
 
 Examined/excluded scientific resources are listed separately in NASA_DATA_SOURCES.md and are not claimed as integrations.
