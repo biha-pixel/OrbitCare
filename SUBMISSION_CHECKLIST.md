@@ -1,6 +1,6 @@
 # OrbitCare — submission checklist
 
-Working deadline, confirmed by participant from their guide: **Sunday 15 November 2026, 23:59 Asia/Colombo (UTC+05:30)**. Target successful submission by23:00. Earlier Anuradhapura local judging cutoff: **unverified**. Registered event: Anuradhapura, Sri Lanka, virtual individual participant.
+Working deadline, confirmed by participant from their guide: **Sunday 15 November 2026, 23:59 Asia/Colombo (UTC+05:30)**. Target successful submission by 23:00. Earlier Anuradhapura local judging cutoff: **unverified**. Registered event: Anuradhapura, Sri Lanka, virtual individual participant.
 
 The agent could not independently retrieve the current official Project Submission Guide PDF or Global Awards guide. Reconcile this checklist with the participant's official PDF/dashboard before submission. Do not substitute historical rules or treat a local software test as submission confirmation.
 
@@ -20,11 +20,13 @@ The agent could not independently retrieve the current official Project Submissi
 ## Public deliverables
 
 - [x] Public application works in fresh unauthenticated browser contexts without password, owner session, or registration.
-- [x] Public demo playback verified without registration: 28.4 seconds. Fallback PDF has seven pages including title/closing slides.
+- [x] Redesigned release passed all 15 public browser checks without owner cookies; see QA_REPORT.md.
+- [x] Public demo playback verified without registration: 28.000 seconds, 1920×1080. Fallback PDF has exactly seven native 16:9 pages including title/closing slides.
 - [x] English project materials and baked-in English video captions; no narration or non-English content in prepared media.
 - [ ] Source repository is public if provided. The agent does not commit/push; the participant handles source publication manually.
 - [ ] Public source snapshot matches the deployed feature claims and disclosures.
-- [ ] Final demo/video reviewed for duration, legibility, accurate offline behavior, and scientific labels.
+- [x] Agent inspected rendered video scenes and every exported PDF page; duration, real offline provenance and scientific labels checked.
+- [ ] Participant watches the final public video and reviews all seven slides and submission text.
 - [ ] No generated/modified NASA logos, flags, or mission identifiers; no implication of endorsement.
 - [ ] No under-18 likenesses in submitted media.
 - [ ] If any generated imagery/video is added later, verify the guide's watermark requirements.

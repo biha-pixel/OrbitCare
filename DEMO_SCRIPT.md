@@ -1,21 +1,31 @@
-# OrbitCare — demonstration script
+# OrbitCare — final 1080p demonstration
 
-Target: 27–29 seconds, below the participant-supplied 30-second maximum. Use actual production UI and English captions. No private data, people, NASA insignia, invented connectivity, or generated astronaut footage.
+The redesigned submission video is **28.000 seconds**, **1920×1080**, 16:9, 30 fps, H.264/yuv420p, silent with large English captions. It combines focused captures of the actual application with a recorded interaction in a genuinely disconnected browser. It is not presented as one continuous recording.
 
-| Time | Screen action | Caption / optional narration |
+| Time | Actual material | Message |
 |---|---|---|
-| 0–3 s | Title and stable synthetic workspace | OrbitCare · Understand change, even offline. |
-| 3–9 s | Switch to Sustained change, select day24 | Three days differ from this astronaut's personal reference. |
-| 9–17 s | Inspect heart-rate reference, change and rule | See what changed and why review is suggested. Rules are prototype assumptions. |
-| 17–24 s | Genuine browser network disconnection; reload; save review | Disconnected. The record and explanations remain available. |
-| 24–28 s | Saved local review action and closing caption | Notice. Explain. Record a review. Research prototype, not a diagnosis. |
+| 0–3 s | Stable synthetic monitoring record | Personal health changes need individual context. |
+| 3–5 s | Original stable-scenario metric controls | Start with the astronaut's fixed personal reference. |
+| 5–8 s | Original sustained-change controls, day 24 | The selected observations now differ enough to meet the illustrative rules. |
+| 8–11.5 s | Personal comparison and original-unit difference closeups | Inspect the reference, selected reading, and observed difference. |
+| 11.5–15 s | Actual persistence and rule panels | Three changed days; transparent engineering assumptions, no diagnostic claim. |
+| 15–19 s | Original OSD-575 scatterplot, units and participant legend | NASA research is a separate descriptive view, not monitoring-threshold validation. |
+| 19–25 s | Actual offline browser badges and recorded review-form interaction | Reloaded offline; record an action locally without contacting medical support. |
+| 25–28 s | Review history captured after a second offline reload; public URL | The local record persists. Research prototype, not a certified medical system. |
 
-Production preparation must actually complete before disconnecting. Browser automation may set the browser context offline; the capture must show the app reporting Browser offline after reload and a genuine saved action. Do not substitute an application toggle for network disconnection.
+Crossfades are 0.2 seconds. Captures use clearly labeled synthetic monitoring, original NASA research, and the actual UI. No generated astronaut footage, NASA insignia, invented telemetry, fake disconnection toggle, narration, or under-18 likeness is included.
 
-Use a silent captioned capture or the participant's own narration. Inspect the final encoded duration, legibility, simulation/assumption labels, and public playback before submitting. AI_USE.md must reflect actual media tooling. Actual UI screen recording is not invented research footage.
+## Files and reproduction
 
-Fallback: at most seven slides including title, using actual screenshots: (1) title/problem, (2) personal record, (3) transparent rule, (4) missing-data uncertainty, (5) genuine offline review, (6) separate NASA research/provenance, (7) public project link/limitations. Video and fallback must not be described as finished until generated and inspected.
+- Video: `public/demo/OrbitCare-demo.mp4`.
+- Presentation: `public/demo/OrbitCare-seven-slides.pdf`, exactly seven native 16:9 pages.
+- Standalone slide HTML: `public/demo/slides.html`.
+- Capture provenance, network/persistence assertions and raw interaction timing: `artifacts/presentation/capture.json`.
+- FFprobe output: `artifacts/presentation/verification.json`.
+- Actual rendered PDF pages: `artifacts/presentation/pdf-rendered/`.
 
-## Prepared artifacts
+Start the production preview with `npm run build` then `npm start`. In another terminal, `npm run media:build` captures and renders both artifacts using the installed Playwright and FFmpeg. No NASA requests or paid services are needed. Optional actual-PDF rendering uses `py -3.13 scripts/verify-presentation.py` with the local verification wheel described in the upgrade report; it is not an application dependency.
 
-The actual application capture was encoded to public/demo/OrbitCare-demo.mp4: 28.400 seconds, 2,106,664 bytes, H.264/yuv420p with fast-start metadata, silent with baked-in English captions. Capture used a real Playwright offline browser context, reload, and persisted local review. A seven-page screenshot PDF and standalone HTML fallback are prepared in public/demo/. The public demo page also provides a transcript. Publication/playback checks are recorded in QA_REPORT.md. The participant should still watch the final media before submission.
+The seven slides are: (1) problem/challenge, (2) complete solution, (3) personalized reference, (4) explainable review, (5) offline operation, (6) NASA research/transparency, (7) impact/limitations/link. Their source is a purpose-built 16:9 layout, not rescaled A4 pages.
+
+The participant should watch the final public video and review the final PDF and submission fields. AI_USE.md records AI assistance and the use of actual screen captures. The official guide must still be checked for final submission requirements.

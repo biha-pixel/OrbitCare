@@ -65,10 +65,13 @@ package-lock.json   Locked dependency versions
 - `npm run test:e2e` tests the production artifact, including actual offline reopening.
 - `npm run data:prepare` reproduces the selected research subset without network access.
 - `npm run data:fetch` explicitly re-downloads the original source, rejecting unexpected checksums.
+- `npm run media:build` captures the running production preview and renders the 28-second 1080p demo and seven native 16:9 slides. FFmpeg is required.
 
 ## Implemented features
 
 Daily heart-rate, sleep, ordinal fatigue, and contextual exercise entries; fixed personal reference statistics; transparent three-day persistence; aligned original-unit plots; mission timeline/replay; evidence and assumptions; review history; native IndexedDB; validated JSON import/export; deliberate reset; printable record; responsive keyboard-accessible UI; production offline PWA; and a separate 56-observation NASA OSD-575 explorer.
+
+The redesigned workspace puts a unified change brief first, followed by scenario previews, readable plots, a reference-to-reading explanation, and marked mission progression. See [VISUAL_UPGRADE.md](VISUAL_UPGRADE.md) for the visual audit, checkpoint, screenshot comparisons and preservation checks. The final demo uses composed actual screen captures and a recorded, genuinely offline interaction; it is not presented as a continuous recording.
 
 Next.js 16.4.6 static export, React 19.3.0, TypeScript, Tailwind 4.3.3, Recharts, Zod, Lucide, and locally bundled IBM Plex fonts. No server, authentication, analytics SDK, cloud model, sensor connection, or automatic synchronization is used. Hosting receives normal web requests; monitoring entries are processed locally.
 

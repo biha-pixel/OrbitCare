@@ -18,7 +18,7 @@ Direct video if the field requires a media file: https://orbitcare-eight.vercel.
 
 Fallback presentation: https://orbitcare-eight.vercel.app/demo/OrbitCare-seven-slides.pdf
 
-Choose one primary demonstration format according to the official guide. The video is 28.4 seconds; the fallback PDF has seven pages including title/closing slides.
+Choose one primary demonstration format according to the official guide. The video is 28 seconds; the fallback PDF has seven pages including title/closing slides.
 
 ## Final project
 

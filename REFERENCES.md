@@ -28,6 +28,10 @@ Development tools include TypeScript (Apache-2.0), ESLint (MIT), Vitest/Vite (MI
 - [Vercel skills](https://github.com/vercel-labs/agent-skills/tree/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62), commit `1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62`, MIT: React Best Practices and Web Design Guidelines.
 - [Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines): interface review reference retrieved during implementation.
 
-Skills are project-scoped copies in `.agents/skills/`, with licenses and skills-lock.json. They add no runtime service or hooks. Impeccable, UI UX Pro Max, and Anthropic Webapp Testing were reviewed but not installed to avoid redundant tooling/hooks/binaries/testing stacks.
+Skills are project-scoped copies in `.agents/skills/`, with licenses and source records. They add no runtime service or hooks. The visual upgrade additionally installed [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/d643997c82e94742dd3bee43210b0198e8bbba3d), commit `d643997c82e94742dd3bee43210b0198e8bbba3d`, MIT. Its standard-library Python searches informed chart labeling, touch spacing, readable typography, and accessible interaction; the participant-approved palette and fonts took precedence over generic search recommendations.
+
+[Impeccable](https://github.com/pbakaus/impeccable) critique/polish references were inspected for evidence-based hierarchy and refinement principles, without installing its engine, hooks, live mode, or detector. No automated Impeccable audit is claimed. Anthropic Webapp Testing remains omitted in favor of the existing TypeScript Playwright suite.
+
+Final media uses actual Playwright screen captures, FFmpeg composition, local IBM Plex fonts, and the original OrbitCare mark. A local, non-runtime PyMuPDF 1.26.7 verification wheel rendered the exported PDF pages for visual inspection; it is not bundled with the app or added to its dependencies.
 
 OrbitCare code retains the existing MIT license, copyright Bihandu Liyanage 2026. Third-party sources retain their terms. No NASA branding, endorsement, or certification is claimed.

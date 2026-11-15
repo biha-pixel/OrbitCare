@@ -9,13 +9,19 @@ Approved by the participant on 15 November 2026: mission clinical hybrid, rich i
 
 ```text
 navigation | mission title / local status / check-in
-           | scenario controls
-           | review summary
+           | prominent change brief and original-unit differences
+           | four descriptive scenario choices and real fixture previews
            | aligned indicator plots | explanation / rule / evidence
            | mission day selection   | review action
            | exercise context        | history
 ```
 
 This is a tool for operating and reading. Boldness belongs in the coherent mission record, not ornament. Typography, chart alignment, scientific labels, and state feedback give it identity. A generic card grid was rejected in favor of a continuous, selectable record.
+
+The visual upgrade makes the change brief the opening focal point. Reference and selected reading sit together in the explanation, followed by the observed difference, three-day persistence, and progressively disclosed evidence. Larger day controls distinguish reference, change, missingness and recorded review events using text and symbols as well as color. Future timeline states remain hidden during replay. Scenario previews use existing fixture values, without new metrics or predictions.
+
+On mobile, the change brief precedes scenario controls; metric headers sit above full-width plots. The check-in action stays within the page header rather than covering content. Original-unit plots retain gaps and an accessible table. NASA participant shapes and keyboard-selectable observations add a non-color way to inspect the unchanged source measurements.
+
+Use the project-local Frontend Design, Vercel Web Design Guidelines, React Best Practices and UI UX Pro Max guidance. Impeccable critique/polish references inform review only; no engine or hooks are installed. Baseline/final screenshot evidence and implementation decisions are recorded in VISUAL_UPGRADE.md.
 
 Use visible keyboard focus, original chart units, redundant text status, touch-sized controls, native dialog semantics, reduced motion, and table alternatives. Every loading, empty, error, incomplete, and offline state must provide useful direction.

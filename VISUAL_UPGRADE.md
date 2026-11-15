@@ -38,3 +38,29 @@ One presentation correction is intentional: during replay, future timeline days 
 ## Skill use
 
 Frontend Design: intentional composition, typography, critique through rendered screenshots. Vercel guidelines: focus, forms, keyboard, contrast, responsive states. React Best Practices: preserve local computation and defer the separate research view. UI UX Pro Max: project-scoped guidance for readable data interfaces and touch/keyboard interaction. Impeccable: inspected critique/polish references; use focused hierarchy/system refinement principles without installing its hooks, engine, detector, or live mode.
+
+UI UX Pro Max is installed in `.agents/skills/ui-ux-pro-max/` from commit `d643997c82e94742dd3bee43210b0198e8bbba3d` with its MIT notice. Its Python search uses the standard library; no global dependency or new application runtime package was added.
+
+## Final result and visual evidence
+
+Compare the same viewport captures:
+
+| View | Baseline | Redesigned |
+|---|---|---|
+| 1440×900 opening | [Before](artifacts/upgrade-baseline/opening-1440.png) | [After](artifacts/upgrade-final/opening-1440.png) |
+| 1920×1080 opening | [Before](artifacts/upgrade-baseline/opening-1920.png) | [After](artifacts/upgrade-final/opening-1920.png) |
+| 1024×768 tablet | [Before](artifacts/upgrade-baseline/opening-1024.png) | [After](artifacts/upgrade-final/opening-1024.png) |
+| 390×844 mobile | [Before](artifacts/upgrade-baseline/opening-390.png) | [After](artifacts/upgrade-final/opening-390.png) |
+| 360×800 mobile | [Before](artifacts/upgrade-baseline/opening-360.png) | [After](artifacts/upgrade-final/opening-360.png) |
+
+Each directory also contains full workspace captures, check-in dialogs and desktop/mobile research, method and data views. Final screenshots were visually inspected; `layout-measurements.json` records exact dimensions. Artifacts are ignored local evidence, not required public app assets.
+
+The change brief now exposes original-unit differences before the scenario choices. Reference/reading pairs and a three-step persistence display make the explanation the signature interaction. Larger plots retain gaps, selected-day marks and accessible tables. The timeline adds state symbols and recorded-review markers; research points add participant shapes and keyboard selection. Mobile has a coherent reading order and an unobstructed check-in action. Scientific caveats and local-only review language remain visible.
+
+No changes from the checkpoint were found in protected scientific/data/storage/offline files. Future-status masking in the timeline is the single intentional presentation behavior correction, covered by browser regressions.
+
+Final local verification: 28 unit/data tests, 15 Chromium tests, lint, TypeScript, production build and Microsoft Edge offline/persistence smoke passed. See QA_REPORT.md and DEPLOYMENT.md for release verification and public results.
+
+## Rebuilt presentation
+
+`public/demo/OrbitCare-demo.mp4`: 28.000 seconds, 1920×1080, 30 fps, large English captions, actual app closeups and an actual disconnected-browser form interaction. `public/demo/OrbitCare-seven-slides.pdf`: exactly seven native 16:9 pages. Every exported PDF page and encoded video scenes were visually inspected. Reproduction: run the production preview, then `npm run media:build`; details and provenance are in DEMO_SCRIPT.md and `artifacts/presentation/`.

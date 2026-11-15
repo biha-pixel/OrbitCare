@@ -12,6 +12,8 @@ The app records resting heart rate (bpm), sleep (hours), fatigue (an explicitly 
 
 Aligned plots and a selectable mission timeline reveal what was available on each day, hiding later readings. Selecting an indicator exposes the reference, current value, difference, persistence, rule, research context, origin, uncertainty, and limitations. Local review actions record verifying a measurement, adding context, or requesting medical review. They neither send a communication nor clear a computed flag.
 
+The opening change brief answers what changed and links directly to the explanation. A paired reference/reading comparison and three-day persistence display make the reasoning inspectable. The mission timeline marks reference days, observed changes, missingness and recorded reviews, without revealing future flags. The NASA explorer provides participant shapes, keyboard-selectable observations and an accessible original-value table.
+
 Four deterministic scenarios demonstrate stability, sustained change, incomplete information, and return toward the reference. Judges can reproduce the same behavior without registration. Entries can be added or deliberately edited; accessible tables, validated JSON portability, workspace reset, and a printable review record make the workflow inspectable.
 
 After **Offline ready** confirms preparation, the production application can reopen without network access and continue local analysis, entry, review, evidence inspection, and export. Persistence alone is never presented as proof of offline reopening.
