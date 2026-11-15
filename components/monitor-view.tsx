@@ -1,5 +1,5 @@
 "use client";
-import { Activity, ClipboardPlus, FileCheck2, Info } from "lucide-react";
+import { Activity, ChevronRight, ClipboardPlus, FileCheck2, Info } from "lucide-react";
 import { formatValue, METRICS } from "@/lib/analysis";
 import type { Indicator, Result, Review, Workspace } from "@/lib/types";
 import { SCENARIOS } from "@/data/scenarios";

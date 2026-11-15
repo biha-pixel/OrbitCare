@@ -11,9 +11,11 @@ test("scenario decisions, timeline replay, and no future observations", async ({
   await expect(page.getByText("3 indicators suggest a closer look.")).toBeVisible();
   await page.getByRole("button", { name: "Mission day 22", exact: true }).click();
   await expect(page.getByText("A change is emerging in the record.")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Mission day 24, not yet displayed", exact: true })).toHaveAttribute("data-state", "future");
   await page.getByText("Inspect the monitoring data table", { exact: true }).click();
   await expect(page.getByRole("table").getByRole("row")).toHaveCount(23);
   await page.getByRole("button", { name: "Mission day 24,", exact: false }).click();
+  await expect(page.getByRole("button", { name: "Mission day 24, review suggested", exact: true })).toHaveAttribute("data-state", "review");
   await expect(page.getByText("3 indicators suggest a closer look.")).toBeVisible();
   await page.getByRole("button", { name: "Stable", exact: true }).click();
   await expect(page.getByText("Within the current comparison rules.")).toBeVisible();
@@ -199,4 +201,39 @@ test("public demonstration plays within the time limit and the fallback has seve
   const source = await request.get("/research/OSD-575-original.csv");
   expect(source.status()).toBe(200);
   expect((await source.body()).length).toBe(25275);
+});
+
+test("the change brief leads to an accessible explanation and review event", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole("button", { name: "Inspect Resting heart rate: Review suggested", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Resting heart rate", exact: true })).toBeFocused();
+  await expect(page.locator(".comparison-flow")).toContainText("60");
+  await expect(page.locator(".comparison-flow")).toContainText("71");
+  await page.getByLabel("Review note", { exact: false }).fill("Review event from mobile investigation.");
+  await page.getByRole("button", { name: "Record action", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Mission day 28, review suggested", exact: true })).toHaveAttribute("title", /1 recorded review/);
+  await expect(page.getByText("Review event from mobile investigation.", { exact: true })).toBeVisible();
+});
+
+test("NASA original observations can be selected by keyboard without applying monitoring rules", async ({ page }) => {
+  await page.getByRole("button", { name: "NASA research", exact: true }).click();
+  await page.getByRole("button", { name: "Potassium", exact: true }).click();
+  const point = page.getByRole("button", { name: "C001, L-92: 4.6 mmol/L potassium", exact: true });
+  await point.focus();
+  await page.keyboard.press("Enter");
+  await expect(point).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".observation-readout")).toContainText("4.6");
+  await expect(page.locator(".observation-readout")).toContainText("No monitoring rule applied.");
+  await expect(page.locator(".research-legend button")).toHaveCount(4);
+});
+
+test("all five required viewports preserve controls, chart size, and reduced motion", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  for (const [width, height] of [[1440,900],[1920,1080],[1024,768],[390,844],[360,800]]) {
+    await page.setViewportSize({ width, height });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await expect(page.getByRole("button", { name: "Record check-in", exact: true })).toBeVisible();
+    expect(await page.locator(".plot").first().evaluate(element => element.clientHeight)).toBeGreaterThanOrEqual(130);
+  }
+  expect(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior)).toBe("auto");
 });

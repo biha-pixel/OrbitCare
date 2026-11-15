@@ -33,6 +33,8 @@ On mobile: compact brand/navigation → mission context → change brief → sce
 
 No new risk score, prediction, medical threshold, telemetry, health conclusion, or real-data calibration is authorized. `lib/analysis.ts`, model/validation/persistence, scenario fixtures, NASA source bytes, and service-worker logic are protected from incidental design edits. Changes here are presentation and interaction improvements, with actual scientific statements retained.
 
+One presentation correction is intentional: during replay, future timeline days no longer reveal their later review/missingness status. Their dates remain selectable, but markers appear only when that day is reached. The numerical engine and saved records are unchanged; browser assertions cover the future→review transition. The earlier implementation already hid future plots/tables but exposed later flags in the timeline index.
+
 ## Skill use
 
 Frontend Design: intentional composition, typography, critique through rendered screenshots. Vercel guidelines: focus, forms, keyboard, contrast, responsive states. React Best Practices: preserve local computation and defer the separate research view. UI UX Pro Max: project-scoped guidance for readable data interfaces and touch/keyboard interaction. Impeccable: inspected critique/polish references; use focused hierarchy/system refinement principles without installing its hooks, engine, detector, or live mode.
