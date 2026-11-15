@@ -1,6 +1,16 @@
 # OrbitCare deployment
 
-## Current Crew Assist release — 15 November 2026 at 17:48 Asia/Colombo
+## Cinematic production release - 15 November 2026 at 20:01 Asia/Colombo
+
+Production **dpl_TMyUrpL1vHy9Lbxjp4cChWmUe5WF** is **Ready** at https://orbitcare-eight.vercel.app/ (deployment URL https://orbitcare-glymu5tpc-nutri-38e1.vercel.app). The participant explicitly approved promotion of verified candidate **dpl_AWZz2FrihrbgtFMTRVqbMiEigqhB**. Protected preview: https://orbitcare-h884wvtaa-nutri-38e1.vercel.app; protection was retained. The previous production **dpl_ivAkd6evSFgFx1ghkmtsHqPpeNfr** remains in deployment history for rollback. No source commit/push or NASA judging submission was made. All release entries below are historical.
+
+The release contains the optional procedural 3D opening, actual five-stage walkthrough, as-of replay milestones, layered body explorer, research introduction and updated submission media. Local build, TypeScript, lint, 41 unit/data tests and all 42 browser tests passed. Public application markers and exact SW, MP4, PDF, poster, player/slide HTML and original NASA CSV bytes match the tested local artifact. Actual public playback and both team credits passed. Edge public offline reopen, local review save, second offline reload and bundled research passed. All 42 public acceptance checks are verified: 41 passed the initial full run; the remaining accessibility check passed on rerun after the audit was made to wait for finite entrance animations. This changed test timing only; production files are unchanged.
+
+Public media: [28-second demonstration](https://orbitcare-eight.vercel.app/demo/), [MP4](https://orbitcare-eight.vercel.app/demo/OrbitCare-demo.mp4), [seven-slide PDF](https://orbitcare-eight.vercel.app/demo/OrbitCare-seven-slides.pdf). Both team names and visible procedural-art disclosure are preserved.
+
+Evidence and all five before/after screenshot sizes: [CINEMATIC_UPGRADE.md](CINEMATIC_UPGRADE.md), `artifacts/cinematic-release/` and `artifacts/cinematic-after/`. Final cache: `efccd56fac9c6a3d`, 51 assets, about 1.65 MiB. Public asset hashes are in `artifacts/cinematic-release/public-verification.json`.
+
+## Previous Crew Assist release — 15 November 2026 at 17:48 Asia/Colombo
 
 Production **dpl_ivAkd6evSFgFx1ghkmtsHqPpeNfr** is Ready at https://orbitcare-eight.vercel.app/ (deployment URL https://orbitcare-kv7e8ui41-nutri-38e1.vercel.app). Final protected preview: **dpl_GJDBcqikDPiSLGtCgBbsUnvcz4XC**, https://orbitcare-t3ktaenj1-nutri-38e1.vercel.app. Preview HTML, MP4, PDF and SW matched the tested local artifact before promotion. The previous verified production **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV** remains the fallback in deployment history. Source changes remain local and uncommitted; no agent commit/push was made.
 

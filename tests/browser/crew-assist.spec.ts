@@ -28,6 +28,7 @@ test("Crew Assist is independent of stable, changed, missing and empty workspace
 test("synthetic drill prepares a sourced handoff, exports and persists without medical contact", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Investigate the change", exact: true }).click();
+  await page.getByText("Complete day-by-day record", { exact: true }).click();
   await page.getByRole("button", { name: /^Mission day 22(?:,|$)/ }).click();
   await page.getByRole("button", { name: "Help a crewmate", exact: true }).click();
   await page.getByRole("button", { name: "Start Crew Emergency Drill", exact: true }).click();

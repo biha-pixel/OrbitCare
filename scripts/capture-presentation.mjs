@@ -26,8 +26,11 @@ try {
   await expect(page.getByRole("button", { name: "Record check-in", exact: true })).toBeEnabled();
   await page.evaluate(() => document.fonts.ready);
   await expect(page.getByText("Offline ready", { exact: true }).first()).toBeVisible({ timeout: 45000 });
-  await capture("opening", ".change-brief");
+  await capture("opening", ".mission-intro");
+  await capture("mission-scene", ".intro-universe");
+  await page.getByRole("button", { name: "Enter health monitoring", exact: true }).click();
   await page.getByRole("button", { name: "Investigate the change", exact: true }).click();
+  await page.getByText("Complete day-by-day record", { exact: true }).click();
   await page.getByRole("button", { name: "Stable", exact: true }).click(); await day24();
   await capture("stable-record", ".record-surface");
   for (let i = 0; i < 3; i++) await capture(`stable-metric-${i}`, `.brief-metric:nth-of-type(${i + 1})`);
@@ -105,6 +108,7 @@ try {
   await context.setOffline(true);
   await page.reload();
   await page.locator(".investigation > summary").click();
+  await page.getByText("Complete day-by-day record", { exact: true }).click();
   await expect(page.getByText("Browser offline", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Sustained change", exact: true }).click(); await day24();
   await capture("offline-status", ".topbar-status");
@@ -125,6 +129,7 @@ try {
   await page.waitForTimeout(2000);
   await page.reload();
   await page.locator(".investigation > summary").click();
+  await page.getByText("Complete day-by-day record", { exact: true }).click();
   await expect(page.getByText("Browser offline", { exact: true })).toBeVisible();
   await expect(page.getByText(note, { exact: true })).toBeVisible();
   await day24();

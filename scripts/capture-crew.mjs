@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const directory = "artifacts/presentation";
 const capture = JSON.parse(await readFile(`${directory}/capture.json`, "utf8"));
-const source = process.env.ORBITCARE_DEMO_URL || "http://127.0.0.1:3001";
+const source = process.env.ORBITCARE_DEMO_URL || "http://127.0.0.1:3000";
 const browser = await chromium.launch();
 try {
   const context = await browser.newContext({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 2, reducedMotion: "reduce" });

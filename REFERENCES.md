@@ -57,3 +57,11 @@ The human-body SVG is original AI-assisted application code, not NASA imagery or
 ## Crew Assist extension sources
 
 Rechecked 15 November 2026: [NASA care §§3.1, 3.5](https://www.nasa.gov/reference/3-0-health-and-medical-care/) for designated medical responsibility and recording encounters/observations; [NASA training §§5.1–5.2.2](https://www.nasa.gov/reference/5-0-training/) for mission-specific medical roles and training verification. The same [HRP Risks](https://www.nasa.gov/hrp/risks/), [Five Hazards](https://www.nasa.gov/hrp/hazards/) and [Standard Measures](https://www.nasa.gov/reference/standard-measures/) provide scope, distance and longitudinal-context boundaries. These are not installed emergency protocols, clinical handoff validation or an endorsement. The fictional drill and handoff layout are participant-requested, AI-assisted software work. No clinical treatment sequence, new dependency or cloud service was used.
+
+
+## Cinematic graphics, November 2026
+
+- `components/mission-space.tsx`: original AI-assisted WebGL/GLSL procedural illustration; no third-party image, geographic map, model, texture, NASA logo or mission insignia. Visible imagery disclosure appears in the scene and submission media. Original code follows the repository MIT license.
+- Flight-path/spacecraft SVG, CSS fallback, research orbit diagram and layered educational body refinements: original code-defined graphics under the same license. Body regions remain educational selectors, not anatomical measurements.
+- Native browser WebGL, CSS and SVG provide the new graphics/motion; no additional runtime package or remote asset was added. Existing Recharts, Lucide and IBM Plex licenses remain applicable.
+- NASA Space Apps AI-use clarification consulted: https://github.com/nasa/spaceapps/discussions/1947. Code assistance, procedural artwork and actual-capture media composition are disclosed in AI_USE.md.

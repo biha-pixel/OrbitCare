@@ -1,7 +1,25 @@
-import { analyze } from "./analysis";
+import { analyze, comparableReading, meetsRule, referenceFor } from "./analysis";
 import type { Indicator, Result, Workspace } from "./types";
 
 // Presentation states only. All decisions and measurements come from analyze().
+export function knownTurningPoints(workspace: Workspace, day: number, indicator: Indicator) {
+  const reference = referenceFor(workspace, indicator, Math.min(day, workspace.referenceEnd));
+  const points: { firstChange?: number; persistence?: number; review?: number } = {};
+  if (!reference.sufficient) return points;
+  let streak = 0, previous = workspace.referenceEnd;
+  for (const row of workspace.checkIns.filter(row => row.day > workspace.referenceEnd && row.day <= day).sort((a, b) => a.day - b.day)) {
+    if (row.day !== previous + 1) streak = 0;
+    const value = comparableReading(row, indicator);
+    streak = value !== null && meetsRule(value, indicator, reference) ? streak + 1 : 0;
+    if (streak === 1) points.firstChange ??= row.day;
+    if (streak === 2) points.persistence ??= row.day;
+    if (streak === 3) points.review ??= row.day;
+    if (points.review !== undefined) break;
+    previous = row.day;
+  }
+  return points;
+}
+
 export function replayStage(result: Result) {
   if (result.status === "change") return result.streak === 1 ? "first-change" : "persistence";
   return result.status;

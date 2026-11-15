@@ -1,0 +1,14 @@
+"use client";
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import { ArrowRight, ChevronDown, HeartPulse, Pause, Play, ShieldAlert } from "lucide-react";
+const MissionSpace = dynamic(() => import("./mission-space"), { ssr: false, loading: () => <div className="space-fallback"><div className="fallback-earth" /></div> });
+
+export default function MissionIntro({ onDemo, onMonitor, onCrew }: { onDemo: () => void; onMonitor: () => void; onCrew: () => void }) {
+  const [paused, setPaused] = useState(false);
+  return <section className="mission-intro" aria-labelledby="intro-heading">
+    <div className="intro-composition"><div className="intro-copy"><span className="mission-edition"><span />Human health beyond Earth</span><h2 id="intro-heading">Care for the human<br />behind the mission.</h2><p className="intro-narrative">Far from Earth, understanding your health becomes part of the mission.</p><p className="intro-description">Notice a personal change. Understand the evidence. Keep a review record, even when connectivity drops.</p><div className="intro-actions"><button className="button intro-primary" onClick={onDemo}>Explore Mission Demo<ArrowRight size={18} aria-hidden="true" /></button><button className="intro-skip" onClick={onMonitor}>Enter health monitoring<ChevronDown size={16} aria-hidden="true" /></button></div><p className="intro-boundary">NASA Space Apps 2026 research prototype.<br />Synthetic monitoring. No diagnosis or flight certification.</p></div><div className="intro-universe"><MissionSpace paused={paused} /><div className="space-caption"><span>Earth → Mars</span><span>Conceptual flight path / not to scale</span></div><p className="scene-disclosure">AI-generated procedural artwork</p><button className="space-motion" onClick={() => setPaused(value => !value)} aria-pressed={paused}>{paused ? <Play size={13} aria-hidden="true" /> : <Pause size={13} aria-hidden="true" />}{paused ? "Resume scene" : "Pause scene"}</button></div></div>
+    <div className="intro-pathways"><button onClick={onMonitor}><HeartPulse size={24} aria-hidden="true" /><span><strong>Monitor my health</strong><small>Personal reference, explainable change, local review.</small></span><ArrowRight size={20} aria-hidden="true" /></button><button onClick={onCrew}><ShieldAlert size={24} aria-hidden="true" /><span><strong>Help a crewmate</strong><small>Approved procedures first. Optional local handoff.</small></span><ArrowRight size={20} aria-hidden="true" /></button></div>
+    <ol className="intro-workflow" aria-label="Monitoring workflow"><li><span>01</span><strong>Observe</strong><small>Record the measurement</small></li><li><span>02</span><strong>Compare</strong><small>Use a personal reference</small></li><li><span>03</span><strong>Explain</strong><small>Inspect the sustained change</small></li><li><span>04</span><strong>Record</strong><small>Keep the review on this device</small></li></ol>
+  </section>;
+}

@@ -1,9 +1,31 @@
 import { describe, expect, it } from "vitest";
 import { makeScenario } from "@/data/scenarios";
 import { analyze } from "@/lib/analysis";
-import { nextTurningPoint, replayNarrative, replayStage } from "@/lib/replay";
+import { knownTurningPoints, nextTurningPoint, replayNarrative, replayStage } from "@/lib/replay";
 
 describe("decision replay uses the original analysis", () => {
+  it("known milestones match the original engine at every as-of day without future data", () => {
+    for (const scenario of ["stable", "drift", "missing", "recovery"] as const) {
+      const workspace = makeScenario(scenario);
+      for (const indicator of ["heartRate", "sleep", "fatigue"] as const) for (let day = 1; day <= 28; day++) {
+        const expected: { firstChange?: number; persistence?: number; review?: number } = {};
+        for (let cursor = 15; cursor <= day; cursor++) {
+          const result = analyze(workspace, cursor).find(item => item.indicator === indicator)!;
+          if (result.streak === 1) expected.firstChange ??= cursor;
+          if (result.streak === 2) expected.persistence ??= cursor;
+          if (result.streak >= 3) expected.review ??= cursor;
+        }
+        expect(knownTurningPoints(workspace, day, indicator)).toEqual(expected);
+        expect(knownTurningPoints({ ...workspace, checkIns: workspace.checkIns.filter(row => row.day <= day) }, day, indicator)).toEqual(expected);
+      }
+    }
+  });
+  it("a missing calendar day breaks milestone persistence", () => {
+    const workspace = makeScenario("drift");
+    workspace.checkIns = workspace.checkIns.filter(row => row.day !== 23);
+    expect(knownTurningPoints(workspace, 24, "heartRate")).toEqual({ firstChange: 22 });
+    expect(knownTurningPoints(workspace, 26, "heartRate")).toEqual({ firstChange: 22, persistence: 25, review: 26 });
+  });
   it("visits the reference, ordinary observation, first change, persistence and review", () => {
     const workspace = makeScenario("drift");
     const days = [14];

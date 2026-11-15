@@ -1,5 +1,16 @@
 # OrbitCare — release verification
 
+## Cinematic production release - 15 November 2026 at 20:01 Asia/Colombo
+
+The new local artifact passes **41 unit/data tests and all 42 production browser tests**, explicit TypeScript, lint and the production build. Edge actual offline save/reload smoke passed. All five requested screenshot viewports have no overflow or browser page errors. New checks exercise the real guided fixture/review/export, keyboard and touch navigation, reduced motion, WebGL failure and context loss, scene cleanup, as-of milestones and reset isolation. Reset preserves the demo workspace identity and unrelated saved reviews; guided check-ins remain fixed. The original numerical engine, schemas, storage, NASA observations, logo, dependencies and offline generator are unchanged.
+
+The refreshed video is 28.000 seconds, 1920x1080/30 fps and fully decodes; the PDF rasterizes as seven 16:9 pages with both team members. Actual PDF pages and decoded video frames were visually inspected. Real network disconnection, offline reload, review saving and a second offline reload were captured. The scene is explicitly labeled procedural AI artwork, not mission imagery or telemetry.
+
+After explicit participant approval, production **dpl_TMyUrpL1vHy9Lbxjp4cChWmUe5WF** is Ready at https://orbitcare-eight.vercel.app/. The approved candidate remains at https://orbitcare-h884wvtaa-nutri-38e1.vercel.app with protection retained. Public SW/MP4/PDF/poster/player/slide HTML/NASA CSV bytes match the local files; public app markers are present. Actual public video playback, both team credits, desktop/mobile opening captures and Edge offline persistence passed. All 42 public acceptance checks are verified: 41 passed the initial full run; the remaining accessibility check passed on rerun after the audit was made to wait for finite entrance animations. This changed test timing only; production files are unchanged. No source commit/push was made.
+
+See [CINEMATIC_UPGRADE.md](CINEMATIC_UPGRADE.md), `artifacts/cinematic-release/local-verification.json`, `preview-verification.json`, `artifacts/cinematic-after/` and the PDF/video contact boards. All sections below describe earlier releases. No clinical validation, physical-device performance test or Safari/iOS test is claimed. No qualifying Next.js feedback candidate remained.
+
+
 ## Crew Assist release verification — 15 November 2026 at 17:48 Asia/Colombo
 
 Current production: **dpl_ivAkd6evSFgFx1ghkmtsHqPpeNfr**, https://orbitcare-eight.vercel.app/. This is the current release record; all earlier sections below are historical. Software checks do not establish clinical validity, astronaut usability, medical training or flight readiness.

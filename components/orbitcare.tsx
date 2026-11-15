@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useReducer, useRef, useState, type ChangeEvent } from "react";
 import dynamic from "next/dynamic";
-import { Activity, BookOpen, Check, ChevronRight, CircleAlert, Database, FlaskConical, HeartPulse, Info, ShieldAlert, ShieldCheck, Wifi, WifiOff } from "lucide-react";
+import { Activity, BookOpen, Check, ChevronRight, CircleAlert, Database, FlaskConical, HeartPulse, Info, Orbit, ShieldAlert, ShieldCheck, Wifi, WifiOff } from "lucide-react";
 import { analyze } from "@/lib/analysis";
 import type { AppState, CheckIn, Indicator, Review, Workspace } from "@/lib/types";
 import { initialState, makeScenario, customWorkspace } from "@/data/scenarios";
@@ -15,6 +15,9 @@ import DataView from "./data-view";
 import UrgentConcern from "./urgent-concern";
 import CrewAssist from "./crew-assist";
 import BrandMark from "./brand-mark";
+import MissionIntro from "./mission-intro";
+const MissionWalkthrough = dynamic(() => import("./mission-walkthrough"), { loading: () => <p className="loading-message">Opening guided mission…</p> });
+const guidedFixture: Workspace = { ...makeScenario("drift"), id: "guided-mission", name: "Guided mission demo" };
 const ResearchView = dynamic(() => import("./research-view"), { loading: () => <p className="loading-message">Opening bundled NASA observations…</p> });
 const HealthExplorer = dynamic(() => import("./health-explorer"), { loading: () => <p className="loading-message">Opening bundled health explorer…</p> });
 type View = "monitor" | "explorer" | "research" | "method" | "data" | "crew";
@@ -26,6 +29,10 @@ function download(text: string, name: string) {
 }
 export default function OrbitCare() {
   const [state, dispatch] = useReducer((_state: AppState, next: AppState) => next, undefined, initialState);
+  const [intro, setIntro] = useState(true);
+  const [tour, setTour] = useState(false);
+  const [tourStep, setTourStep] = useState(0);
+  const [observedDay, setObservedDay] = useState(22);
   const [view, setView] = useState<View>("monitor");
   const [day, setDay] = useState(28);
   const [indicator, setIndicator] = useState<Indicator>("heartRate");
@@ -42,6 +49,7 @@ export default function OrbitCare() {
   const queue = useRef<Promise<void>>(Promise.resolve());
   const offline = useOffline();
   const workspace = state.workspaces.find(item => item.id === state.activeId)!;
+  const demoWorkspace = state.workspaces.find(item => item.id === guidedFixture.id) ?? guidedFixture;
   const results = useMemo(() => analyze(workspace, day), [workspace, day]);
   useEffect(() => {
     let active = true;
@@ -76,15 +84,22 @@ export default function OrbitCare() {
   }
   function openUrgent() { setPlaying(false); setUrgentOpen(true); }
   function navigate(next: View) {
-    if (next === view) return;
+    if (next === view) { if (next === "monitor") setIntro(false); setTour(false); return; }
     if (view === "crew" && crewDirty && !window.confirm("Leave Crew Assist with unsaved changes? Save or export the incident first to keep your draft.")) return;
-    setView(next); setPlaying(false);
+    setView(next); if (next === "monitor") setIntro(false); setTour(false); setPlaying(false);
   }
+  function saveDemoReview(review: Review) {
+    const next = { ...demoWorkspace, reviews: [...demoWorkspace.reviews, review] };
+    commit({ ...state, workspaces: state.workspaces.some(item => item.id === next.id) ? state.workspaces.map(item => item.id === next.id ? next : item) : [...state.workspaces, next] });
+    setMessage("Demo review recorded locally. Nothing was sent to medical support.");
+  }
+  function enterMonitor() { setIntro(false); setTour(false); navigate("monitor"); requestAnimationFrame(() => document.querySelector(".page-heading")?.scrollIntoView({ block: "start", behavior: "instant" })); }
+  function startTour() { if (!loaded) return; navigate("monitor"); setPlaying(false); setTour(true); setIntro(false); requestAnimationFrame(() => document.getElementById("tour-heading")?.scrollIntoView({ block: "start", behavior: "instant" })); }
   function saveReview(review: Review) { updateWorkspace({ ...workspace, reviews: [...workspace.reviews, review] }); setMessage("Review action recorded locally. Calculated flags are unchanged. Nothing was sent to medical support."); }
   function exportCurrent() { download(exportWorkspace(workspace), `OrbitCare-${workspace.id}-through-day-${workspace.currentDay}.json`); setMessage("Workspace exported. NASA research remains separate from monitoring."); }
   function reset() {
     if (!window.confirm(`Reset “${workspace.name}”? Its check-ins and review actions will be replaced. Export first if you want to keep them.`)) return;
-    const next = workspace.scenario && workspace.kind === "scenario" ? makeScenario(workspace.scenario) : { ...workspace, currentDay: 1, checkIns: [], reviews: [] };
+    const next = workspace.scenario && workspace.kind === "scenario" ? { ...makeScenario(workspace.scenario), id: workspace.id, name: workspace.name } : { ...workspace, currentDay: 1, checkIns: [], reviews: [] };
     updateWorkspace(next); setDay(next.currentDay); setMessage("Workspace reset. Offline assets remain available.");
   }
   function addCustom() { const next = customWorkspace(); commit({ ...state, activeId: next.id, workspaces: [...state.workspaces, next] }); setDay(1); setView("monitor"); setMessage("Empty test workspace created. Days 1–14 form its fixed reference period."); }
@@ -99,17 +114,19 @@ export default function OrbitCare() {
   }
   return <div className={`app-shell${view === "crew" || urgentOpen ? " crew-mode" : ""}`}><a href="#main-content" className="skip-link">Skip to main content</a>
     <aside className="sidebar"><a className="brand" href="#main-content" aria-label="OrbitCare home" onClick={() => navigate("monitor")}><BrandMark /><span>OrbitCare<span className="brand-caption">Research prototype</span></span></a>
-      <div className="workspace-label">Mission workspace</div><nav aria-label="Main navigation">{navigation.map(item => <button key={item.id} className={view === item.id ? "nav-item active" : "nav-item"} aria-current={view === item.id ? "page" : undefined} onClick={() => navigate(item.id)}><item.icon size={19} />{item.label}{view === item.id && <span className="nav-active-dot" />}</button>)}</nav>
+      <div className="workspace-label">Mission workspace</div><button className={`nav-item overview-nav${intro && view === "monitor" && !tour ? " overview-selected" : ""}`} onClick={() => { navigate("monitor"); setIntro(true); setTour(false); window.scrollTo({ top: 0, behavior: "instant" }); }}><Orbit size={19} aria-hidden="true" />Mission overview</button><nav aria-label="Main navigation">{navigation.map(item => <button key={item.id} className={view === item.id && !(intro && view === "monitor" && !tour) ? "nav-item active" : "nav-item"} aria-current={view === item.id && !(intro && view === "monitor" && !tour) ? "page" : undefined} onClick={() => navigate(item.id)}><item.icon size={19} />{item.label}{view === item.id && <span className="nav-active-dot" />}</button>)}</nav>
       <div className="sidebar-bottom"><div className="device-status"><span className={`connection-orb ${offline.ready ? "ready" : ""}`} /><div><strong>{offline.status}</strong><span>Local analysis. No cloud account.</span></div></div><div className="crew-identity"><span className="crew-monogram">C1</span><div><strong>Crewmember 01</strong><span>Fictional demonstration profile</span></div></div><p className="sidebar-disclaimer">A research prototype for NASA Space Apps 2026. Not a clinical or flight-certified system.</p></div>
     </aside>
-    <div className="app-content"><header className="topbar"><div className="breadcrumb"><span>Mission operations</span><ChevronRight size={14} /><strong>{view === "crew" ? "Crew Assist" : navigation.find(item => item.id === view)!.label}</strong></div><div className="topbar-status"><span className="cache-readiness" title={offline.status}><ShieldCheck size={14} />{offline.status}</span>{offline.online ? <Wifi size={15} /> : <WifiOff size={15} />}<span>{offline.online ? "Browser online" : "Browser offline"}</span><span className="prototype-tag">Research prototype</span></div><button className="urgent-trigger" onClick={openUrgent}><ShieldAlert size={17} aria-hidden="true" />Urgent concern</button></header>
+    <div className="app-content"><header className="topbar"><div className="breadcrumb"><span>Mission operations</span><ChevronRight size={14} /><strong>{view === "crew" ? "Crew Assist" : view === "monitor" && tour ? "Guided mission" : view === "monitor" && intro ? "Mission overview" : navigation.find(item => item.id === view)!.label}</strong></div><div className="topbar-status"><span className="cache-readiness" title={offline.status}><ShieldCheck size={14} />{offline.status}</span>{offline.online ? <Wifi size={15} /> : <WifiOff size={15} />}<span>{offline.online ? "Browser online" : "Browser offline"}</span><span className="prototype-tag">Research prototype</span></div><button className="urgent-trigger" onClick={openUrgent}><ShieldAlert size={17} aria-hidden="true" />Urgent concern</button></header>
       <main id="main-content" className="main-content">
         <nav className="crew-entry" aria-label="Assistance mode"><button aria-pressed={view !== "crew"} onClick={() => navigate("monitor")}>Monitor my health</button><button aria-pressed={view === "crew"} onClick={() => navigate("crew")}><ShieldAlert size={16} aria-hidden="true" />Help a crewmate</button><span>Crew Assist · same device</span></nav>
         {error && <div className="notice error" role="alert"><CircleAlert size={18} /><span>{error}</span><button className="text-button" onClick={() => setError("")}>Dismiss</button></div>}
         {message && <div className="notice success" role="status"><Check size={17} /><span>{message}</span><button className="text-button" onClick={() => setMessage("")}>Dismiss</button></div>}
         {offline.waiting && <div className="notice"><Info size={17} /><span>An updated application is ready. Save or export work before reloading.</span><button className="text-button" onClick={() => { if (window.confirm("Apply the update and reload? Save or export unsaved work first.")) offline.applyUpdate(); }}>Apply update</button></div>}
         <div key={view} className="view-transition">
-        {view === "monitor" && <MonitorView workspace={workspace} day={day} indicator={indicator} results={results} loaded={loaded} playing={playing} investigating={investigating} onInvestigating={open => { setInvestigating(open); if (!open) setPlaying(false); }} onResearch={() => { setPlaying(false); setView("research"); }} selectDay={next => { setPlaying(false); setDay(next); }} selectIndicator={next => { setPlaying(false); setIndicator(next); }} selectWorkspace={selectWorkspace} onCheckIn={() => setEntryDay(day)} onReview={saveReview} onReplay={() => { if (playing) setPlaying(false); else { setDay(Math.min(14, workspace.currentDay)); setPlaying(true); } }} onData={() => setView("data")} onExplorer={() => { setPlaying(false); setView("explorer"); }} onUrgent={openUrgent} />}
+        {view === "monitor" && intro && !tour && <MissionIntro onDemo={startTour} onMonitor={enterMonitor} onCrew={() => navigate("crew")} />}
+        {view === "monitor" && tour && <MissionWalkthrough workspace={demoWorkspace} step={tourStep} observedDay={observedDay} onStep={setTourStep} onDay={setObservedDay} onClose={() => { setTour(false); requestAnimationFrame(() => document.querySelector(".page-heading")?.scrollIntoView({ block: "start", behavior: "instant" })); }} onReview={saveDemoReview} offline={offline} onExport={() => download(exportWorkspace(demoWorkspace), "OrbitCare-guided-mission.json")} onData={() => navigate("data")} />}
+        {view === "monitor" && !tour && <MonitorView workspace={workspace} day={day} indicator={indicator} results={results} loaded={loaded} fixedFixture={workspace.id === guidedFixture.id} onDemo={startTour} playing={playing} investigating={investigating} onInvestigating={open => { setInvestigating(open); if (!open) setPlaying(false); }} onResearch={() => { setPlaying(false); setView("research"); }} selectDay={next => { setPlaying(false); setDay(next); }} selectIndicator={next => { setPlaying(false); setIndicator(next); }} selectWorkspace={selectWorkspace} onCheckIn={() => setEntryDay(day)} onReview={saveReview} onReplay={() => { if (playing) setPlaying(false); else { setDay(Math.min(14, workspace.currentDay)); setPlaying(true); } }} onData={() => setView("data")} onExplorer={() => { setPlaying(false); setView("explorer"); }} onUrgent={openUrgent} />}
         {view === "explorer" && <HealthExplorer initialIndicator={indicator} workspace={workspace} day={day} results={results} onDay={next => { setPlaying(false); setDay(next); }} onMonitor={next => { setIndicator(next); setInvestigating(true); setView("monitor"); }} onUrgent={openUrgent} />}
         {view === "research" && <ResearchView />}{view === "method" && <MethodView />}
         {view === "crew" && <CrewAssist workspace={workspace} day={day} onDirtyChange={setCrewDirty} />}

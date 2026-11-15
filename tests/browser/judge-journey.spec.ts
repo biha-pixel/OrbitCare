@@ -60,6 +60,7 @@ test("missing and non-comparable investigation preserves uncertainty and as-of h
   await page.goto("/");
   await page.getByRole("button", { name: "Missing data", exact: true }).click();
   await page.getByRole("button", { name: "Investigate this day", exact: true }).click();
+  await page.getByText("Complete day-by-day record", { exact: true }).click();
   await page.getByRole("button", { name: /^Mission day 25,/ }).click();
   await expect(page.locator(".replay-story")).toContainText("exclude the comparison");
   await expect(page.locator(".comparison-flow")).toContainText("—");
@@ -77,6 +78,7 @@ test("missing and non-comparable investigation preserves uncertainty and as-of h
 test("opening and investigation remain accessible at four judge sizes and reduced motion", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
+  await page.getByRole("button", { name: "Enter health monitoring", exact: true }).click();
   for (const [width, height] of [[1440,900],[1920,1080],[390,844],[360,800]]) {
     await page.setViewportSize({ width, height });
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);

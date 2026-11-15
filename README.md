@@ -13,6 +13,10 @@ OrbitCare has two officially registered NASA Space Apps Challenge 2026 team memb
 
 Local Event: **Anuradhapura, Sri Lanka**. Nesandu’s team membership has been approved by Bihandu. This current membership update does not change the documented original project ownership, development history or AI-use attribution.
 
+## Cinematic mission experience
+
+The optional mission overview introduces the problem with a labeled procedural 3D scene. **Explore Mission Demo** opens five real stages: personal reference, recorded change, explanation, local review and offline preparation. Enter monitoring or Help a crewmate immediately. Mission overview reopens the introduction; Health review goes directly to the workspace. The demo uses a separate saved review workspace. See [CINEMATIC_UPGRADE.md](CINEMATIC_UPGRADE.md) for before/after captures, implementation, validation and release evidence.
+
 ## Try the workflow
 
 Verified public links are recorded in [DEPLOYMENT.md](DEPLOYMENT.md). No registration or credentials are required.
