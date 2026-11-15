@@ -1,0 +1,13 @@
+import { mkdir, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+const url = "https://osdr.nasa.gov/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Comprehensive_Metabolic_Panel_CMP.upload_SUBMITTED.csv";
+const expected = "dab247eb794edab59aaaa683c85fd1f2dbf4ae3684872739338e10ead4192a0c";
+const response = await fetch(url);
+if (!response.ok) throw new Error(`NASA download failed: ${response.status}`);
+const bytes = Buffer.from(await response.arrayBuffer());
+const sha256 = createHash("sha256").update(bytes).digest("hex");
+if (sha256 !== expected) throw new Error("NASA source changed. Review the new source before updating the approved checksum.");
+await mkdir("data/raw", { recursive: true });
+await writeFile("data/raw/OSD-575-CMP.csv", bytes);
+await writeFile("data/raw/acquisition.json", JSON.stringify({ url, filename: "LSDS-8_Comprehensive_Metabolic_Panel_CMP.upload_SUBMITTED.csv", acquiredAt: new Date().toISOString(), sha256, bytes: bytes.length }, null, 2) + "\n");
+console.log(`Verified OSD-575 source: ${bytes.length} bytes, SHA-256 ${sha256}`);

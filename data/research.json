@@ -1,0 +1,489 @@
+{
+  "study": "OSD-575",
+  "version": 3,
+  "title": "Inspiration4 serum metabolic measurements",
+  "doi": "10.26030/mc5d-p710",
+  "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Comprehensive_Metabolic_Panel_CMP.upload_SUBMITTED.csv",
+  "filename": "LSDS-8_Comprehensive_Metabolic_Panel_CMP.upload_SUBMITTED.csv",
+  "acquiredAt": "2026-11-15T01:08:12.094Z",
+  "sha256": "dab247eb794edab59aaaa683c85fd1f2dbf4ae3684872739338e10ead4192a0c",
+  "bytes": 25275,
+  "sourceRows": 531,
+  "selectedRows": 56,
+  "participants": [
+    "C001",
+    "C002",
+    "C003",
+    "C004"
+  ],
+  "visits": [
+    "L-92",
+    "L-44",
+    "L-3",
+    "R+1",
+    "R+45",
+    "R+82",
+    "R+194"
+  ],
+  "methodology": "Serum comprehensive metabolic panel, Quest Diagnostics test 10231, Beckman Coulter AU5800; four Inspiration4 participants on a three-day mission in September 2021.",
+  "license": "Study listing states CC0-1.0. The inspected metadata API omits a license field; retain OSDR attribution and redistribution policy.",
+  "policy": "https://science.nasa.gov/reference/osdr-help-terms-and-conditions/",
+  "limitations": [
+    "Four participants, not 28 independent participants per marker.",
+    "Ground samples before and after flight, not live or in-flight telemetry.",
+    "Sampling visits are not equally spaced in time.",
+    "R+194 occurs in the file although the study prose summarizes fewer timepoints.",
+    "Other variables in the complete source include missing values. Only the selected subset has been validated here.",
+    "No disease interpretation, alert calibration, causal attribution, or long-duration prediction is supported."
+  ],
+  "observations": [
+    {
+      "participant": "C001",
+      "visit": "L-92",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 141,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "L-92",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.6,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "L-44",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 139,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "L-44",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.2,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "L-3",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 142,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "L-3",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.9,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "R+1",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 138,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "R+1",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.4,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "R+45",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 138,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "R+45",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 4,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "R+82",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 140,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "R+82",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.3,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "R+194",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 137,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C001",
+      "visit": "R+194",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.3,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "L-92",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 142,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "L-92",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.9,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "L-44",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 141,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "L-44",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 4,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "L-3",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 143,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "L-3",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.8,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "R+1",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 137,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "R+1",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.5,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "R+45",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 140,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "R+45",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.1,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "R+82",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 141,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "R+82",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.7,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "R+194",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 138,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C002",
+      "visit": "R+194",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.4,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "L-92",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 138,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "L-92",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.2,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "L-44",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 140,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "L-44",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.2,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "L-3",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 141,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "L-3",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.7,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "R+1",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 140,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "R+1",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 4,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "R+45",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 139,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "R+45",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 5.9,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "R+82",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 140,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "R+82",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.2,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "R+194",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 141,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C004",
+      "visit": "R+194",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.8,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "L-92",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 139,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "L-92",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.7,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "L-44",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 139,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "L-44",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.5,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "L-3",
+      "phase": "Pre-flight",
+      "analyte": "SODIUM",
+      "value": 138,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "L-3",
+      "phase": "Pre-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.3,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "R+45",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 136,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "R+45",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 4.4,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "R+82",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 138,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "R+82",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.7,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "R+194",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 137,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "R+194",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 3.8,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "R+1",
+      "phase": "Post-flight",
+      "analyte": "SODIUM",
+      "value": 137,
+      "unit": "mmol/L"
+    },
+    {
+      "participant": "C003",
+      "visit": "R+1",
+      "phase": "Post-flight",
+      "analyte": "POTASSIUM",
+      "value": 3,
+      "unit": "mmol/L"
+    }
+  ]
+}
