@@ -19,14 +19,14 @@ The numerical analysis, types, validation, scenario fixtures, NASA raw/derived m
 | New guided-care checks | Guides, acute concern in stable/empty records, check-in-to-urgent navigation, system mapping, as-of replay, responsiveness, reduced motion and offline persistence passed in the final 23-test run |
 | Existing regression coverage | All original 15 checks passed within that complete local run |
 | Accessibility | No axe WCAG 2 A/AA and 2.1 AA violations in the tested original views/dialog, new urgent dialog, body explorer and expanded guide |
-| Microsoft Edge | Final local artifact passed actual offline reload, persisted review, bundled research and no page-error smoke |
+| Microsoft Edge | Local artifact and public release passed actual offline reload, persisted review, bundled research and no page-error smoke |
 | Visual review | Real captures at 1440x900, 1920x1080, 1024x768, 390x844 and 360x800, including all three systems, guidance and urgent concern; no document overflow |
 | Video | FFprobe: 28.000 seconds, 1920x1080, 30 fps, H.264/yuv420p, 1,236,621 bytes; encoded scenes inspected |
 | Presentation | Exactly seven 16:9 PDF pages (1440x810 points); every actual exported page rendered with PyMuPDF and visually inspected |
 | Source/data preservation | Protected-file diff empty; original checksum and all 56 selected NASA values pass existing tests |
 | git diff --check | Passed, ordinary Windows line-ending notices only |
 
-All 23 final local browser tests passed (2.2 minutes). The eighth new test explicitly verifies missing-data action guidance, local no-request language, recent-observation focus and urgent replay pause. Final public acceptance is recorded in DEPLOYMENT.md when observed; it must not be inferred from local results.
+The complete local browser suite passed all 23 checks (2.2 minutes); after a final one-line contextual-navigation pause correction, the affected body-selection/replay and offline-explorer tests both passed again (9.3 seconds). The eighth new test explicitly verifies missing-data action guidance, local no-request language, recent-observation focus and urgent replay pause. All 23 checks also passed against final production dpl_EMS6sxHxe1j6RDLhCCDqaVuqoapc in fresh unauthenticated Chromium contexts (2.2 minutes). Edge public offline smoke passed. Public SW/MP4/PDF checksums match local verification; DEPLOYMENT.md records the artifact.
 
 ## Targeted browser assertions
 
@@ -41,7 +41,7 @@ All 23 final local browser tests passed (2.2 minutes). The eighth new test expli
 
 ## Findings corrected
 
-The SVG activity hit area initially had a gap; it now covers the intended region. A guide heading's mixed text structure made its control difficult to locate; it now has a distinct label. A research link measured 4.43:1 contrast and was darkened before retesting. A missing-data test used the wrong fixture day and was corrected to the actual missing day without changing fixtures. Urgent navigation now pauses replay through one shared handler. Insufficient-reference guidance explicitly avoids inventing missing historical values. Early media punctuation encoding was corrected before the final rendered review.
+The SVG activity hit area initially had a gap; it now covers the intended region. A guide heading's mixed text structure made its control difficult to locate; it now has a distinct label. A research link measured 4.43:1 contrast and was darkened before retesting. A missing-data test used the wrong fixture day and was corrected to the actual missing day without changing fixtures. Urgent navigation pauses replay through one shared handler. Contextual explorer navigation also pauses replay, with a timed regression assertion. Insufficient-reference guidance explicitly avoids inventing missing historical values. Early media punctuation encoding was corrected before the final rendered review.
 
 No new runtime package or animation framework was added. Effects use immediate correct values and 180/280/320 ms CSS feedback with a reduced-motion override. Controlled folder access remains enabled; no Defender allow-list exception was needed.
 

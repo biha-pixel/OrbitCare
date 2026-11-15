@@ -9,11 +9,11 @@
 
 ## Guided-care release - 15 November 2026
 
-Published production: dpl_BhMPnwWKC1RVr69m6iEbDNNhQYVj, deployment-specific URL https://orbitcare-qwbuot5w9-nutri-38e1.vercel.app. Use the stable public production alias above for judges. The previous verified release dpl_7xF44a7wDxZz46LLoUnFr2tTqY6D remains in deployment history as fallback.
+Published production: dpl_EMS6sxHxe1j6RDLhCCDqaVuqoapc, deployment-specific URL https://orbitcare-oxmob0w4b-nutri-38e1.vercel.app. Use the stable public production alias above for judges. The previous verified release dpl_7xF44a7wDxZz46LLoUnFr2tTqY6D remains in deployment history as fallback.
 
-Protected preview: https://orbitcare-2om0bq18v-nutri-38e1.vercel.app (dpl_HVC92d8qYiqCroZLDKKYeRd5wxBo). Before production, signed-in CLI retrieval confirmed matching app HTML apart from Vercel's injected preview feedback script, and exact matching service worker, video and PDF checksums. Protection was retained. All 23 final local browser tests and Edge offline smoke passed before publication. Public acceptance is recorded below after its actual completion.
+Protected preview: https://orbitcare-bj6c4e2bg-nutri-38e1.vercel.app (dpl_8Cn7y1aREcu8bDQg4uUi1jT2Pe7Z). Before production, signed-in CLI retrieval confirmed matching final app HTML apart from Vercel's injected preview feedback script and an exact matching service worker. Unchanged media matched on the preceding preview; final public MP4/PDF checksums also match the verified local files. Protection was retained. The full local suite passed all 23 checks, with affected replay/body and offline tests separately rerun after the last one-line correction. Edge offline smoke also passed. All 23 acceptance checks passed against the final public release in fresh unauthenticated Chromium contexts (2.2 minutes). Microsoft Edge final public offline/persistence smoke passed. Public service-worker/video/PDF bytes match the verified local files.
 
-Core offline version: 0a30272f7930fd3d; 48 assets, approximately 1.55 MiB. The new separately loaded explorer chunk, SVG/code, guides, evidence and urgent signpost are bundled and tested after a real offline reload. Submission media is excluded from core preparation.
+Core offline version: d9e046d3f93c54aa; 48 assets, approximately 1.55 MiB. The new separately loaded explorer chunk, SVG/code, guides, evidence and urgent signpost are bundled and tested after a real offline reload. Submission media is excluded from core preparation.
 
 Final media: 28.000-second 1920x1080/30-fps H.264 video, 1,236,621 bytes; PDF exactly seven native 16:9 pages, 656,741 bytes. Every actual PDF page and all encoded video scenes were visually inspected. The video uses actual composed application closeups and a recorded disconnected-browser review, not a continuous recording. Persistence was verified after another offline reload.
 
@@ -21,7 +21,7 @@ SHA-256:
 
 - MP4: 10fb596a7a0b25f24a020e90e92928c96d0aa46e1adaf6cdaec1bacd2fc85d86.
 - PDF: f903aef8854214519715df8c8ec27080e73619c4169d9bf4d83ba7d42e33274d.
-- Service worker: 08ee76afdbaf90d083af6b89b6b2d97b1bb89dede38b4ba92301f6b8ff138481.
+- Service worker: 140cdf0879a18b1f3c3aedbcbf9590a44e17702b0ac98904e0073e684fa7211c.
 
 Preview proof: artifacts/alignment-final/preview-verification.json. Software/source-preservation proof: QA_REPORT.md and artifacts/alignment-final/preservation.json. Deployment is not NASA judging submission.
 

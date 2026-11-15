@@ -20,7 +20,7 @@ The agent could not independently retrieve the current official Project Submissi
 ## Public deliverables
 
 - [x] Public application works in fresh unauthenticated browser contexts without password, owner session, or registration.
-- [x] Previous redesigned release passed all 15 public browser checks without owner cookies; the subsequent guided-care release has 23 passing local checks. Latest public results are recorded in QA_REPORT.md and DEPLOYMENT.md after release verification.
+- [x] Final guided-care release passed all 23 public browser checks in fresh unauthenticated contexts, plus Edge offline smoke. Results and release IDs are recorded in QA_REPORT.md and DEPLOYMENT.md.
 - [x] Public demo playback verified without registration: 28.000 seconds, 1920×1080. Fallback PDF has exactly seven native 16:9 pages including title/closing slides.
 - [x] English project materials and baked-in English video captions; no narration or non-English content in prepared media.
 - [ ] Source repository is public if provided. The agent does not commit/push; the participant handles source publication manually.
