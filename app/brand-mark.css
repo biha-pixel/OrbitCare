@@ -29,7 +29,7 @@
 .brand-mark .brand-planet,
 .brand-mark .brand-planetHalo {
   fill: #a5f1df;
-  offset-path: path("M 57 32 A 25 16 0 1 1 7 32 A 25 16 0 1 1 57 32");
+  offset-path: path("M 57 32 A 25 16 0 1 1 7 32 A 25 16 0 1 1 57 32 Z");
   offset-position: 0 0;
   offset-anchor: 0px 0px;
   offset-rotate: 0deg;
@@ -56,7 +56,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .brand-planet,
   .brand-planetHalo {
-    animation: orbit 7s linear infinite;
+    animation: brand-orbit-loop 7s linear -.84s infinite;
   }
 
   .brand-trace {
@@ -64,9 +64,9 @@
   }
 }
 
-@keyframes orbit {
-  from { offset-distance: 12%; }
-  to { offset-distance: 112%; }
+@keyframes brand-orbit-loop {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
 }
 
 @keyframes heartbeat {
