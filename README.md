@@ -25,6 +25,8 @@ Verified public links are recorded in [DEPLOYMENT.md](DEPLOYMENT.md). No registr
 6. Open **Health explorer** to select a schematic body region, inspect its existing recorded trend and read the NASA context and limits. Expand **How to measure and record** in check-in for methods and quality guidance.
 7. **Urgent concern** directs immediately to approved mission procedures and designated medical personnel. It works independently of trend flags and makes no contact or diagnosis.
 
+**Help a crewmate** opens Crew Assist without requiring readings or flags. Shared urgent guidance comes first; optional incident records, a deterministic fictional Mars drill, explicit historical snapshots, local JSON/text export and Print / Save as PDF follow. No alarm, diagnosis, treatment, installed mission protocol or synchronized crew access is provided. See [Crew Assist](CREW_ASSIST.md).
+
 Monitoring data is synthetic or user-entered test data. NASA laboratory observations never enter the monitoring engine. Do not enter private medical information.
 
 ## Getting started

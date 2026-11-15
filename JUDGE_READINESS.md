@@ -1,6 +1,13 @@
 # OrbitCare — judge-first readiness
 
-## Final media consistency — 15 November 2026, 15:56 Asia/Colombo
+## Current Crew Assist readiness — 15 November 2026 at 17:48 Asia/Colombo
+
+Public production **dpl_ivAkd6evSFgFx1ghkmtsHqPpeNfr**, https://orbitcare-eight.vercel.app/, adds the participant-proposed assistance use case while retaining the normal first-visit monitoring journey. **Help a crewmate** → approved-procedure/trained-personnel guidance → optional incident/drill → source-labeled local handoff. There is no emergency detection, installed mission protocol, treatment or automated contact.
+
+All 39 unit/data tests, lint, TypeScript and build passed. The complete local suite passed 34 checks; affected forms passed again after final corrections, and all 34 passed on the final public deployment. Public Edge actual-offline export/import and persistence passed. Video remains 28 seconds; slide deck remains seven pages and both names remain accurate. Source, scientific/AI limitations, current transcript and public files align. See CREW_ASSIST.md, latest QA_REPORT.md / DEPLOYMENT.md and `artifacts/crew-final/`. The participant must still publish source if linked and complete **Submit for Judging** with confirmation. Earlier readiness entries are historical.
+
+
+## Previous media consistency — 15 November 2026, 15:56 Asia/Colombo
 
 Current production: **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV**, https://orbitcare-eight.vercel.app/. The 28.000-second final cut replaces the poorly framed replay crop with the actual day-24 review explanation. Its eight-scene timed transcript and current submission/AI descriptions match. The seven-slide PDF is byte-for-byte unchanged and lists both registered members for Anuradhapura. Application functionality, science and disclosures are unchanged. All 31 unit/data tests, lint, production build/TypeScript, six local and six public browser checks, demo accessibility and public Edge offline persistence passed. Evidence: `artifacts/media-final/`; see the newest DEPLOYMENT.md and QA_REPORT.md entries. The participant still must publish source if providing it and complete **Submit for Judging** in the registered dashboard.
 

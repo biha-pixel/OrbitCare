@@ -1,6 +1,20 @@
 # OrbitCare — submission checklist
 
-## Final media and public files — 15 November 2026, 15:56 Asia/Colombo
+## Current Crew Assist release and submission files — 15 November 2026 at 17:48 Asia/Colombo
+
+- [x] Public release **dpl_ivAkd6evSFgFx1ghkmtsHqPpeNfr** at https://orbitcare-eight.vercel.app/; prior verified build retained as fallback.
+- [x] Crew Assist guidance, optional local handoff and labeled deterministic drill implemented without changing the monitoring engine or NASA measurements.
+- [x] Lint/TypeScript/build, 39 unit/data tests, 34 complete local and 34 final public browser checks, affected-form reruns, public Edge offline handoff export/import/persistence and ordinary monitoring passed.
+- [x] Final 28-second MP4, timed transcript and seven-slide PDF match actual implemented UI. Only one scene/slide changed in content; both **Bihandu Liyanage and Nesandu Liyanage**, **Anuradhapura, Sri Lanka**, remain accurate. Public links work without registration and match local files.
+- [x] Project description, submission summary, NASA evidence/references, AI disclosure, limitations and Crew Assist usage updated.
+- [ ] Review final media/text, copy SUBMISSION_FIELDS.md / PROJECT_DESCRIPTION.md / AI_USE.md into the registered project, confirm both members, event and selected challenge, and check the actual form limits/required media format.
+- [ ] Publish the reviewed source if providing a repository link; source changes remain local and uncommitted.
+- [ ] Save the official form and open its public application/media links. Select **Submit for Judging** and retain the successful confirmation before **15 November 2026, 23:59 Asia/Colombo**, or any earlier local cutoff.
+
+No authenticated Space Apps dashboard access was available to the agent. Deployment is verified; successful judging submission remains unconfirmed. Older checklist sections below are historical.
+
+
+## Previous media and public files — 15 November 2026, 15:56 Asia/Colombo
 
 - [x] Final release **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV** is public at https://orbitcare-eight.vercel.app/.
 - [x] The 28-second MP4 has a properly framed actual review explanation; encoded 12–14-second frames and public playback checked.

@@ -86,3 +86,7 @@ The existing four design skills were used directly: Frontend Design for the body
 | Presentation | Responsive body explorer, restrained motion, updated actual-capture media and source-linked explanations | Participant review and successful final submission still required |
 
 No official score, medical effectiveness or award outcome is implied. Reminder scheduling, complex 3D anatomy, new datasets, sensors and environment-specific rules remain outside scope.
+
+## Crew Assist extension
+
+At the participant’s request, the completed personal-monitoring journey now also supports helping a fictional crewmate unable to operate the software. A two-option mode selector opens shared urgent guidance before optional incident recording, a deterministic training-only Mars drill and a local printable/exportable handoff. The design extends evaluation/recording and responsibility boundaries without converting sustained monitoring flags into emergencies. NASA care/training standards inform roles and recording context; they supply no installed mission-specific protocol. No new numerical indicator, monitoring rule, real communication service or clinical outcome is claimed. The prior verified media release remains the deployment fallback until replacement checks pass. See CREW_ASSIST.md and the newest QA_REPORT.md/DEPLOYMENT.md entries for final results.

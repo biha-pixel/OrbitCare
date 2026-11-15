@@ -17,7 +17,7 @@ Local Event: **Anuradhapura, Sri Lanka**. Nesandu’s team membership has been a
 
 ## High-level summary
 
-OrbitCare helps astronauts notice personal changes, understand why a review is suggested, and preserve their review offline. Mission Decision Replay traces a fixed reference, changed readings, persistence and review using transparent rules. NASA research informs indicator context and care boundaries; a separate OSD-575 explorer preserves original laboratory measurements. Monitoring scenarios are synthetic. This research prototype does not diagnose, treat or validate medical thresholds.
+OrbitCare helps astronauts notice personal changes, understand why a review is suggested, and preserve their review offline. Mission Decision Replay traces a fixed reference, changed readings, persistence and review using transparent rules. NASA research informs indicator context and care boundaries; a separate OSD-575 explorer preserves original laboratory measurements. Crew Assist adds urgent-procedure signposting and optional same-device incident handoffs, demonstrated by a clearly labeled fictional drill. It makes no contact and contains no mission emergency protocol. Monitoring scenarios are synthetic. This research prototype does not diagnose, treat or validate medical thresholds.
 
 ## Public demonstration
 
@@ -27,7 +27,7 @@ Direct video if the field requires a media file: https://orbitcare-eight.vercel.
 
 Fallback presentation: https://orbitcare-eight.vercel.app/demo/OrbitCare-seven-slides.pdf
 
-Choose one primary demonstration format according to the official guide. The final video is 28 seconds and follows one reference-to-review story, including actual reference/replay cards, a clearly framed day-24 review explanation and a recorded offline review interaction. The fallback PDF has seven pages including title/closing slides; the title slide lists Bihandu Liyanage and Nesandu Liyanage for Anuradhapura, Sri Lanka. Slide 5 shows actual NASA OSD-575 measurements and their scientific separation. The final 28-second cut has no outdated membership claim; its review-explanation segment and timed transcript were corrected without changing the application or PDF.
+Choose one primary demonstration format according to the official guide. The final video is 28 seconds and follows one reference-to-review story, including actual reference/replay cards, a clearly framed day-24 review explanation and a recorded offline review interaction. The fallback PDF has seven pages including title/closing slides; the title slide lists Bihandu Liyanage and Nesandu Liyanage for Anuradhapura, Sri Lanka. Slide 4 shows actual Crew Assist guidance and a synthetic handoff with unknown observations; slide 5 preserves actual NASA OSD-575 measurements and their scientific separation. The final 28-second cut retains the corrected day-24 explanation and offline interaction. Its 13–16.5-second scene now shows actual synthetic Crew Assist guidance; the timed transcript and slide 4 match this implemented extension. Both team names remain accurate.
 
 ## Final project
 

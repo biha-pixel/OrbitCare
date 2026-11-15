@@ -1,7 +1,7 @@
 import type { AppState } from "./types";
 import { validateState } from "./validation";
 
-function database(): Promise<IDBDatabase> {
+export function database(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open("orbitcare", 1);
     request.onupgradeneeded = () => request.result.createObjectStore("state");

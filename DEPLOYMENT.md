@@ -1,6 +1,19 @@
 # OrbitCare deployment
 
-## Final media correction — 15 November 2026, 15:56 Asia/Colombo
+## Current Crew Assist release — 15 November 2026 at 17:48 Asia/Colombo
+
+Production **dpl_ivAkd6evSFgFx1ghkmtsHqPpeNfr** is Ready at https://orbitcare-eight.vercel.app/ (deployment URL https://orbitcare-kv7e8ui41-nutri-38e1.vercel.app). Final protected preview: **dpl_GJDBcqikDPiSLGtCgBbsUnvcz4XC**, https://orbitcare-t3ktaenj1-nutri-38e1.vercel.app. Preview HTML, MP4, PDF and SW matched the tested local artifact before promotion. The previous verified production **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV** remains the fallback in deployment history. Source changes remain local and uncommitted; no agent commit/push was made.
+
+**Help a crewmate** opens shared urgent guidance independently of monitoring flags. Optional local incident documentation, a deterministic fictional Mars drill, explicit selected-day historical snapshots, JSON import/export, text download and browser Print / Save as PDF follow. No approved mission-specific protocol, medical detection, triage, treatment, automated contact, cloud service or crew-device sync is implemented. Normal monitoring remains the default. The original logo files are unchanged; distracting movement is paused within Crew Assist/urgent guidance.
+
+Passed: lint, TypeScript, 39 unit/data tests, production build, complete 34-test local browser run and all 34 browser checks on the final public alias. Affected Crew Assist tests passed again after final print/form corrections. Edge public Crew Assist offline reload, previously unvisited drill, export/import, handoff persistence after another reload and ordinary monitoring/research smoke passed. Fresh public asset hashes match local HTML, media, slide HTML, poster, service worker and original NASA CSV.
+
+Core offline manifest: **9ab37165e2fd56ad**, **49 assets**, approximately **1.60 MiB**. MP4: **28.000 seconds**, **1920×1080**, **30 fps**, **840 H.264/yuv420p frames**, **1,336,582 bytes**, SHA-256 `2976c054adc357c1855ea933d7d4ea50871167de62a88095fcfe69d91a2e0f1c`. PDF: **seven native 16:9 slides**, **668,689 bytes**, SHA-256 `dd4888dc29423133f38dffe85672486d56fafda33c2ef68892f4d005b01e0f65`. Only scene 13–16.5 seconds and slide 4 changed in content; the six other PDF pages are pixel-identical. Both team names and the NASA laboratory slide are preserved. The eight-scene transcript matches. Crew captures: **2026-11-15T11:49:22.151Z**; retained monitoring/NASA/offline captures and the corrected review explanation keep their original provenance.
+
+Evidence: `artifacts/crew-baseline/`, `artifacts/crew-final/`, `artifacts/presentation/capture.json` and `encoded-frames/verification.json`. This is a public deployment, not confirmation of judging submission. Earlier release entries below are historical.
+
+
+## Previous media correction — 15 November 2026, 15:56 Asia/Colombo
 
 Production **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV** is Ready at https://orbitcare-eight.vercel.app/ (deployment URL https://orbitcare-6y8zgtjma-nutri-38e1.vercel.app). Protected preview **dpl_HofgSbUaYPnuTJSsVU2Y4x3xMCg9**, https://orbitcare-dnnalsynu-nutri-38e1.vercel.app, matched the tested HTML, MP4, PDF and service worker before promotion. The previous verified production **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu** remains in deployment history as fallback. An initial preview upload failed with a transient connection error; retry succeeded before promotion.
 

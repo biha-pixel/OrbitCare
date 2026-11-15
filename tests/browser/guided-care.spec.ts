@@ -33,7 +33,7 @@ test("urgent concern is immediate in stable and empty records and makes no conta
   const dialog = page.getByRole("dialog");
   await expect(dialog.getByRole("heading", { name: "Use your mission emergency procedures now." })).toBeFocused();
   await expect(dialog).toContainText("Do not wait for three days");
-  await expect(dialog).toContainText("No contact has been made.");
+  await expect(dialog).toContainText("No contact has been made by OrbitCare.");
   await expect(dialog).toContainText("No mission protocol is installed here.");
   await expect(dialog.locator("form,input,textarea")).toHaveCount(0);
   await expect(dialog.getByRole("button")).toHaveCount(1);
@@ -142,7 +142,7 @@ test("unvisited explorer, guidance and urgent signpost all work after actual off
   await page.getByRole("button", { name: "Sleep & fatigue", exact: false }).first().click();
   await expect(page.locator(".system-panel .metric-row")).toHaveCount(2);
   await page.getByRole("button", { name: "Urgent concern", exact: true }).click();
-  await expect(page.getByRole("dialog")).toContainText("No contact has been made.");
+  await expect(page.getByRole("dialog")).toContainText("No contact has been made by OrbitCare.");
   await page.keyboard.press("Escape");
   await page.getByRole("button", { name: "Health review", exact: true }).click();
   await page.getByRole("button", { name: "Record check-in", exact: true }).click();

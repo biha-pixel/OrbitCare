@@ -8,6 +8,7 @@ import "./mission.css";
 import "./alignment.css";
 import "./brand-mark.css";
 import "./judge.css";
+import "./crew-assist.css";
 
 export const metadata: Metadata = {
   title: "OrbitCare — Mission health review",
