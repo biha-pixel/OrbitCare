@@ -1,0 +1,84 @@
+.brand-mark {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 50px;
+}
+
+.brand-mark .brand-artwork {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: none;
+}
+
+.brand-mark .brand-orbit {
+  stroke: #8dd6c8;
+  stroke-width: 1.7;
+  opacity: .8;
+}
+
+.brand-mark .brand-waveform {
+  width: 42px;
+  height: 28px;
+  overflow: hidden;
+  stroke: none;
+}
+
+.brand-mark .brand-planet,
+.brand-mark .brand-planetHalo {
+  fill: #a5f1df;
+  offset-path: path("M 57 32 A 25 16 0 1 1 7 32 A 25 16 0 1 1 57 32");
+  offset-position: 0 0;
+  offset-anchor: 0px 0px;
+  offset-rotate: 0deg;
+  offset-distance: 12%;
+}
+
+.brand-mark .brand-planetHalo {
+  opacity: .16;
+}
+
+.brand-mark .brand-planet {
+  stroke: #122235;
+  stroke-width: 1.3;
+}
+
+.brand-mark .brand-pulse {
+  fill: none;
+  stroke: #f4f8fa;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand-planet,
+  .brand-planetHalo {
+    animation: orbit 7s linear infinite;
+  }
+
+  .brand-trace {
+    animation: heartbeat 1.8s linear infinite;
+  }
+}
+
+@keyframes orbit {
+  from { offset-distance: 12%; }
+  to { offset-distance: 112%; }
+}
+
+@keyframes heartbeat {
+  from { transform: translateX(0); }
+  to { transform: translateX(-42px); }
+}
+
+@media (min-width: 761px) and (max-width: 1250px) {
+  .brand-mark { width: 36px; height: 44px; }
+}
+
+@media (max-width: 760px) {
+  .brand-mark { width: 48px; height: 48px; }
+}
+

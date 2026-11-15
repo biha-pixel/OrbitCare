@@ -13,6 +13,7 @@ import MonitorView from "./monitor-view";
 import MethodView from "./method-view";
 import DataView from "./data-view";
 import UrgentConcern from "./urgent-concern";
+import BrandMark from "./brand-mark";
 const ResearchView = dynamic(() => import("./research-view"), { loading: () => <p className="loading-message">Opening bundled NASA observations…</p> });
 const HealthExplorer = dynamic(() => import("./health-explorer"), { loading: () => <p className="loading-message">Opening bundled health explorer…</p> });
 type View = "monitor" | "explorer" | "research" | "method" | "data";
@@ -89,7 +90,7 @@ export default function OrbitCare() {
     } catch (cause) { setError(cause instanceof Error && cause.message.startsWith("Import must") ? cause.message : "Import rejected: use an OrbitCare schema-v1 export with valid units, values, unique days, and rule version. Existing data is unchanged."); }
   }
   return <div className="app-shell"><a href="#main-content" className="skip-link">Skip to main content</a>
-    <aside className="sidebar"><a className="brand" href="#main-content" aria-label="OrbitCare home" onClick={() => setView("monitor")}><svg viewBox="0 0 42 42" aria-hidden="true"><ellipse cx="21" cy="21" rx="19" ry="10" transform="rotate(-38 21 21)" /><path d="M8 22h8l4-8 5 15 4-7h5" /><circle cx="35" cy="10" r="2" /></svg><span>OrbitCare<span className="brand-caption">Personal monitoring</span></span></a>
+    <aside className="sidebar"><a className="brand" href="#main-content" aria-label="OrbitCare home" onClick={() => setView("monitor")}><BrandMark /><span>OrbitCare<span className="brand-caption">Personal monitoring</span></span></a>
       <div className="workspace-label">Mission workspace</div><nav aria-label="Main navigation">{navigation.map(item => <button key={item.id} className={view === item.id ? "nav-item active" : "nav-item"} aria-current={view === item.id ? "page" : undefined} onClick={() => { setView(item.id); setPlaying(false); }}><item.icon size={19} />{item.label}{view === item.id && <span className="nav-active-dot" />}</button>)}</nav>
       <div className="sidebar-bottom"><div className="device-status"><span className={`connection-orb ${offline.ready ? "ready" : ""}`} /><div><strong>{offline.status}</strong><span>Local analysis. No cloud account.</span></div></div><div className="crew-identity"><span className="crew-monogram">C1</span><div><strong>Crewmember 01</strong><span>Fictional demonstration profile</span></div></div><p className="sidebar-disclaimer">A research prototype for NASA Space Apps 2026. Not a clinical or flight-certified system.</p></div>
     </aside>
