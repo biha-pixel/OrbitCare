@@ -4,6 +4,8 @@ import { spawnSync } from "node:child_process";
 
 const directory = "artifacts/presentation";
 const slidesOnly = process.argv.includes("--slides-only");
+const videoOnly = process.argv.includes("--video-only");
+if (slidesOnly && videoOnly) throw new Error("Choose either slides-only or video-only.");
 const capture = JSON.parse(await readFile(`${directory}/capture.json`, "utf8"));
 await mkdir(`${directory}/frames`, { recursive: true });
 await mkdir(`${directory}/clips`, { recursive: true });
@@ -34,7 +36,7 @@ const videoFrames = [
   frame("A personal change. A reason to investigate.", text("An astronaut’s<br>readings change.",80,230,850,88,"hero") + text("What changed? Why review?<br>OrbitCare makes the reasoning inspectable.",84,566,800,35,"soft") + image("change-record",970,280,870,620,"bordered"), {dark:true}),
   frame("Reference / Fixed days 1–14", text("Start with their<br>own reference.",80,220,850,83,"hero") + image("story-14",84,555,820,240,"bordered") + image("comparison",1010,365,820,300,"bordered") + text("Reference → day 24 reading<br>Original units. No hidden score.",1010,737,820,33,"soft")),
   frame("Notice / Synthetic mission day 22", text("The first changed reading.<br>Not yet a review flag.",80,210,1740,76,"hero") + image("story-22",80,443,1760,250,"bordered") + text("A single changed day does not meet the three-day persistence rule.",84,818,1740,34,"soft")),
-  frame("Mission Decision Replay / Actual application interaction", text("A changed reading becomes<br>an explainable review.",80,210,1740,78,"hero") + `<div class="picture-panel" style="left:80px;top:470px;width:1760px;height:350px"></div>` + text("Selected day only · Three consecutive changed days · Unvalidated engineering rule",84,890,1740,30,"soft")),
+  frame("Mission Decision Replay / Day 24 review explanation", text("Why suggest<br>a review?",80,220,830,83,"hero") + text("60 → 71 bpm<br>Three consecutive changed days.",84,540,830,39,"facts") + text("Check the calculation and measurement quality.<br>Then record an appropriate review action.",84,730,830,30,"soft") + image("review-explanation",990,200,850,770,"bordered"), {source:"Synthetic mission day 24 · Unvalidated engineering rule · Not a diagnosis"}),
   frame("NASA context / Research mapped to features", text("Research informs<br>what we record.",80,220,850,80,"hero") + text("Cardiovascular adaptation. Sleep and schedules.<br>Longitudinal observations. Medical-care boundaries.",84,570,850,32,"facts") + image("nasa-connection",1020,257,800,690,"bordered") + text("NASA research does not validate our thresholds.",84,872,850,27,"soft")),
   frame("NASA measurements / OSD-575", text("Real laboratory data.<br>Kept scientifically separate.",80,205,1740,73,"hero") + text("Sodium (mmol/L) · ground sampling visits",84,398,1110,23,"soft") + image("research-plot",80,445,1110,445,"bordered") + text("56 original observations<br>4 participants · 7 visits<br>Sodium / potassium · mmol/L",1260,441,570,32,"facts") + text("These measurements do not calibrate the monitoring rules.",1260,744,570,30,"soft"), {source:"OSD-575 · DOI 10.26030/mc5d-p710 · original values and provenance preserved"}),
   frame("Continue / Actual browser network disconnection", text("Disconnected.<br>Review continues.",80,213,830,78,"hero") + image("offline-status",84,455,780,62) + text("Reopened offline.<br>Record the action locally.<br>Nothing sent to medical support.",84,600,820,34,"facts") + `<div class="picture-panel" style="left:1040px;top:292px;width:800px;height:660px"></div>`),
@@ -44,12 +46,14 @@ const html = content => `<!doctype html><html lang="en"><head><meta charset="utf
 const browser = await chromium.launch();
 try {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
+  if (!videoOnly) {
   await page.setContent(html(slides.join("")), { waitUntil: "load" });
   await page.evaluate(() => document.fonts.ready);
   await page.emulateMedia({ media: "print" });
   await page.pdf({ path: "public/demo/OrbitCare-seven-slides.pdf", printBackground: true, preferCSSPageSize: true });
   await writeFile("public/demo/slides.html", html(slides.join("")));
   for (let index = 0; index < slides.length; index++) await page.locator(".frame").nth(index).screenshot({ path: `${directory}/frames/slide-${index + 1}.png` });
+  }
   await page.emulateMedia({ media: "screen" });
   for (let index = 0; !slidesOnly && index < videoFrames.length; index++) {
     await page.setContent(html(videoFrames[index]), { waitUntil: "load" });
@@ -72,10 +76,10 @@ const transition = .2;
 for (let index = 0; index < videoFrames.length; index++) {
   const duration = planned[index] + (index < videoFrames.length - 1 ? transition : 0);
   const path = `${directory}/clips/scene-${index}.mp4`;
-  if (index === 6 || index === 3) {
-    const interaction = index === 3 ? capture.replay : capture.action;
+  if (index === 6) {
+    const interaction = capture.action;
     const box = interaction.box;
-    const target = index === 3 ? {width:1760,height:350,x:80,y:470} : {width:800,height:660,x:1040,y:292};
+    const target = {width:800,height:660,x:1040,y:292};
     const crop = `${Math.floor(box.width / 2) * 2}:${Math.floor(box.height / 2) * 2}:${Math.floor(box.x / 2) * 2}:${Math.floor(box.y / 2) * 2}`;
     run(["-loop","1","-framerate","30","-i",`${directory}/frames/video-${index}.png`,"-ss",String(interaction.start),"-t",String(interaction.duration),"-i",capture.action.sourceVideo,"-filter_complex_threads","1","-filter_complex",`[1:v]crop=${crop},fps=30,setpts=PTS-STARTPTS,scale=${target.width}:${target.height}:force_original_aspect_ratio=decrease,pad=${target.width}:${target.height}:(ow-iw)/2:(oh-ih)/2:white,tpad=stop_mode=clone:stop_duration=2[v];[0:v][v]overlay=${target.x}:${target.y}:shortest=1,format=yuv420p[out]`,"-map","[out]","-t",String(duration),"-c:v","libx264","-preset","fast","-crf","19","-pix_fmt","yuv420p","-an",path]);
   } else run(["-loop","1","-framerate","30","-i",`${directory}/frames/video-${index}.png`,"-t",String(duration),"-c:v","libx264","-preset","fast","-crf","19","-pix_fmt","yuv420p","-an",path]);
@@ -90,7 +94,7 @@ run([...inputs,"-filter_complex_threads","1","-filter_complex",filter,"-map","[v
 await copyFile(`${directory}/frames/video-0.png`, "public/demo/poster.png");
 const probe = spawnSync("ffprobe",["-v","error","-show_entries","format=duration,size:stream=width,height,r_frame_rate","-of","json","public/demo/OrbitCare-demo.mp4"],{encoding:"utf8"});
 if (probe.status !== 0) throw new Error(probe.stderr);
-const result = { ...JSON.parse(probe.stdout), slideCount: slides.length, aspectRatio: "16:9", actualAppCaptures: true, englishText: "large captions baked into each scene", imageGenerationModelUsed: false, aiAssistedCodeDefinedSchematic: true, offlineProof: capture.offline, actualReplayRecorded: Boolean(capture.replay), capturedAt: capture.capturedAt };
+const result = { ...JSON.parse(probe.stdout), slideCount: slides.length, aspectRatio: "16:9", actualAppCaptures: true, englishText: "large captions baked into each scene", imageGenerationModelUsed: false, aiAssistedCodeDefinedSchematic: true, offlineProof: capture.offline, actualReplayRecorded: false, actualReviewExplanationCapture: true, capturedAt: capture.capturedAt, reviewExplanation: capture.reviewExplanation };
 if (Number(result.format.duration) > 30) throw new Error("Demo exceeds the limit.");
 await writeFile(`${directory}/verification.json`,JSON.stringify(result,null,2));
 console.log(result);

@@ -16,7 +16,7 @@ The opening view presents compact mission context, clearly labeled synthetic sce
 
 Four deterministic scenarios demonstrate stability, sustained change, incomplete information, and return toward the reference. Judges can reproduce the same behavior without registration. Entries can be added or deliberately edited; accessible tables, validated JSON portability, workspace reset, and a printable review record make the workflow inspectable.
 
-An expandable four-indicator guide explains what is recorded, why it matters, practical methods, equipment assumptions and interpretation limits. Status-specific next steps suggest checking measurement quality, recording context, inspecting recent observations and using designated medical personnel or approved procedures when appropriate. Saving a review is always a local action.
+An expandable guide to the four recorded measurements explains what is recorded, why it matters, practical methods, equipment assumptions and interpretation limits. Status-specific next steps suggest checking measurement quality, recording context, inspecting recent observations and using designated medical personnel or approved procedures when appropriate. Saving a review is always a local action.
 
 The interactive human health explorer links a schematic cardiovascular, head and muscle region to the existing selected-day heart-rate, sleep/fatigue or exercise record. Spatial controls have keyboard and text alternatives. Region highlighting is educational navigation, never an organ-health conclusion. Direct NASA research cards distinguish context from unvalidated thresholds.
 
@@ -47,4 +47,4 @@ Bihandu Liyanage selected and refined the core direction through an AI-assisted 
 
 A static Next.js/React application runs deterministic TypeScript analysis locally, persists work in IndexedDB, and prepares production assets through a generated service worker. No backend, paid AI key, sign-in, or runtime NASA request is needed. The interface emphasizes understandable change instead of an opaque health score.
 
-The prototype demonstrates reproducible software behavior. Clinical performance, instrument uncertainty, astronaut human-factors suitability, operational usefulness, and flight certification require future evaluation. Four indicators do not address every spaceflight hazard or establish health and safety. See SCIENTIFIC_LIMITATIONS.md for exact rules and failure modes.
+The prototype demonstrates reproducible software behavior. Clinical performance, instrument uncertainty, astronaut human-factors suitability, operational usefulness, and flight certification require future evaluation. The three monitored indicators and contextual exercise record do not address every spaceflight hazard or establish health and safety. See SCIENTIFIC_LIMITATIONS.md for exact rules and failure modes.

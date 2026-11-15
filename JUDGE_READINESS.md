@@ -1,8 +1,15 @@
 # OrbitCare — judge-first readiness
 
+## Final media consistency — 15 November 2026, 15:56 Asia/Colombo
+
+Current production: **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV**, https://orbitcare-eight.vercel.app/. The 28.000-second final cut replaces the poorly framed replay crop with the actual day-24 review explanation. Its eight-scene timed transcript and current submission/AI descriptions match. The seven-slide PDF is byte-for-byte unchanged and lists both registered members for Anuradhapura. Application functionality, science and disclosures are unchanged. All 31 unit/data tests, lint, production build/TypeScript, six local and six public browser checks, demo accessibility and public Edge offline persistence passed. Evidence: `artifacts/media-final/`; see the newest DEPLOYMENT.md and QA_REPORT.md entries. The participant still must publish source if providing it and complete **Submit for Judging** in the registered dashboard.
+
+Earlier release summaries below are historical.
+
+
 Team-membership release verified 15 November 2026, 15:26 Asia/Colombo: **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**, are reflected in the public credits and seven-slide PDF at https://orbitcare-eight.vercel.app/ (`dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu`). Original ownership/AI attribution remain accurate; the 28-second video was inspected and preserved unchanged. See `artifacts/team-update/` and the latest DEPLOYMENT.md/QA_REPORT.md entries.
 
-Final release verified 15 November 2026, 14:58 Asia/Colombo: https://orbitcare-eight.vercel.app/ (dpl_FF9aFyLmA98toA4uavzPuwDFnqo3). All 31 unit/data tests and 28 local/public browser checks passed. Final public screenshot evidence is in `artifacts/judge-public/`. The participant-requested original continuous logo is restored, with reduced-motion support. See DEPLOYMENT.md and QA_REPORT.md for final release details.
+Previous release verified 15 November 2026, 14:58 Asia/Colombo: https://orbitcare-eight.vercel.app/ (dpl_FF9aFyLmA98toA4uavzPuwDFnqo3). All 31 unit/data tests and 28 local/public browser checks passed. Final public screenshot evidence is in `artifacts/judge-public/`. The participant-requested original continuous logo is restored, with reduced-motion support. See DEPLOYMENT.md and QA_REPORT.md for final release details.
 
 15 November 2026, Asia/Colombo. This is an implementation and expert-review record, not a human usability study or a prediction of judging results.
 
@@ -55,7 +62,7 @@ The official challenge resource page was read successfully in a real browser. NA
 - Actual encoded MP4 scene checks: `artifacts/presentation/encoded-frames/`.
 - Final test and public-release results: QA_REPORT.md and DEPLOYMENT.md.
 
-The final 28-second video tells one reference-to-review story and includes recorded manual replay and a genuinely disconnected-browser review. It uses actual application captures with explanatory captions, not a continuous unedited recording. The seven-slide PDF visibly includes the original NASA laboratory chart, participant labels, original units and scientific separation. No generated astronaut imagery or fabricated data is used.
+The final 28-second video tells one reference-to-review story and includes actual reference/replay cards, a steady day-24 review explanation and a genuinely recorded disconnected-browser review. It uses actual application captures with explanatory captions, not a continuous unedited recording. The seven-slide PDF visibly includes the original NASA laboratory chart, participant labels, original units and scientific separation. No generated astronaut imagery or fabricated data is used.
 
 ## Remaining limitations and required participant actions
 

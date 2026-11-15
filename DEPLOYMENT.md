@@ -1,6 +1,19 @@
 # OrbitCare deployment
 
-## Current team-membership release — 15 November 2026, 15:26 Asia/Colombo
+## Final media correction — 15 November 2026, 15:56 Asia/Colombo
+
+Production **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV** is Ready at https://orbitcare-eight.vercel.app/ (deployment URL https://orbitcare-6y8zgtjma-nutri-38e1.vercel.app). Protected preview **dpl_HofgSbUaYPnuTJSsVU2Y4x3xMCg9**, https://orbitcare-dnnalsynu-nutri-38e1.vercel.app, matched the tested HTML, MP4, PDF and service worker before promotion. The previous verified production **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu** remains in deployment history as fallback. An initial preview upload failed with a transient connection error; retry succeeded before promotion.
+
+The 8–13-second scene now uses a steady capture of the actual synthetic day-24 review explanation, replacing a moving crop that showed a partial navy panel at 12.5–13 seconds. The timed eight-scene transcript and current media/AI descriptions match the final cut. No application, scientific data, test, license or PDF content changed in this pass; 48 protected file hashes match the starting snapshot. Both **Bihandu Liyanage and Nesandu Liyanage**, **Anuradhapura, Sri Lanka**, remain in the public credits and PDF.
+
+Final MP4: **28.000 seconds**, **1920×1080**, **30 fps**, **840 frames**, H.264/yuv420p, **1,308,305 bytes**, SHA-256 `61c4d945a9e6d496aa04c80a84d55aca219a1cbd075cff3bb7be3dedcb31d78d`. All frames decode without error. Public links return HTTP 200 without authentication. PDF: unchanged **seven 16:9 pages**, **736,453 bytes**, SHA-256 `bd0de876c36fe5decdb8becc1ad0bf0cb80f6a4ba35a0e78555a5d6c9140c56c`. Core offline manifest: **c7c1f776eb95213e**. The new explanation was captured at **2026-11-15T10:16:56.955Z**; retained reference/NASA/offline captures are from **2026-11-15T09:11:57.181Z**.
+
+Lint, 31 unit/data tests, production build/TypeScript, six relevant local and six public browser checks passed. Fresh public media/credit/transcript checks and Edge offline/review persistence passed. Evidence: `artifacts/media-final/` and `artifacts/presentation/encoded-frames/`. Source changes remain local and uncommitted. This deployment does not complete the official judging submission.
+
+Earlier release records below are historical.
+
+
+## Previous team-membership release — 15 November 2026, 15:26 Asia/Colombo
 
 Production **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu** is published at https://orbitcare-eight.vercel.app/. It lists **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**, in the public demo credits and seven-slide presentation. Bihandu confirmed both registrations and approved Nesandu’s membership. Original project ownership, development history, AI attribution and MIT copyright remain unchanged.
 

@@ -1,6 +1,20 @@
 # OrbitCare — submission checklist
 
-## Current team and public files — 15 November 2026, 15:26 Asia/Colombo
+## Final media and public files — 15 November 2026, 15:56 Asia/Colombo
+
+- [x] Final release **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV** is public at https://orbitcare-eight.vercel.app/.
+- [x] The 28-second MP4 has a properly framed actual review explanation; encoded 12–14-second frames and public playback checked.
+- [x] /demo/ timed transcript, submission description and AI media disclosure match this final cut.
+- [x] Seven-slide PDF is unchanged and lists **Bihandu Liyanage and Nesandu Liyanage**, **Anuradhapura, Sri Lanka**.
+- [x] Lint, 31 unit/data tests, build/TypeScript, six local and six public browser checks, demo accessibility and Edge offline persistence passed. Public assets match tested local files without authentication.
+- [ ] Review the final public video/PDF and paste the final fields from SUBMISSION_FIELDS.md, PROJECT_DESCRIPTION.md and AI_USE.md into the registered project. Check both members, event, selected challenge and required form limits.
+- [ ] Publish the reviewed source manually if supplying a repository link; current source changes remain local and uncommitted.
+- [ ] Save, open the public links from the saved form, then **Submit for Judging** and retain successful confirmation before **15 November 2026, 23:59 Asia/Colombo**, or any earlier event cutoff.
+
+The agent has no authenticated Space Apps dashboard access. Judging submission remains unconfirmed; deployment is not submission. Earlier release records below are historical.
+
+
+## Previous team and public files — 15 November 2026, 15:26 Asia/Colombo
 
 - [x] OrbitCare team lists **Bihandu Liyanage and Nesandu Liyanage**, **Anuradhapura, Sri Lanka**.
 - [x] Public demo credits and seven-slide PDF reflect both names; the unchanged video remains 28 seconds.
@@ -9,7 +23,7 @@
 
 Older release/readiness entries below are retained as history.
 
-## Latest readiness update — 15 November 2026, 14:58 Asia/Colombo
+## Previous readiness update — 15 November 2026, 14:58 Asia/Colombo
 
 - [x] Judge-first release dpl_FF9aFyLmA98toA4uavzPuwDFnqo3 is public; original continuous pulse/planet logo restored.
 - [x] All 31 unit/data tests and 28 local/public browser checks passed, plus lint, TypeScript, build and Edge offline persistence.

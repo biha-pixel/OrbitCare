@@ -1,5 +1,20 @@
 # OrbitCare - guided-care release verification
 
+## Final submission-media verification — 15 November 2026, 15:56 Asia/Colombo
+
+Current production: **dpl_BrXpy5kcdiZ86cXFZRstmvDMijaV**. This pass corrected media framing and consistency without changing application behavior or the PDF. Earlier full-suite results below remain historical implementation evidence.
+
+- Confirmed the actual encoded defect at 12.5–13 seconds; replaced the affected scene with an actual day-24 explanation showing 60 → 71 bpm, +11 bpm, three consecutive changed days, calculation and the unvalidated-engineering-rule label. The video now uses steady reference/replay cards and explanation captures, plus the retained recorded offline review.
+- FFprobe: 28.000 seconds, 1920×1080, 30 fps, 840 H.264/yuv420p frames. FFmpeg decoded the complete MP4 without error. Encoded samples cover all scenes and 12, 12.5, 13, 13.1, 13.2, 13.5 and 14 seconds; the corrected explanation, transition and offline confirmation were visually inspected.
+- Timed eight-scene transcript, submission media description and AI-use disclosure match the final cut. README opening-flow wording now matches the completed progressive investigation. The project description distinguishes three monitored indicators from the contextual exercise measurement. No outdated team claim is present.
+- PDF hash is unchanged; seven native 16:9 pages, both names and Anuradhapura on the title. Original OSD-575 labels, 56 observations/four participants/seven visits/mmol/L, scientific separation and unvalidated-capability statements remain accurate. Title was visually inspected; no redesign or regeneration.
+- Lint and all 31 unit/data tests passed; production build including TypeScript passed. Existing demonstration test plus all five judge-journey tests passed locally and again on the final public deployment: six checks per environment, including offline reload, missing/non-comparable data, as-of replay, four viewport sizes, keyboard/reduced motion and axe checks. The full 28-test suite was not rerun for this media-only correction.
+- Additional fresh demo checks: playback and seeking, 28-second metadata, eight transcript entries, keyboard expansion, zero axe violations, no document overflow at 390/360 widths, team/original creator credits, no page errors. Edge public offline reload, local review persistence and bundled NASA research passed.
+- Protected preview and final unauthenticated public bytes match local HTML, video, PDF and SW; public app, poster and slide HTML also match local files. All 48 protected application/data/test/license/PDF file hashes remain unchanged. No qualifying Next.js feedback issue was retained.
+
+Evidence: `artifacts/media-final/local-verification.json`, `public-verification.json`, `preview-verification.json`, `pdf-verification.json`, `preservation.json`, `explanation-provenance.json`, public player screenshots and original defect frames; encoded-frame provenance in `artifacts/presentation/encoded-frames/verification.json`. No human usability result or completed judging submission is claimed.
+
+
 ## Team-membership update verification — 15 November 2026, 15:26 Asia/Colombo
 
 Current production: **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu**. This was a documentation/media-credit update; the prior full 28-check application regression results below remain the implementation baseline.
@@ -15,7 +30,7 @@ Current production: **dpl_9JcQtRhUEeVP1cWiFKJRdG2xjwvu**. This was a documentati
 
 Evidence: `artifacts/team-update/`. Current source/submission references to solo membership were removed; explicitly historical descriptions of Bihandu’s earlier individual participation remain accurate. No qualifying Next.js feedback issue was retained in this pass.
 
-## Latest judge-first verification — 15 November 2026, 14:58 Asia/Colombo
+## Previous judge-first verification — 15 November 2026, 14:58 Asia/Colombo
 
 This section supersedes the earlier 23-test release results below. Final production: dpl_FF9aFyLmA98toA4uavzPuwDFnqo3. Software testing does not establish clinical validity or human usability.
 

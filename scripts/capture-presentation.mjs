@@ -54,6 +54,14 @@ try {
   await capture("change-record", ".record-surface");
   for (let i = 0; i < 3; i++) await capture(`change-metric-${i}`, `.brief-metric:nth-of-type(${i + 1})`);
   for (const [name, selector] of [["comparison", ".comparison-flow"],["difference", ".comparison"],["coverage", ".reference-coverage"],["persistence", ".persistence"],["rule", ".rule-details"],["timeline", ".timeline"],["explanation", ".explanation"]]) await capture(name, selector);
+  await page.locator(".explanation").evaluate(element => element.scrollIntoView({ block: "start", behavior: "instant" }));
+  const explanationBox = await page.locator(".explanation").evaluate(element => {
+    const box = element.getBoundingClientRect();
+    const rule = element.querySelector(".rule-details").getBoundingClientRect();
+    return { x: box.x, y: box.y, width: box.width, height: rule.bottom - box.top };
+  });
+  await page.screenshot({ path: `${directory}/assets/review-explanation.png`, clip: explanationBox, animations: "disabled" });
+  assets["review-explanation"] = `${directory}/assets/review-explanation.png`;
   await page.locator(".rule-details").scrollIntoViewIfNeeded();
   const ruleBox = await page.locator(".rule-details").evaluate(element => {
     const first = element.querySelector("p").getBoundingClientRect();

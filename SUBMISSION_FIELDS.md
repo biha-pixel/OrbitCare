@@ -27,7 +27,7 @@ Direct video if the field requires a media file: https://orbitcare-eight.vercel.
 
 Fallback presentation: https://orbitcare-eight.vercel.app/demo/OrbitCare-seven-slides.pdf
 
-Choose one primary demonstration format according to the official guide. The final video is 28 seconds and follows one reference-to-review story, including actual manual replay and offline review interactions. The fallback PDF has seven pages including title/closing slides; the title slide lists Bihandu Liyanage and Nesandu Liyanage for Anuradhapura, Sri Lanka. Slide 5 shows actual NASA OSD-575 measurements and their scientific separation. The 28-second video has no outdated membership claim and was preserved unchanged.
+Choose one primary demonstration format according to the official guide. The final video is 28 seconds and follows one reference-to-review story, including actual reference/replay cards, a clearly framed day-24 review explanation and a recorded offline review interaction. The fallback PDF has seven pages including title/closing slides; the title slide lists Bihandu Liyanage and Nesandu Liyanage for Anuradhapura, Sri Lanka. Slide 5 shows actual NASA OSD-575 measurements and their scientific separation. The final 28-second cut has no outdated membership claim; its review-explanation segment and timed transcript were corrected without changing the application or PDF.
 
 ## Final project
 
