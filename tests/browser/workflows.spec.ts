@@ -189,6 +189,7 @@ test("public demonstration plays within the time limit and the fallback has seve
   const video = page.locator("video");
   await expect.poll(() => video.evaluate((element: HTMLVideoElement) => element.readyState)).toBeGreaterThanOrEqual(1);
   const duration = await video.evaluate((element: HTMLVideoElement) => element.duration);
+  expect(await video.evaluate((element: HTMLVideoElement) => element.videoWidth / element.videoHeight)).toBeCloseTo(16 / 9, 3);
   expect(duration).toBeGreaterThan(27);
   expect(duration).toBeLessThanOrEqual(30);
   await video.evaluate(async (element: HTMLVideoElement) => { element.muted = true; await element.play(); });
@@ -197,7 +198,11 @@ test("public demonstration plays within the time limit and the fallback has seve
   const pdf = await request.get("/demo/OrbitCare-seven-slides.pdf");
   expect(pdf.status()).toBe(200);
   expect(pdf.headers()["content-type"]).toContain("application/pdf");
-  expect(((await pdf.body()).toString("latin1").match(/\/Type\s*\/Page\b/g) || []).length).toBe(7);
+  const pdfText = (await pdf.body()).toString("latin1");
+  expect((pdfText.match(/\/Type\s*\/Page\b/g) || []).length).toBe(7);
+  const mediaBox = pdfText.match(/\/MediaBox\s*\[\s*0\s+0\s+([\d.]+)\s+([\d.]+)\s*\]/);
+  expect(mediaBox).not.toBeNull();
+  expect(Number(mediaBox![1]) / Number(mediaBox![2])).toBeCloseTo(16 / 9, 3);
   const source = await request.get("/research/OSD-575-original.csv");
   expect(source.status()).toBe(200);
   expect((await source.body()).length).toBe(25275);

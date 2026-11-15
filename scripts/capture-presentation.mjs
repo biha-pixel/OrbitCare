@@ -11,6 +11,8 @@ const recording = page.video();
 const assets = {};
 async function capture(name, selector) {
   const element = page.locator(selector).first();
+  await page.mouse.move(0, 0);
+  await page.waitForTimeout(60);
   await element.screenshot({ path: `${directory}/assets/${name}.png`, animations: "disabled" });
   assets[name] = `${directory}/assets/${name}.png`;
 }
@@ -28,12 +30,21 @@ try {
   await capture("change-record", ".record-surface");
   for (let i = 0; i < 3; i++) await capture(`change-metric-${i}`, `.brief-metric:nth-child(${i + 1})`);
   for (const [name, selector] of [["comparison", ".comparison-flow"],["difference", ".comparison"],["coverage", ".reference-coverage"],["persistence", ".persistence"],["rule", ".rule-details"],["timeline", ".timeline"],["explanation", ".explanation"]]) await capture(name, selector);
+  await page.locator(".rule-details").scrollIntoViewIfNeeded();
+  const ruleBox = await page.locator(".rule-details").evaluate(element => {
+    const first = element.querySelector("p").getBoundingClientRect();
+    const last = element.querySelector(".assumption-label").getBoundingClientRect();
+    return { x: first.left, y: first.top, width: first.width, height: last.bottom - first.top };
+  });
+  await page.screenshot({ path: `${directory}/assets/rule-body.png`, clip: ruleBox });
+  assets["rule-body"] = `${directory}/assets/rule-body.png`;
   await page.getByRole("button", { name: "Missing data", exact: true }).click();
   await capture("missing-record", ".record-surface");
   await capture("missing-brief", ".change-brief");
   await page.getByRole("button", { name: "NASA research", exact: true }).click();
   await expect(page.getByRole("heading", { name: "A record across sampling visits" })).toBeVisible();
   await capture("research-plot", ".research-plot");
+  for (let i = 0; i < 4; i++) await capture(`research-participant-${i}`, `.research-legend button:nth-of-type(${i + 1})`);
   await capture("research-observation", ".observation-readout");
   await capture("research-caveat", ".research-callout");
   await context.setOffline(true);
