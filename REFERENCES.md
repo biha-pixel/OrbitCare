@@ -65,3 +65,9 @@ Rechecked 15 November 2026: [NASA care §§3.1, 3.5](https://www.nasa.gov/refere
 - Flight-path/spacecraft SVG, CSS fallback, research orbit diagram and layered educational body refinements: original code-defined graphics under the same license. Body regions remain educational selectors, not anatomical measurements.
 - Native browser WebGL, CSS and SVG provide the new graphics/motion; no additional runtime package or remote asset was added. Existing Recharts, Lucide and IBM Plex licenses remain applicable.
 - NASA Space Apps AI-use clarification consulted: https://github.com/nasa/spaceapps/discussions/1947. Code assistance, procedural artwork and actual-capture media composition are disclosed in AI_USE.md.
+
+## Separate narrated video candidate, November 2026
+
+- [Kokoro-82M, hexgrad](https://huggingface.co/hexgrad/Kokoro-82M): v1.0 English speech generation, stock af_heart voice; model card declares Apache 2.0. [kokoro-onnx](https://github.com/thewh1teagle/kokoro-onnx), MIT, runs the downloaded model locally. These are media-production tools, not OrbitCare runtime dependencies or medical models.
+- ["Decoherence" by Scott Buckley](https://www.scottbuckley.com.au/library/decoherence/), [composer's use guidance](https://www.scottbuckley.com.au/library/using-this-music/), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): licensed ambient music, 00:12-00:40 excerpt; equalized, faded, reduced in level and ducked beneath narration. Required credit is retained in the candidate's descriptive text and metadata.
+- Local Whisper/FFmpeg/FFprobe checks inspect transcription, timing, levels, stream preservation and decoding. They do not constitute subjective listening review. See NARRATED_DEMO.md and the ignored `artifacts/narrated-demo/` evidence/source manifest. The silent public demo remains unchanged.

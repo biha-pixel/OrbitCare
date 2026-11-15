@@ -1,5 +1,13 @@
 # AI and Super Intelligence use disclosure
 
+## Separate narrated candidate - public listening review
+
+The separate `public/demo/OrbitCare-demo-narrated.mp4`, publicly available [for listening review](https://orbitcare-eight.vercel.app/demo/narrated-review.html), adds SI/AI-generated English speech produced with **Kokoro-82M v1.0, af_heart**, through kokoro-onnx 0.6.1. Codex assisted the script, scene timing, FFmpeg mixing and verification tooling. This is a stock synthetic voice, not a recording or imitation attributed to either team member. The original silent public demonstration remains unchanged; no runtime AI was added to OrbitCare.
+
+The background is a licensed excerpt of **"Decoherence" by Scott Buckley**, [released under CC BY 4.0 by the composer](https://www.scottbuckley.com.au/library/decoherence/), with fades, equalization, level adjustment and speech-driven ducking. The music is not AI-generated. `public/demo/OrbitCare-audio-credits.txt`, the local comparison player and MP4 metadata disclose synthesized speech, both team members, the composer, source, license and edits. Keep these descriptive credits with any published narrated version. Existing visible artwork disclosures and scientific captions are unchanged.
+
+See NARRATED_DEMO.md for timing, quality evidence and reproduction. Automated transcription and audio-level checks passed; human listening review remains pending because this agent cannot receive audio input. No subjective listening approval or official-demo replacement is claimed. Replacing the official demo requires the user's approval. The sections below describe the original development and silent-release history.
+
 OrbitCare was developed collectively by **Bihandu Liyanage and Nesandu Liyanage**, the registered team for Local Event **Anuradhapura, Sri Lanka**. This joint attribution includes the **Help a crewmate / Crew Assist** workflow.
 
 Bihandu Liyanage and Nesandu Liyanage jointly selected and refined OrbitCare through an AI-assisted requirements process. Team choices include astronaut self-monitoring, personalized references, selected indicators, explainable persistence, offline continuity, separate NASA research, the mission clinical visual direction, and scientific validity as the primary priority. This does not imply that every idea arose independently of AI assistance.

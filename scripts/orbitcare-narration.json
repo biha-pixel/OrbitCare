@@ -1,0 +1,28 @@
+{
+  "source": "public/demo/OrbitCare-demo.mp4",
+  "output": "public/demo/OrbitCare-demo-narrated.mp4",
+  "duration": 28,
+  "voice": "af_heart",
+  "language": "en-us",
+  "speed": 0.92,
+  "music": {
+    "file": "artifacts/narrated-demo/sources/sb_decoherence.mp3",
+    "start": 12,
+    "title": "Decoherence",
+    "artist": "Scott Buckley",
+    "source": "https://www.scottbuckley.com.au/library/decoherence/",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "credit": "Decoherence by Scott Buckley - released under CC BY 4.0. www.scottbuckley.com.au",
+    "changes": "28-second excerpt, equalization, fades, level adjustment and speech-driven ducking"
+  },
+  "cues": [
+    { "id": "mission", "start": 0.18, "end": 2.42, "text": "Far from Earth." },
+    { "id": "baseline", "start": 2.72, "end": 4.94, "text": "Start with your own baseline.", "speed": 0.82 },
+    { "id": "replay", "start": 5.26, "end": 7.85, "text": "Mission Decision Replay." },
+    { "id": "explanation", "start": 8.34, "end": 12.75, "text": "See sustained changes. Understand why a review is suggested." },
+    { "id": "crew", "start": 13.32, "end": 16.32, "text": "Crew Assist puts approved procedures first." },
+    { "id": "research", "start": 16.78, "end": 19.36, "text": "NASA research, kept separate." },
+    { "id": "offline", "start": 19.91, "end": 24.92, "text": "Disconnected? Keep reviewing, and save records locally." },
+    { "id": "closing", "start": 25.65, "end": 27.82, "text": "A research prototype." }
+  ]
+}

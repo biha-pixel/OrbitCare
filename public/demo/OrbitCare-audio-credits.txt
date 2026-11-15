@@ -1,0 +1,36 @@
+OrbitCare - narrated demonstration candidate
+
+Team: Bihandu Liyanage and Nesandu Liyanage, collectively.
+Local Event: Anuradhapura, Sri Lanka.
+
+AI-GENERATED AUDIO DISCLOSURE
+The English narration is SI/AI-generated speech produced locally with
+Kokoro-82M v1.0, using the standard af_heart English voice, through kokoro-onnx.
+The script and audio-production tooling were prepared with OpenAI Codex
+assistance. No team member or other real person is represented as the speaker.
+The application does not run Kokoro or another AI model at runtime.
+Model: https://huggingface.co/hexgrad/Kokoro-82M
+Model license: Apache License 2.0.
+Inference tooling: https://github.com/thewh1teagle/kokoro-onnx (MIT).
+
+MUSIC ATTRIBUTION
+"Decoherence" by Scott Buckley - released under CC BY 4.0.
+www.scottbuckley.com.au
+Source: https://www.scottbuckley.com.au/library/decoherence/
+License: https://creativecommons.org/licenses/by/4.0/
+Adaptation: 28-second excerpt starting at 00:12, equalization, fades,
+level adjustment and speech-driven ducking beneath narration.
+This is licensed third-party music, not AI-generated music.
+The music is synchronized to this video; it is not offered as a standalone track.
+Keep this attribution in the accompanying description when publishing the video.
+
+VISUAL AND SCIENTIFIC SCOPE
+The original 28-second application's video stream is preserved without visual
+re-encoding. Existing English captions and procedural-artwork disclosures remain.
+Monitoring scenarios are synthetic. NASA research observations remain separate.
+OrbitCare is a research prototype; it does not diagnose, provide treatment,
+contact medical personnel or use NASA-validated clinical thresholds.
+
+STATUS
+This is a separate narrated candidate. The original silent demonstration remains
+the primary fallback and the public demonstration has not been replaced.

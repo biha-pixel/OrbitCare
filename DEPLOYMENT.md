@@ -1,5 +1,17 @@
 # OrbitCare deployment
 
+## Additive narration-review publication - 15 November 2026
+
+Production **dpl_DXBcBZUvsEUKLZw7pTVeiQTEFvCG** is Ready at https://orbitcare-eight.vercel.app/ (deployment URL https://orbitcare-1t4u7pjx0-nutri-38e1.vercel.app). It adds only four review assets to the existing static application: the narrated MP4, English narration VTT, audio credits and a comparison page. Existing video bytes were reused without regeneration. This publishes a review candidate; **the official demo remains the original silent `/demo/OrbitCare-demo.mp4` until the user approves replacement**.
+
+- [Public narrated MP4](https://orbitcare-eight.vercel.app/demo/OrbitCare-demo-narrated.mp4)
+- [Sequential narrated/silent comparison and downloads](https://orbitcare-eight.vercel.app/demo/narrated-review.html)
+- [Unchanged official silent MP4](https://orbitcare-eight.vercel.app/demo/OrbitCare-demo.mp4)
+
+Anonymous asset/hash checks, HTTP 206 range access and complete public playback passed: 28.000 seconds, 840 frames, zero dropped/corrupted frames, decoded audio, eight caption cues and no browser page errors. All 56 original artifact payloads are preserved. Before publication, the hosted Turbopack file differed only by Vercel's opt-in toolbar suffix; its application-code prefix matched exactly. After publication all 56 original artifact files match public bytes. The original silent MP4 retains SHA-256 `8f18b1951d0e81b210ddab8540d4fc77212abd78f7cbb16f1407dc92146d6ef8`; the narrated candidate retains `b3acec8a2704efe280f5bc5a6f4263d3350f234821a103f9fb5a26a259db0309`. No app/science changes, source commit/push or judging submission were made. Global Vercel protection settings were not changed. Human listening review remains pending.
+
+Evidence: NARRATED_DEMO.md and `artifacts/narrated-app-publication/`. The prior application release **dpl_TMyUrpL1vHy9Lbxjp4cChWmUe5WF** remains available for rollback. The earlier protected media-only trial **dpl_8sqGWB27baTF4ffLF6BFsDpcMBob** contains no application and must never be promoted onto the official app domain.
+
 Working-tree attribution correction: submission documents now credit Bihandu Liyanage and Nesandu Liyanage collectively, including Crew Assist. The matching `public/demo/index.html` footer correction is local and has not been deployed. The release byte comparisons below describe the published release at verification time.
 
 ## Cinematic production release - 15 November 2026 at 20:01 Asia/Colombo

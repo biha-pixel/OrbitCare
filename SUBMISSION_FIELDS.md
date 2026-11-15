@@ -25,6 +25,8 @@ https://orbitcare-eight.vercel.app/demo/OrbitCare-demo.mp4
 
 Preparation note: use the direct 28-second video URL above as the primary demo. The public player and English transcript are at https://orbitcare-eight.vercel.app/demo/. If choosing slides instead, the seven-slide PDF is https://orbitcare-eight.vercel.app/demo/OrbitCare-seven-slides.pdf. The guide accepts an externally hosted video of 30 seconds or less or a deck of up to seven slides, including title/intro slides. Do not try to upload video or PDF directly to the project page.
 
+Audio preparation note: the separate narrated candidate is public for listening review at https://orbitcare-eight.vercel.app/demo/OrbitCare-demo-narrated.mp4; compare both versions at https://orbitcare-eight.vercel.app/demo/narrated-review.html. It has not replaced the official silent demo above. See NARRATED_DEMO.md for technical verification and pending listening review. Retain the Kokoro SI-generated audio disclosure and Scott Buckley CC BY 4.0 music credit from https://orbitcare-eight.vercel.app/demo/OrbitCare-audio-credits.txt in any description of the narrated version. Keep the official demo field above unchanged until the user approves selecting the narration.
+
 The current cut opens with the labeled procedural mission illustration, then shows the personal reference, decision replay, actual day-24 explanation, Crew Assist guidance, separate NASA observations and a recorded offline review. It is an edited composition of actual application captures, not a continuous recording. Offline review persistence was checked after a second disconnected reload. Both registered team members are credited on the player page and PDF. Procedural artwork assistance is visibly disclosed.
 
 ## Link to Final Project

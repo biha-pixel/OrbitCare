@@ -2,6 +2,8 @@
 
 Final format: 28.000 seconds, 1920 x 1080, 16:9, 30 fps, H.264/yuv420p. Silent with large English captions. Edited actual application captures and a recorded offline interaction; not a continuous recording.
 
+An additional **narrated candidate for listening review**, `public/demo/OrbitCare-demo-narrated.mp4`, preserves this exact visual stream and adds disclosed Kokoro English narration plus licensed Scott Buckley ambient music. [Compare both public versions](https://orbitcare-eight.vercel.app/demo/narrated-review.html). The original silent MP4 remains the primary public demo and fallback until the user approves replacement. See [NARRATED_DEMO.md](NARRATED_DEMO.md) for the precise script, audio credits, technical checks and pending human listening review. Do not run `media:build` to reproduce this audio-only enhancement; use `scripts/render-narrated-demo.py`.
+
 | Time | Actual application material | Purpose |
 | --- | --- | --- |
 | 0-2.5 s | Labeled procedural 3D mission scene; Far from Earth. Care stays personal. | Introduce the mission and personal health context |
