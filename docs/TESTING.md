@@ -16,6 +16,8 @@ npm run test:e2e
 
 The first installation requires the registry; Chromium is a separate download. On Linux use `npx playwright install --with-deps chromium`. Production tests use static `out/`, not `next dev`. Playwright starts `scripts/serve.mjs` on port 3000; stop unrelated servers or set `PLAYWRIGHT_BASE_URL` to a controlled matching artifact. Unit tests use Vitest. Axe checks accessibility in browser journeys; automated checks are not a complete accessibility evaluation.
 
+`npm run typecheck` runs `next typegen` before TypeScript, so it works before any development server or production build on a fresh checkout. Next.js generates `LayoutProps` and related route helpers under ignored `.next/` files; do not commit those generated files or rely on a previous build to provide them. CI pins Ubuntu 24.04 and immutable v6 action revisions using the Node.js 24 action runtime; the application tooling still uses Node.js 26.8.1 from `.nvmrc`.
+
 ## Coverage
 
 | Suite | Exercises |

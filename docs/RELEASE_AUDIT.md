@@ -4,7 +4,15 @@
 
 Repository: [biha-pixel/OrbitCare](https://github.com/biha-pixel/OrbitCare), `main`, initially private and clean at `d81935cad0454ae245402c135c0d9c9108bee022`. [Checkpoint, submission evidence and publication sequence](RELEASE_PLAN.md) distinguish the November 15 candidate from later fixes.
 
+## Subsequent CI correction — November 16, 2026
+
+After the owner pushed preparation commit `85a04226982f296a302ee1d2811f589c7ce11502`, the first hosted verification run failed at TypeScript with `Cannot find name 'LayoutProps'`. The earlier local type check had generated Next.js types available; the separate clean build generated them automatically and did not exercise standalone type checking before a build. Those prior passes therefore did not prove that the CI step order worked on a fresh runner.
+
+The local correction makes `npm run typecheck` run `next typegen` before `tsc`, as documented by the installed Next.js version. No application layout, rule or data change is required. The two pinned GitHub actions are updated to verified official v6 revisions using the Node.js 24 action runtime; Ubuntu is pinned to 24.04 to avoid the moving `ubuntu-latest` image notice. These warnings were separate from the actual type-check error. A separate source archive with no `.next` or `next-env.d.ts` reproduced the old exit-code-2 failure; the corrected command then passed, as did lint and all 41 unit/data tests. A hosted rerun is not claimed until the correction is committed/pushed and actually runs. No remote settings or visibility were changed by this correction. The original 42-path list below describes the earlier preparation; this follow-up changes only `package.json`, `.github/workflows/ci.yml`, this audit and `docs/TESTING.md`.
+
 ## Findings and disposition
+
+Follow-up CI verification also passed a full production build in that isolated checkout. Raw before/after, install, lint, unit and build logs are retained under ignored `artifacts/ci-typecheck/`. The corrected hosted workflow remains unrun until a new push.
 
 | Severity | Finding | Disposition |
 | --- | --- | --- |
