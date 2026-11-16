@@ -1,5 +1,9 @@
 # AI and Super Intelligence use disclosure
 
+## Post-submission public-release preparation — November 16, 2026
+
+At the team's request, Codex assisted repository/history inspection, redacted secret and dependency scans, licensing-source verification, documentation, genuine synthetic-application screenshots, a Git line-ending fix preserving the original NASA bytes, host-header hardening and regression checks. The preparation did not add application features or alter analysis, data values or existing media. Actual results and limitations are in [docs/RELEASE_AUDIT.md](docs/RELEASE_AUDIT.md). Publication and final licensing remain subject to the owners' approval; this later work is not represented as part of the November 15 judging submission.
+
 ## Separate narrated candidate - public listening review
 
 The separate `public/demo/OrbitCare-demo-narrated.mp4`, publicly available [for listening review](https://orbitcare-eight.vercel.app/demo/narrated-review.html), adds SI/AI-generated English speech produced with **Kokoro-82M v1.0, af_heart**, through kokoro-onnx 0.6.1. Codex assisted the script, scene timing, FFmpeg mixing and verification tooling. This is a stock synthetic voice, not a recording or imitation attributed to either team member. The original silent public demonstration remains unchanged; no runtime AI was added to OrbitCare.

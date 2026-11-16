@@ -16,7 +16,7 @@ await rm(resolve(output, "builds.json"), { force: true });
 await cp("out", destination, { recursive: true });
 const config = { version: 3, routes: [
   { src: "/sw\\.js", headers: { "Cache-Control": "no-cache, no-store, must-revalidate", "Service-Worker-Allowed": "/" }, continue: true },
-  { src: "/(.*)", headers: { "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin" }, continue: true },
+  { src: "/(.*)", headers: { "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin", "X-Frame-Options": "DENY", "Content-Security-Policy": "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'", "Permissions-Policy": "camera=(), microphone=(), geolocation=()" }, continue: true },
   { handle: "filesystem" },
   { src: "/", dest: "/index.html" },
   { src: "/.*", dest: "/404.html", status: 404 },

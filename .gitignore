@@ -26,6 +26,23 @@
 # misc
 .DS_Store
 *.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.bundle
+*.bak
+*.log
+/.vscode/
+/.idea/
+/.history/
+/.codex/
+/.aws/
+/.npmrc
+/.netrc
+/credentials.json
+/secrets.json
 
 # debug
 npm-debug.log*
@@ -37,11 +54,8 @@ yarn-error.log*
 .env*
 
 # vercel
-.vercel
+.vercel/
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-.vercel
-.env*

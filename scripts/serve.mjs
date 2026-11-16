@@ -12,6 +12,10 @@ http.createServer(async (request, response) => {
     response.setHeader("Content-Type", types[extname(file)] || "application/octet-stream");
     response.setHeader("Cache-Control", "no-cache");
     response.setHeader("X-Content-Type-Options", "nosniff");
+    response.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+    response.setHeader("X-Frame-Options", "DENY");
+    response.setHeader("Content-Security-Policy", "object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'");
+    response.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
     response.end(await readFile(file));
   } catch { response.writeHead(404, { "Content-Type": "text/plain" }).end("Not found"); }
 }).listen(port, "127.0.0.1", () => console.log(`OrbitCare production preview: http://127.0.0.1:${port}`));

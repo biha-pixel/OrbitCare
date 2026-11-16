@@ -1,107 +1,122 @@
-# OrbitCare
+# OrbitCare — Astronaut Health Monitoring & Crew Assistance
 
-Understand a sustained change. Inspect the reasoning. Keep monitoring offline.
+**Notice a personal change. Inspect the reasoning. Keep a review record offline.**
 
-OrbitCare is an astronaut self-monitoring research prototype for NASA Space Apps 2026, developed collectively by Bihandu Liyanage and Nesandu Liyanage through an AI-assisted discovery and implementation process. It is not a diagnostic, treatment, emergency-triage, or flight-certified system. No NASA endorsement is implied.
+OrbitCare turns individual readings into an explainable monitoring-to-review workflow: a fixed personal reference, explicit persistence rules, selected-day decision replay and locally saved reviews. Crew Assist adds a separate way to help a fictional crewmate and prepare a handoff on the same device.
 
-## Team
+[**Open the application**](https://orbitcare-eight.vercel.app/) · [**Watch the 28-second demo**](https://orbitcare-eight.vercel.app/demo/) · [Seven-slide presentation](https://orbitcare-eight.vercel.app/demo/OrbitCare-seven-slides.pdf) · [Get started](docs/GETTING_STARTED.md)
 
-OrbitCare has two officially registered NASA Space Apps Challenge 2026 team members:
+![Actual OrbitCare mission overview, with visibly disclosed procedural Earth-to-Mars artwork](docs/images/mission-overview.jpg)
 
-- Bihandu Liyanage
-- Nesandu Liyanage
+Developed collectively by **Bihandu Liyanage and Nesandu Liyanage**, Local Event **Anuradhapura, Sri Lanka**, for the **NASA Space Apps Challenge 2026** challenge [Create Health Monitoring Software for Astronauts on Space Missions](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/). Submitted for judging on **November 15, 2026**, as reported by the team. No award, endorsement or clinical validation is claimed.
 
-Local Event: **Anuradhapura, Sri Lanka**. Both team members jointly developed and refined OrbitCare, including **Help a crewmate / Crew Assist**. See AI_USE.md for the assistance disclosure.
+> Research prototype. Monitoring scenarios are synthetic or manually entered test measurements. The separate NASA laboratory explorer contains original research observations. OrbitCare does not diagnose, treat, contact medical support or establish mission safety. Do not enter private medical information.
 
-## Cinematic mission experience
+## Why OrbitCare
 
-The optional mission overview introduces the problem with a labeled procedural 3D scene. **Explore Mission Demo** opens five real stages: personal reference, recorded change, explanation, local review and offline preparation. Enter monitoring or Help a crewmate immediately. Mission overview reopens the introduction; Health review goes directly to the workspace. The demo uses a separate saved review workspace. See [CINEMATIC_UPGRADE.md](CINEMATIC_UPGRADE.md) for before/after captures, implementation, validation and release evidence.
+An isolated measurement says little about a sustained individual change. Far from Earth, reviewing the comparison and recording uncertainty must also work when a connection is unavailable. OrbitCare makes **reading → personal comparison → quality assessment → explanation → recorded review → prepared offline continuity** inspectable, without an opaque health score.
+
+| Implemented capability | What you can inspect |
+| --- | --- |
+| **Personal monitoring and explanations** | Heart rate, sleep and ordinal fatigue against fixed days 1–14; contextual exercise; exact values, quality, calculations and explicit three-day rules |
+| **Mission Decision Replay** | Reference, first change, persistence and review using only information available through the selected day; slider, next turning point and pausable playback |
+| **Interactive Human Health Explorer** | Schematic cardiovascular, head and muscle regions connected to selected-day records and research; keyboard and text alternatives |
+| **Crew Assist** | Urgent guidance, optional source-labeled notes, fictional Mars day-24 drill, explicit historical snapshots, JSON/text handoff and Print / Save as PDF |
+| **Prepared offline workflow** | Local analysis, check-ins, reviews, bundled evidence, research and export after **Offline ready** confirms preparation |
+| **Separate NASA OSD-575 explorer** | 56 original sodium/potassium observations, four coded participants, seven categorical ground visits, original mmol/L, CSV and provenance |
+
+![Actual synthetic day-24 health review with personal comparison and investigation entry](docs/images/health-review.jpg)
+
+<details>
+<summary>Explore the actual application screens</summary>
+
+Captures use a fresh local production application and the shipped synthetic scenario. These post-submission captures are not generated UI mockups or clinical records.
+
+**Mission Decision Replay**
+
+![Actual selected-day replay and investigation](docs/images/decision-replay.jpg)
+
+**Interactive Human Health Explorer**
+
+![Actual educational body selector linked to the selected-day record](docs/images/health-explorer.jpg)
+
+**Crew Assist**
+
+![Actual urgent-procedure signpost before optional fictional documentation](docs/images/crew-assist.jpg)
+
+**NASA OSD-575 research**
+
+![Actual separate original-value OSD-575 explorer](docs/images/nasa-research.jpg)
+
+</details>
 
 ## Try the workflow
 
-Verified public links are recorded in [DEPLOYMENT.md](DEPLOYMENT.md). No registration or credentials are required.
+1. Enter monitoring directly or choose **Explore Mission Demo** for five stages using the working application.
+2. Compare **Stable**, **Sustained change**, **Missing data** and **Return to reference**. Choose **Investigate the change** to inspect the selected-day explanation and timeline.
+3. Record a fictional review. It stays on the device, does not contact anyone and does not clear computed flags. The guided demo has a separate review workspace.
+4. Wait for **Offline ready**, disconnect and reload. Record another review and reload again. Persistence alone does not prove offline reopening.
+5. Open **NASA research** for actual laboratory measurements. Choose **Help a crewmate** for urgent signposting and optional fictional handoff documentation.
 
-1. Compare **Stable**, **Sustained change**, **Missing data**, and **Return to reference**.
-2. Select a mission day and indicator. Inspect the personal comparison, persistence, rule, evidence, origin, and uncertainty.
-3. Record a review action. It stays local, does not contact support, and does not clear calculated flags.
-4. Wait for **Offline ready**, disconnect, and reload. Use monitoring, check-ins, evidence, research, reviews, and export offline.
-5. Open **NASA research** for a separate, descriptive view of real OSD-575 serum measurements.
-6. Open **Health explorer** to select a schematic body region, inspect its existing recorded trend and read the NASA context and limits. Expand **How to measure and record** in check-in for methods and quality guidance.
-7. **Urgent concern** directs immediately to approved mission procedures and designated medical personnel. It works independently of trend flags and makes no contact or diagnosis.
+**Urgent concern** directs immediately to actual approved mission procedures and designated medical personnel, independently of gradual trend rules. No mission-specific emergency protocol is installed.
 
-**Help a crewmate** opens Crew Assist without requiring readings or flags. Shared urgent guidance comes first; optional incident records, a deterministic fictional Mars drill, explicit historical snapshots, local JSON/text export and Print / Save as PDF follow. No alarm, diagnosis, treatment, installed mission protocol or synchronized crew access is provided. See [Crew Assist](CREW_ASSIST.md).
+## Run locally
 
-Monitoring data is synthetic or user-entered test data. NASA laboratory observations never enter the monitoring engine. Do not enter private medical information.
-
-## Getting started
-
-Use Node.js 26.8.1 (the tested version) and npm. No environment variables or service keys are required.
+Use **Node.js 26.8.1** and npm; no environment variables, account or API keys are required.
 
 ```sh
+git clone https://github.com/biha-pixel/OrbitCare.git
+cd OrbitCare
 npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. Development does not register the service worker. For the real offline application:
+Visit <http://localhost:3000>. Until publication is approved, cloning requires authorized private-repository access. For the actual offline application:
 
 ```sh
 npm run build
 npm start
 ```
 
-Open http://127.0.0.1:3000. The production preview serves static `out/` files. Use HTTPS or localhost, not a directly opened HTML file.
+Visit <http://127.0.0.1:3000> and wait for **Offline ready**. Use HTTPS or localhost, not a directly opened HTML file. Development mode does not register the service worker. See [setup and troubleshooting](docs/GETTING_STARTED.md).
 
-## Project structure
+## Engineering and verification
 
-```text
-app/                Routes, layouts, global styles, and app icons
-components/         Mission workspace, explanations, check-in, research, data views
-lib/                Pure analysis, validation, IndexedDB, offline state
-data/               Deterministic scenarios, evidence, original NASA data/provenance
-scripts/            Data preparation, service worker generation, static preview
-tests/              Numerical, validation, source-integrity, browser tests
-public/             Static assets
-next.config.ts      Next.js configuration
-eslint.config.mjs   ESLint configuration
-tsconfig.json       TypeScript configuration and @/* import alias
-package.json        Dependencies and scripts
-package-lock.json   Locked dependency versions
+Static **Next.js 16.4.6 / React 19.3.0**, TypeScript, Tailwind CSS, Recharts, Zod and IndexedDB. Native WebGL/GLSL, SVG and CSS provide original procedural graphics, with a static fallback and reduced-motion support. Lucide icons and locally bundled IBM Plex fonts retain their licenses. There is no application backend, authentication, runtime generative AI, wearable connection or automatic synchronization.
+
+```mermaid
+flowchart LR
+  inputs[Synthetic fixtures / fictional entries] --> rules[Local deterministic rules]
+  rules --> review[Selected-day explanation and review]
+  review <--> local[IndexedDB]
+  csv[Original NASA CSV] --> verify[Build-time checksum and subset]
+  verify --> research[Separate research explorer]
+  assets[Static build] --> cache[Prepared offline asset cache]
 ```
 
-`node_modules/` and `.next/` are generated locally and ignored by Git.
+[Architecture](docs/ARCHITECTURE.md) · [Scientific methodology](docs/SCIENTIFIC_METHODOLOGY.md) · [NASA provenance](NASA_DATA_SOURCES.md)
 
-## Commands
+```sh
+npm run lint
+npm run typecheck
+npm test
+npm run build
+npx playwright install chromium
+npm run test:e2e
+```
 
-- `npm run dev` starts the development server.
-- `npm run lint` checks the code with ESLint.
-- `npm run build` creates a production build.
-- `npm start` serves the production build after `npm run build`.
-- `npm run typecheck` checks TypeScript.
-- `npm test` runs numerical, validation, and source-integrity tests.
-- `npx playwright install chromium` installs the browser for local tests.
-- `npm run test:e2e` tests the production artifact, including actual offline reopening.
-- `npm run data:prepare` reproduces the selected research subset without network access.
-- `npm run data:fetch` explicitly re-downloads the original source, rejecting unexpected checksums.
-- `npm run media:build` captures the running production preview and renders the 28-second 1080p demo and seven native 16:9 slides. FFmpeg is required.
+Vitest checks analysis, portability, replay, incidents and original NASA values. Playwright and axe exercise browser workflows, accessibility and genuine offline reopening. [Testing](docs/TESTING.md) documents prerequisites; the dated [release audit](docs/RELEASE_AUDIT.md) records actual results and remaining risks. No unrun CI or coverage badge is claimed. `npm run data:prepare` reproduces the NASA subset from checked-in bytes without network access.
 
-## Implemented features
+## Scientific and data boundaries
 
-Daily heart-rate, sleep, ordinal fatigue, and contextual exercise entries; fixed personal reference statistics; transparent three-day persistence; aligned original-unit plots; mission timeline/replay; evidence and assumptions; review history; native IndexedDB; validated JSON import/export; deliberate reset; printable record; responsive keyboard-accessible UI; production offline PWA; and a separate 56-observation NASA OSD-575 explorer.
+The reference statistics, illustrative fatigue scale, change floors and three-calendar-day rule are unvalidated engineering assumptions. NASA research informs context, not those thresholds. Missing or non-comparable observations interrupt persistence. Four short-mission research participants cannot validate long-duration rules. Highlighted body regions are educational navigation, not organ-health conclusions.
 
-The completed workspace opens with a compact scenario selector and unified change brief. Investigate the change opens the manual replay, readable plots, reference-to-reading explanation and marked mission progression. See [VISUAL_UPGRADE.md](VISUAL_UPGRADE.md) for the visual audit, checkpoint, screenshot comparisons and preservation checks. The final demo uses composed actual screen captures and a recorded, genuinely offline interaction; it is not presented as a continuous recording.
+Browser records and exports are not encrypted by OrbitCare. Storage clearing/eviction can erase records; multi-tab/device synchronization is not implemented. An unprepared first visit, external research pages and uncached demo media require connectivity. Clinical performance, improved outcomes, flight certification and astronaut usability have not been established. Read the [scientific limitations](SCIENTIFIC_LIMITATIONS.md), [Crew Assist boundaries](CREW_ASSIST.md) and [security policy](SECURITY.md).
 
-The subsequent [challenge alignment audit](CHALLENGE_ALIGNMENT.md) records guided recording, status-specific next steps, the separate urgent signpost and the three-region interactive SVG explorer. CSS feedback uses 180–320 ms transitions with a reduced-motion override; health values update immediately without animated interpolation. No additional runtime dependency or saved-record schema was introduced.
+## Open development, credit and licensing
 
-Next.js 16.4.6 static export, React 19.3.0, TypeScript, Tailwind 4.3.3, Recharts, Zod, Lucide, and locally bundled IBM Plex fonts. No server, authentication, analytics SDK, cloud model, sensor connection, or automatic synchronization is used. Hosting receives normal web requests; monitoring entries are processed locally.
+Both team members jointly directed and refined OrbitCare, including Crew Assist. OpenAI Codex assisted requirements, research inspection, architecture, implementation, synthetic fixtures, tests, documentation, deployment and media tooling. Procedural artwork is visibly disclosed. The official demo uses actual application captures and edited composition. A separate narrated candidate uses disclosed Kokoro speech and licensed Scott Buckley music; it has not replaced the silent demo. See [AI_USE.md](AI_USE.md) and [audio credits](public/demo/OrbitCare-audio-credits.txt).
 
-## Documentation and limitations
+Original code/documentation use the existing **[MIT license](LICENSE)**. Datasets, music, fonts, icons, dependencies and agent guidance keep separate terms; they are not relicensed under MIT. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), [REFERENCES.md](REFERENCES.md) and the [license choice for owner approval](docs/LICENSE_DECISION.md).
 
-See [PROJECT_DESCRIPTION.md](PROJECT_DESCRIPTION.md), [NASA_DATA_SOURCES.md](NASA_DATA_SOURCES.md), [SCIENTIFIC_LIMITATIONS.md](SCIENTIFIC_LIMITATIONS.md), [AI_USE.md](AI_USE.md), [REFERENCES.md](REFERENCES.md), [QA_REPORT.md](QA_REPORT.md), [DEMO_SCRIPT.md](DEMO_SCRIPT.md), and [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md). The approved direction is preserved in [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md), [PRODUCT.md](PRODUCT.md), and [DESIGN.md](DESIGN.md).
-
-Thresholds are prototype engineering assumptions, not NASA medical recommendations. Clinical accuracy, flight suitability, and diagnostic performance are unvalidated. Four short-mission research participants cannot validate long-duration monitoring rules.
-
-Browser records are not encrypted by OrbitCare and can be lost through storage clearing or eviction. Export test records you want to retain. Use one editing tab; multi-tab/multi-device synchronization is not implemented. First-ever offline visits cannot load an unprepared app. External source pages require internet. Browser connectivity is a hint, not proof of Earth communications.
-
-## License
-
-Application code retains the repository's MIT [license](LICENSE). Research material, software dependencies, fonts, and skills retain their own terms; see REFERENCES.md. The implementation agent has not committed or pushed changes.
+[Contribute](CONTRIBUTING.md) · [Private vulnerability reporting](SECURITY.md) · [Documentation](docs/README.md) · [Submission revision and release plan](docs/RELEASE_PLAN.md)

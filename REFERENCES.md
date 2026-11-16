@@ -1,5 +1,7 @@
 # References and third-party attribution
 
+Current redistribution obligations and exact assets are consolidated in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Release preparation rechecked the [Space Apps legal terms](https://www.spaceappschallenge.org/legal/), the rendered [OSD-575 license field](https://osdr.nasa.gov/bio/repo/data/studies/OSD-575), [OSDR redistribution guidance](https://science.nasa.gov/reference/osdr-help-terms-and-conditions/), the composer's [Decoherence permission](https://www.scottbuckley.com.au/library/decoherence/), pinned [Vercel guidance license declaration](https://github.com/vercel-labs/agent-skills/tree/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62), [Phosphor license](https://github.com/phosphor-icons/core/blob/main/LICENSE), and OSI's [MIT](https://opensource.org/license/mit) / [Apache-2.0](https://opensource.org/license/apache-2-0) listings on November 16, 2026. This does not change the historical source-use records below.
+
 ## NASA resources actually used
 
 - [NASA Standard Measures](https://www.nasa.gov/reference/standard-measures/): longitudinal/contextual human research.
@@ -34,7 +36,7 @@ Skills are project-scoped copies in `.agents/skills/`, with licenses and source 
 
 Final media uses actual Playwright screen captures, FFmpeg composition, local IBM Plex fonts, and the original OrbitCare mark. A local, non-runtime PyMuPDF 1.26.7 verification wheel rendered the exported PDF pages for visual inspection; it is not bundled with the app or added to its dependencies.
 
-OrbitCare code retains the existing MIT license, copyright Bihandu Liyanage 2026. Third-party sources retain their terms. No NASA branding, endorsement, or certification is claimed.
+OrbitCare code retains the existing MIT license; the 2026 original-work copyright notice credits Bihandu Liyanage and Nesandu Liyanage. Third-party sources retain their terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). No NASA branding, endorsement, or certification is claimed.
 
 ## Guided-care upgrade sources actually used
 

@@ -1,0 +1,4 @@
+# These research files must retain the checksum-verified original download bytes.
+# Git's text normalization otherwise changes CRLF to LF on Linux build machines.
+/data/raw/OSD-575-CMP.csv -text whitespace=cr-at-eol
+/public/research/OSD-575-original.csv -text whitespace=cr-at-eol

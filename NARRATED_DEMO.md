@@ -6,7 +6,7 @@ The separate candidate is `public/demo/OrbitCare-demo-narrated.mp4`. It is **28.
 - [Public narrated/silent comparison and downloads](https://orbitcare-eight.vercel.app/demo/narrated-review.html)
 - [Unchanged official silent MP4](https://orbitcare-eight.vercel.app/demo/OrbitCare-demo.mp4)
 
-Exact local path: `C:\Users\bihal\Documents\codex\OrbitCare project\OrbitCare\public\demo\OrbitCare-demo-narrated.mp4`.
+Repository-relative file: public/demo/OrbitCare-demo-narrated.mp4.
 
 Open [the local comparison player](artifacts/narrated-demo/review.html) to compare both versions. While the local review server is running, use http://127.0.0.1:8767/artifacts/narrated-demo/review.html for external caption support.
 

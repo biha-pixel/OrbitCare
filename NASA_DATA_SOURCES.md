@@ -38,7 +38,7 @@ The view uses discrete observations and an accessible table, with categorical sa
 
 ### Permissions and citation
 
-The selected CSV was publicly downloadable without authentication. The indexed study listing states CC0-1.0; the inspected metadata API has no license field. Retain study attribution, DOI, exact source, provenance, and [OSDR terms/citation guidance](https://science.nasa.gov/reference/osdr-help-terms-and-conditions/). Do not describe all NASA material as public domain. OrbitCare's MIT license applies to its code, not third-party research. No controlled assays or private astronaut records are used.
+The selected CSV was publicly downloadable without authentication. The study listing states CC0-1.0; this was confirmed directly in the rendered original OSD-575 page on November 16, 2026 (HTTP 200, explicit License field). The inspected metadata API has no license field. Retain study attribution, DOI, exact source, provenance, and [OSDR terms/citation guidance](https://science.nasa.gov/reference/osdr-help-terms-and-conditions/). Do not describe all NASA material as public domain. OrbitCare's MIT license applies to its code, not third-party research. No controlled assays or private astronaut records are used. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Examined and excluded
 
